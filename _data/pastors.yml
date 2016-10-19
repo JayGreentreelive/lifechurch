@@ -1,0 +1,15 @@
+---
+- id: vin
+  name: Debbie Salters
+  email: vincennes@thursdaychurch.org
+  photo_portrait: /locations/assets/campus/okc-connect-pastor.jpg
+  photo_portrait_2x: /locations/assets/campus/okc-connect-pastor@2x.jpg
+  photo_campus: /locations/assets/campus/okc-connect-campus.jpg
+  photo_campus_2x: /locations/assets/campus/okc-connect-campus@2x.jpg
+- id: bic
+  name: Jason Walsh
+  email: bicknell@thursdaychurch.org
+  photo_portrait: /locations/assets/campus/bao-connect-pastor.jpg
+  photo_portrait_2x: /locations/assets/campus/bao-connect-pastor@2x.jpg
+  photo_campus: /locations/assets/campus/bao-connect-campus.jpg
+  photo_campus_2x: /locations/assets/campus/bao-connect-campus@2x.jpg

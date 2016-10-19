@@ -1,0 +1,11 @@
+# type: notice or alert
+# active: true or false
+# icon: weather-snow, weather-rain, campus, money, calendar, maintenance, tree
+# message: the message in the announcement
+# url: link or leave blank
+
+- active: false
+  type: alert
+  icon: campus
+  message: We'd love to see you this Easter! Find locations, times, and more.
+  url: /easter/

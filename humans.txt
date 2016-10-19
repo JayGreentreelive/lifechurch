@@ -1,0 +1,27 @@
+/* humanstxt.org */
+
+/* TEAM */
+
+  Justin Battenfield
+    Life.Church
+    justin.battenfield@life.church
+    @jbatphoto
+
+  
+  Chelsea Nelson
+    Life.Church
+    chelsea.nelson@life.church 
+
+
+  Daniel Woodward
+    Life.Church
+    daniel.woodward@life.church
+    @danielrwoodward
+
+  
+
+/* SITE */
+
+  Standards: HTML5, CSS3
+  Components: Bourbon, Neat, Jekyll, jQuery
+  Software: Vim, Git

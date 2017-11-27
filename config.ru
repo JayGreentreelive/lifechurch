@@ -8,8 +8,8 @@ use Rack::Deflater
 #use Rack::AppendTrailingSlash
 
 use Rack::Rewrite do
-  r301 %r{(.*)}, 'http://www.life.church$&', :if => Proc.new {|rack_env|
-    (rack_env['HTTP_HOST'] =~ /www.lifechurch.tv/) == 0
+  r301 %r{(.*)}, 'http://thursdaychurch.org$&', :if => Proc.new {|rack_env|
+    (rack_env['HTTP_HOST'] =~ /thursdaychurch.org/) == 0
   }
 
   r301 %r{^/(?i)digerati/?$}, '/digital-missions/'

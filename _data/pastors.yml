@@ -1,14 +1,21 @@
 ---
 - id: vin
   name: Debbie Salters
-  email: vincennes@thursdaychurch.org
+  email: pastordebbie@thursdaychurch.org
   photo_portrait: /locations/assets/campus/vin-connect-pastor.jpg
   photo_portrait_2x: /locations/assets/campus/vin-connect-pastor@2x.jpg
   photo_campus: /locations/assets/campus/vin-connect-campus.jpg
   photo_campus_2x: /locations/assets/campus/vin-connect-campus@2x.jpg
 - id: bic
   name: Jason Walsh
-  email: bicknell@thursdaychurch.org
+  email: pastorjason@thursdaychurch.org
+  photo_portrait: /locations/assets/campus/bic-connect-pastor.jpg
+  photo_portrait_2x: /locations/assets/campus/bic-connect-pastor@2x.jpg
+  photo_campus: /locations/assets/campus/bic-connect-campus.jpg
+  photo_campus_2x: /locations/assets/campus/bic-connect-campus@2x.jpg
+- id: men
+  name: Dave Dunbar
+  email: pastordave@thursdaychurch.org
   photo_portrait: /locations/assets/campus/bic-connect-pastor.jpg
   photo_portrait_2x: /locations/assets/campus/bic-connect-pastor@2x.jpg
   photo_campus: /locations/assets/campus/bic-connect-campus.jpg

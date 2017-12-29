@@ -4,7 +4,7 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: true
+- active: false
   type: weather-snow
   icon: campus
   message: Serevices cancelled due to severe weather.

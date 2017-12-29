@@ -1,7 +1,7 @@
 {
-  "name": "lifechurch-site",
+  "name": "thursdaychurch-site",
   "version": "1.0.0",
-  "author": "Life.Church",
+  "author": "Thursday Church",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",

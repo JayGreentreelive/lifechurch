@@ -5,7 +5,7 @@
 # url: link or leave blank
 
 - active: true
-  type: alert
+  type: weather-snow
   icon: campus
-  message: We'd love to see you this weekend! Find locations, times, and more.
-  url: /easter/
+  message: Serevices cancelled due to severe weather.
+  url: /weather/

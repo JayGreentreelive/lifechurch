@@ -1,12 +1,12 @@
 <section id="map" class="map">
   <figure id="map-indiana" class="map-visual"></figure>
-  <!--figure id="map-texas" class="map-visual"></figure>
+  <figure id="map-texas" class="map-visual"></figure>
   <figure id="map-tennessee" class="map-visual"></figure>
   <figure id="map-florida" class="map-visual"></figure>
   <figure id="map-kansas" class="map-visual"></figure>
   <figure id="map-newyork" class="map-visual"></figure>
   <figure id="map-newmexico" class="map-visual"></figure>
-  <figure id="map-default" class="map-visual"></figure -->
+  <figure id="map-default" class="map-visual"></figure>
 
   <article class="container">
     <div class="map-panel">
@@ -17,11 +17,24 @@
         <h4 class="state-title"><a href="javascript:void(0);">Indiana, US</a></h4>
         <ul class="map-list">
         {% for location in site.data.locations %}
+        {% if location.id == 'vin' %}
+          <li>
+            <a id="wel" href="/vincennes/{% if include.for and include.for != '' and include.for != 'locations' %}#{{ include.for }}{% endif %}" onclick="ga('send', 'event', 'Map', 'Click', 'Campus WEL');">
+              <span class="marker">A</span>
+              <h6><span class="prepend-connect">Connect with&nbsp;</span>Vincennes, IN</h6>
+              <p class="detail">{{ location.address }}</p>
+            </a>
+            {% include map-connect.html %}
+          </li>
+        {% endif %}
+        {% endfor %}
+
+                {% for location in site.data.locations %}
         {% if location.id == 'bic' %}
           <li>
             <a id="wel" href="/bicknell/{% if include.for and include.for != '' and include.for != 'locations' %}#{{ include.for }}{% endif %}" onclick="ga('send', 'event', 'Map', 'Click', 'Campus WEL');">
               <span class="marker">A</span>
-              <h6><span class="prepend-connect">Connect with&nbsp;</span>Wellington, FL</h6>
+              <h6><span class="prepend-connect">Connect with&nbsp;</span>Bicknell, IN</h6>
               <p class="detail">{{ location.address }}</p>
             </a>
             {% include map-connect.html %}

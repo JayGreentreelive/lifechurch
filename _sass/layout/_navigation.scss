@@ -9,9 +9,9 @@
   z-index: 10;
 
   #header-logo {
-    @include span-columns(8);
-   // @include svg-image('../images/branding/logo-red-black');
-   // @extend %hide-text;
+   @include span-columns(8);
+   @include svg-image('../images/branding/logo-red-black');
+   @extend %hide-text;
 
     .logo-white-white & {
    //   @include svg-image('../images/branding/logo-white-white');

@@ -62,4 +62,4 @@ Heavenly Father, we really love it when we hear You through Your Word, in prayer
 
 There’s a Bible Plan just for you. Start reading today and Go After God’s Heart. [go2.lc/leaderplan](https://www.bible.com/reading-plans/2272-go-after-gods-heart)
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.Thursday Church/talkitover)_

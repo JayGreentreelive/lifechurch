@@ -7,5 +7,5 @@
 - active: true
   type: alert
   icon: campus
-  message: We'd love to see you this Easter! Find locations, times, and more.
+  message: We'd love to see you this weekend! Find locations, times, and more.
   url: /easter/

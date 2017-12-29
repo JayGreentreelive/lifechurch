@@ -14,9 +14,9 @@ hero: locations-hero
         {% unless page.phone == false %}{{ location.phone }}<br />{% endunless %}
         {{ location.address }} 
         {% if location.id == 'bnb' %}
-        <a href="http://maps.google.com/?q=Life.Church Broadway and Britton Campus" class="action" target="_blank">(get directions)</a><br class="large-element" />
+        <a href="http://maps.google.com/?q=Thursday Church Broadway and Britton Campus" class="action" target="_blank">(get directions)</a><br class="large-element" />
         {% elsif location.id == 'wel' %}
-        <a href="http://maps.google.com/?q=Life.Church Wellington" class="action" target="_blank">(get directions)</a><br class="large-element" />
+        <a href="http://maps.google.com/?q=Thursday Church Wellington" class="action" target="_blank">(get directions)</a><br class="large-element" />
         {% else %}
         <a href="http://maps.google.com/?q={{ location.address }}" class="action" target="_blank">(get directions)</a><br class="large-element" />
         {% endif %}
@@ -29,11 +29,11 @@ hero: locations-hero
           <article class="saturday day">
             <h6>Saturday</h6>
 
-            {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' %}{% if time.day == 'sat' %}
+            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' %}{% if time.day == 'sat' %}
             <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
               <time>{{ time.title }}</time>
               <span>
-                {% if time.type == 'service' %}Service &amp; LifeKids
+                {% if time.type == 'service' %}Service &amp; TCKids
                 {% elsif time.type == 'switch' %}Switch &amp; Roots
                 {% endif %}
               </span>
@@ -44,11 +44,11 @@ hero: locations-hero
           <article class="sunday day">
             <h6>Sunday</h6>
           
-            {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'sun' %}
+            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'sun' %}
             <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
               <time>{{ time.title }}</time>
               <span>
-                {% if time.type == 'service' %}Service &amp; LifeKids
+                {% if time.type == 'service' %}Service &amp; TCKids
                 {% elsif time.type == 'switch' %}Switch &amp; Roots
                 {% endif %}
               </span>
@@ -61,13 +61,13 @@ hero: locations-hero
              </div>
           </article>
           <!-- Monday -->
-            {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'mon' %}
+            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'mon' %}
             <article class="monday day">
             <h6>Monday</h6>
             <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
               <time>{{ time.title }}</time>
               <span>
-                {% if time.type == 'service' %}Service &amp; LifeKids
+                {% if time.type == 'service' %}Service &amp; TCKids
                 {% elsif time.type == 'switch' %}Switch &amp; Roots
                 {% endif %}
               </span>
@@ -82,11 +82,11 @@ hero: locations-hero
             
             <!--<p class="detail"><em>Switch relaxes in the summer, just like you! Beginning in August, Switch experiences will be back on Wednesday nights at the time below.</em></p>-->
             
-            {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' %}{% if time.day == 'wed' %}
+            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' %}{% if time.day == 'wed' %}
             <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
               <time>{{ time.title }}</time>
               <span>
-                {% if time.type == 'service-time' %}Service &amp; LifeKids
+                {% if time.type == 'service-time' %}Service &amp; TCKids
                 {% elsif time.type == 'switch' %}Switch &amp; Roots
                 {% endif %}
               </span>
@@ -95,13 +95,13 @@ hero: locations-hero
           </article>
           <!-- Thursday -->
           
-            {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'thu' %}
+            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'thu' %}
             <article class="thursday day">
             <h6>Thursday</h6>
             <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
               <time>{{ time.title }}</time>
               <span>
-                {% if time.type == 'service' %}Service &amp; LifeKids
+                {% if time.type == 'service' %}Service &amp; TCKids
                 {% elsif time.type == 'switch' %}Switch &amp; Roots
                 {% endif %}
               </span>
@@ -203,7 +203,7 @@ hero: locations-hero
       <li class="grid-item panel involved-item">
         <img src="/locations/assets/event-opendoor.jpg" data-retina="/locations/assets/event-opendoor@2x.jpg" alt="Open Door" />
         <h6>Open Door</h6>
-        <p class="detail">Learn more about Life.Church, our vision, and how you can be a part of it all. We'd love to get to know you!</p>
+        <p class="detail">Learn more about Thursday Church, our vision, and how you can be a part of it all. We'd love to get to know you!</p>
 
         <div class="cta">
           <p>
@@ -225,7 +225,7 @@ hero: locations-hero
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Life.Church"
+                   value="Send to Thursday Church"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Open Door');" />
           </form>
         </div>
@@ -260,7 +260,7 @@ hero: locations-hero
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Life.Church"
+                   value="Send to Thursday Church"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Chazown');" />
           </form>
         </div>
@@ -294,7 +294,7 @@ hero: locations-hero
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Life.Church"
+                   value="Send to Thursday Church"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Baptism');" />
           </form>
         </div>
@@ -329,7 +329,7 @@ hero: locations-hero
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Life.Church"
+                   value="Send to Thursday Church"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Restore');" />
           </form>
         </div>
@@ -344,7 +344,7 @@ hero: locations-hero
 <section id="connect" class="group single alt">
   <header class="text-center">
     <h2>Connect with {{ location.title }}</h2>
-    <p>We love to hear from the great people who visit and attend Life.Church.</p>
+    <p>We love to hear from the great people who visit and attend Thursday Church.</p>
   </header>
 
   <div class="container">
@@ -357,7 +357,7 @@ hero: locations-hero
         <img src="{{ pastor.photo_portrait }}" data-retina="{{ pastor.photo_portrait_2x }}" alt="Campus Pastor" />
         
         <h6>Contact Pastor {{ pastor.name }}</h6>
-        <p class="detail">At Life.Church, each campus has its own pastor who leads the community as they learn and grow in their relationships with Christ. If you are looking for guidance or have questions about our church, your campus pastor is here for you.</p>
+        <p class="detail">At Thursday Church, each campus has its own pastor who leads the community as they learn and grow in their relationships with Christ. If you are looking for guidance or have questions about our church, your campus pastor is here for you.</p>
         
         <div class="cta">
           <p><a href="#"
@@ -411,7 +411,7 @@ hero: locations-hero
             <textarea class="details" name="message" placeholder="Your Message"></textarea>
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Life.Church"
+                   value="Send to Thursday Church"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Contact Campus');" />
           </form>
         </div>
@@ -423,7 +423,7 @@ hero: locations-hero
       <li class="grid-item panel involved-item">
         <img src="/locations/assets/connect-facebook.jpg" data-retina="/locations/assets/connect-facebook@2x.jpg" alt="Open Door" />
         <h6>Connect with us on Facebook</h6>
-        <p class="detail">On the Life.Church {{ location.title }} Facebook page, you can find upcoming events, get updates, engage with your community, and see behind-the-scenes pictures and posts from our staff. </p>
+        <p class="detail">On the Thursday Church {{ location.title }} Facebook page, you can find upcoming events, get updates, engage with your community, and see behind-the-scenes pictures and posts from our staff. </p>
 
         <div class="cta">
           <p>

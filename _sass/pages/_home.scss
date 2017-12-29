@@ -83,14 +83,14 @@
 
   .hero {
     min-height: 200px;
-    @include retina-image(/images/home/home-bg, cover, jpg);
+    @include retina-image(/images/home/generic-bg, cover, jpg);
     background-position: top center;
     background-color: #ecd0cf;
     position: relative;
     //padding-bottom: 150px;
 
     @include media($medium-screen) {
-      @include retina-image(/images/home/home-bg, cover, jpg);
+      @include retina-image(/images/home/generic-bg, cover, jpg);
       height: auto;
       background-color: #ecd0cf;
       padding-bottom: 7em;

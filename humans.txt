@@ -2,21 +2,10 @@
 
 /* TEAM */
 
-  Justin Battenfield
-    Life.Church
-    justin.battenfield@life.church
-    @jbatphoto
-
-  
-  Chelsea Nelson
-    Life.Church
-    chelsea.nelson@life.church 
-
-
-  Daniel Woodward
-    Life.Church
-    daniel.woodward@life.church
-    @danielrwoodward
+  Jay L greentree
+    Thursday Church
+    jay@thursdaychurch.org
+    @JayTheITGuy1983
 
   
 

@@ -83,7 +83,7 @@
 
   .hero {
     min-height: 200px;
-    @include retina-image(/images/home/generic-bg, cover, jpg);
+   // @include retina-image(/images/home/generic-bg, cover, jpg);
     background-position: top center;
     background-color: #490b4d;
     position: relative;

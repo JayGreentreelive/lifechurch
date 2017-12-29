@@ -10,23 +10,23 @@
 
   #header-logo {
     @include span-columns(8);
-    @include svg-image('../images/branding/logo-red-black');
+   // @include svg-image('../images/branding/logo-red-black');
     @extend %hide-text;
 
     .logo-white-white & {
-      @include svg-image('../images/branding/logo-white-white');
+   //   @include svg-image('../images/branding/logo-white-white');
     }
 
     .logo-red-white & {
-      @include svg-image('../images/branding/logo-red-white');
+   //   @include svg-image('../images/branding/logo-red-white');
     }
 
     .logo-red-black & {
-      @include svg-image('../images/branding/logo-red-black');
+   //   @include svg-image('../images/branding/logo-red-black');
     }
 
     .logo-black-black & {
-      @include svg-image('../images/branding/logo-black-black');
+   //   @include svg-image('../images/branding/logo-black-black');
     }
 
     height: 33px;

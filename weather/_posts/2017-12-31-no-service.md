@@ -1,8 +1,8 @@
 ---
 layout: announcement
-title: 2015 Christmas Services
-permalink: /christmas-times/
-teaser: "The gifts we exchange this year can't compare to what God gave us on the first Christmas. Jesus brought unfailing love, unending hope, and unfaltering peace. We invite you to join us at LifeChurch.tv this Christmas to celebrate the gifts that only Christ can give."
+title: Services Cancelled
+permalink: /weather/delays-cancellations/
+teaser: "The services for 12-31-2017 have been cancelled due to weather"
 feature: /announcements/assets/2015-11-12-christmas.jpg
 ---
 The gifts we exchange this year can't compare to what God gave us on the first Christmas. Jesus brought unfailing love, unending hope, and unfaltering peace.

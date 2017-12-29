@@ -11,7 +11,7 @@
   #header-logo {
     @include span-columns(8);
    // @include svg-image('../images/branding/logo-red-black');
-    @extend %hide-text;
+   // @extend %hide-text;
 
     .logo-white-white & {
    //   @include svg-image('../images/branding/logo-white-white');

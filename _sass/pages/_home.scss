@@ -76,7 +76,7 @@
     background-repeat: no-repeat;
 
     .hero {
-      background: #d8452e;
+      background: #490b4d;
       height: 100%;
     }
   }
@@ -85,14 +85,14 @@
     min-height: 200px;
     @include retina-image(/images/home/generic-bg, cover, jpg);
     background-position: top center;
-    background-color: #ecd0cf;
+    background-color: #490b4d;
     position: relative;
     //padding-bottom: 150px;
 
     @include media($medium-screen) {
       @include retina-image(/images/home/generic-bg, cover, jpg);
       height: auto;
-      background-color: #ecd0cf;
+      background-color: #490b4d;
       padding-bottom: 7em;
     }
     

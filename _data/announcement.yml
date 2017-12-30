@@ -4,8 +4,8 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: false
-  type: weather-snow
+- active: true
+  type: notice
   icon: campus
-  message: Serevices cancelled due to severe weather.
-  url: /weather/
+  message: We'd love to see you this Easter! Find locations, times, and more.
+  url: /easter/

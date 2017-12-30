@@ -1,7 +1,3 @@
-{% for announcement in site.data.announcement %}
-{% if announcement.active == true %}
-{% if page.section != 'announcements' %}
-
 <!-- Announcement -->
 <div class="panel-giving">Your 2015 giving statement will be <a href="/giving/">available online</a> beginning <strong>Friday, January 15</strong>. You should also receive a hard copy of your giving statement in the mail by Saturday, January 30. Thank you for your generosity! <br />
   <br /><strong>Questions?</strong> Contact the Giving Experience Team at <a href="mailto:giving@thursdaychurch.org">giving@thursdaychurch.org</a> or (812) 882-2737.</div>
@@ -12,6 +8,11 @@
     </a>
   </div>
 </div>
+
+{% for announcement in site.data.announcement %}
+{% if announcement.active == true %}
+{% if page.section != 'announcements' %}
+
 
 <!-- Announcement >
 <div class="announcement {{ announcement.type }}">

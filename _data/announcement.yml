@@ -4,8 +4,8 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: false
-  type: notice
-  icon: campus
-  message: We'd love to see you this Easter! Find locations, times, and more.
-  url: /easter/
+- active: true
+  type: alert
+  icon: money
+  message: Friendly Reminder: Gifts received by Sunday, December 31 will appear on your 2017 statement.
+  url: /giving/

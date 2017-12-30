@@ -5,7 +5,7 @@
 # url: link or leave blank
 
 - active: true
-  type: notice
+  type: alert
   icon: campus
   message: Friendly Reminder. Gifts received by Sunday, December 31 will appear on your 2017 statement.
   url: /giving/

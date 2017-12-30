@@ -4,7 +4,7 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: true
+- active: false
   type: alert
   icon: money
   message: Friendly Reminder. Gifts received by Sunday, December 31 will appear on your 2017 statement.

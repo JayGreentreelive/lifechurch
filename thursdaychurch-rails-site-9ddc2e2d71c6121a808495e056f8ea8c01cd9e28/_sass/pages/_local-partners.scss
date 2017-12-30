@@ -1,0 +1,84 @@
+// Local Partners
+///////////////////////////////////////////////////////////////////////////////
+
+$connect-locally-orange: #ff4611;
+
+.localpartners {
+  .involved-item {
+    min-height: 360px;
+  }
+  //#search-results-grid {
+    //display: none;
+  //}
+  .hide {
+    display: none;
+  }
+  .cause-panel {
+    padding: 3em;
+    min-height: 370px;
+  }
+  #persistent-navigation li {
+    margin: 0.2em 0;
+    a {
+      background: #0EA9D6 !important;
+      color: white !important;
+      font-size: 12px !important;
+    }
+  }
+  h3 {
+    font-weight: 900;
+  }
+  #navigation .nav-live.is-live.alt {
+    color: darken($connect-locally-orange, 25%) !important;
+  }
+  .text-center {
+    text-align: center;
+  }
+  hr {
+    clear: both;
+  }
+  ul.causes {
+    display: table;
+    margin: auto;
+    text-align: center;
+    li {
+      float: left;
+      display: inline-block;
+      list-style-type: none;
+      border-right: 1px solid #ccc;
+      line-height: 1em;
+      &:last-child {
+        border-right: none;
+      }
+      a {
+        font-size: 0.8em;
+        padding: 0 0.5em;
+        &:active, &:current {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  #hide {
+    visibility: hidden;
+  }
+
+  .connectlocally-logo {
+    @include svg-image('../images/branding/connectlocally-white');
+    width: 250px;
+    height: 115px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background: $connect-locally-orange;
+
+    .hero-inner .hero-copy.alt a {
+      color: white;
+
+      &:hover {
+        color: darken($connect-locally-orange, 15%);
+      }
+    }
+  }
+}

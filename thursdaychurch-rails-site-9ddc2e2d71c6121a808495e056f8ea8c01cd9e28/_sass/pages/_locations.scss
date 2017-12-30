@@ -1,0 +1,651 @@
+// Locations Global
+///////////////////////////////////////////////////////////////////////////////
+
+.pin {
+  @include svg-image('/locations/assets/pin');
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #ada5a5;
+  font-family: $sans-serif;
+  font-size: 9px;
+  text-align: center;
+  text-indent: 6px;
+  text-transform: uppercase;
+  width: 44px;
+  height: 33px;
+  padding-top: 28px;
+}
+
+.pin-state.pin-ok,
+.pin-state.pin-tx {
+  @include svg-image('/locations/assets/pin2');
+}
+
+// Maps General
+///////////////////////////////////////////////////////////////////////////////
+
+.map { 
+  position: relative;
+
+  // Container for all map content
+  @include media(1050px) {
+    height: 680px;
+    overflow: hidden;
+  }
+
+  // General map visual styles
+  .map-visual {
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @include media($medium-screen) {
+      height: 370px;
+    }
+
+    @include media(1050px) {
+      height: 680px;
+      bottom: 0;
+    }
+  }
+
+  // The default map view, loads over all the others
+  #map-default.map-visual {
+    @include transition (all 0.3s ease-in-out);
+    background-color: #a2ddf5;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 270px;
+    opacity: 1;
+
+    .svg & { background-image: url('/locations/assets/map-default-small.svg'); }
+    .no-svg & { background-image: url('/locations/assets/map-default-small.gif'); }
+
+    @include media($medium-screen) {
+      background-size: auto 390px;
+    }
+
+    @include media(1050px) {
+      background-size: auto 750px;
+
+      .svg & { background-image: url('/locations/assets/map-default-large.svg'); }
+      .no-svg & { background-image: url('/locations/assets/map-default-large.gif'); }
+    }
+  }
+
+  // Main panel on the map with all the content in
+  .map-panel, .social-panel {
+    @extend .panel;
+    position: relative;
+    margin: 265px 0 0;
+    max-width: 100%;
+    
+    @include media($medium-screen) {
+      max-width: 400px;
+      margin: 330px auto 0;
+    }
+
+    @include media(1050px) {
+      margin: 50px 0 0;
+      max-height: 520px;
+      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    // Pretend scrollbars on Webkit to keep them in view
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 11px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white; /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    &::-webkit-scrollbar-track { 
+      background-color: #fafafa;
+      border-radius: 8px; 
+    } 
+  }
+
+  // Main sections within the map panel
+  .location-state {
+    @include transition (all 0.3s ease-in-out);
+    overflow: hidden;
+    max-height: 1600px;
+    margin: 0 -1em;
+    padding: 0 1em;
+
+    // Names of states in the main panel view
+    .state-title {
+      @include transition (all 0.3s ease-in-out);
+      margin: 10px 0 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    // Add the "up" icon on state titles
+    .state-title a span:before {
+      @include transition (all 0.3s ease-in-out);
+      content: '\e816 ';
+      display: inline-block; 
+      font-family: 'lctv';
+      font-size: .8em;
+    }
+  }
+
+  // Lists of campus locations in each state
+  .map-list {
+    @include transition (all 0.3s ease-in-out);
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 -1em;
+    padding: 0 1em;
+
+    // Container around each listing
+    li {
+      border-bottom: 1px solid #ddd;
+
+      &:last-child {
+        border: none;
+      }
+
+      // Listing link
+      a {
+        display: block;
+        margin: 0 -1em;
+        padding: .35em 1em .1em 3em;
+
+        p {
+          color: $base-font-color;
+        }
+
+        &:hover {
+          background: #fafafa;
+        }
+      }
+    }
+  }
+
+  // Red markers relating to the map visual
+  .marker {
+    background: $red;
+    border-radius: 100px;
+    color: white;
+    display: block;
+    font-family: $sans-serif;
+    float: left;
+    height: 25px;
+    line-height: 1.7em;
+    margin: 3px 0 0 -2em;
+    text-align: center;
+    width: 25px;
+    
+    // Tail on the marker
+    &:after {
+      content: "";
+      display: block;
+      border-left: 9px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 10px solid $red;
+      height: 0;
+      left: 4px;
+      position: relative;
+      top: -5px;
+      width: 0;
+    }
+  }
+}
+
+$states: online, oklahoma, texas, tennessee, florida, kansas, newyork, newmexico;
+
+@each $state in $states{
+  .map.is-#{$state} {
+  
+    #map-#{$state} {
+      opacity: 1;
+      background-size: auto 350px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-color: #f6f0ef;
+
+      @include media($medium-screen) {
+        background-size: auto 460px;
+      }
+
+      .svg & { background-image: url('/locations/assets/map-#{$state}-small.svg'); }
+      .no-svg & { background-image: url('/locations/assets/map-#{$state}-small.gif'); }
+
+      @include media(1050px) {
+        background-size: auto 790px;
+        background-position: center top;
+
+        .svg & { background-image: url('/locations/assets/map-#{$state}-large.svg'); }
+        .no-svg & { background-image: url('/locations/assets/map-#{$state}-large.gif'); }
+      }
+    }
+
+    #map-default {
+      opacity: 0;
+    }
+
+    .location-state {
+      max-height: 0;
+
+      .state-title {
+        border-bottom: 1px solid white;
+      }
+    }
+ 
+    ##{$state},
+    ##{$state} .map-list,
+    ##{$state} .location-state {
+      max-height: 1820px;  
+    }
+  }
+}
+
+// Add the water to Florida
+.map.is-florida #map-florida {
+  background-color: #a2ddf5;
+}
+
+// Locations page
+///////////////////////////////////////////////////////////////////////////////
+.section-locations {
+  #tertiary {
+    border-bottom: none;
+  }
+}
+
+.page-locations {
+  .closing .container {
+    border: none;
+  }
+
+  #tertiary {
+    visibility: hidden;
+
+    @include media($medium-screen) {
+      visibility: visible;
+      border-bottom: none;
+    }
+  }
+ 
+  .map { 
+    top: -145px;
+    padding-top: 145px;
+    margin-bottom: -145px;
+  }
+
+  .map-panel {
+    margin: 120px 0 0;
+
+    @include media($medium-screen) {
+      margin: 190px auto 0;
+    }
+
+    @include media(1050px) {
+      margin: 0;
+    }
+  }
+}
+
+
+// Campus page
+///////////////////////////////////////////////////////////////////////////////
+
+// Page hero section
+
+.locations-hero {
+  background-position: center top;
+  background-repeat: no-repeat;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 4em;
+
+  @include media($medium-screen) {
+    min-height: 620px;
+    height: auto;
+  }
+
+  .map-panel {
+    @extend .panel;
+    max-width: 400px;
+    text-align: left;
+    float: left;
+    margin-bottom: 15px;
+  }
+  
+  .social-panel {
+    @extend .panel;
+    max-width: 100%;
+    width: 325px;
+    text-align: left;
+    float: right;
+    margin-bottom: 15px;
+    .large {
+      padding: 1em 1em;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.5em;
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 1.25em;
+      margin-top: 0;
+      font-weight: bold;
+    }
+    img {
+      border: 1px solid $medium-gray;
+      max-height: 280px;
+      text-align: center;
+    }
+    .detail {
+      font-size: 0.82em;
+    }
+    @media screen and (max-width: 640px) { 
+      float: left;
+    }
+  }
+
+  h1 {
+    margin: 0 0 .3em;
+  }
+
+  h5 {
+    margin: -4px 0px 25px;
+  }
+
+  .event time {
+    width: 80px;
+    display: inline-block;
+  }
+
+  .day {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: .7em;
+    margin-bottom: .8em;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-locations {
+  .tile-lifegroups {
+    @include retina-image(/locations/assets/campus-tile-lifegroups, cover, jpg);
+    background-position: center;
+  }
+
+  .tile-what-to-expect {
+    @include retina-image(/locations/assets/campus-tile-what-to-expect, cover, jpg);
+    background-position: center;
+  }
+}
+
+// Hide Local Partner images
+#localpartners img {
+  display: none;
+}
+
+// Campus contact forms
+.form-contact {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// ~4 Specific Campus Pages ***************************************
+
+$campuses: alb, bao, bnb, cen, edm, ftw, hnv, jnk, klr, mor, mus, mwc, noc, okc, opk, ows, rrn, sba, shw, soc, sto, stw, tul, wel, wch, ykn;
+
+.hs-form fieldset {
+  background: transparent;
+}
+
+@each $campus in $campuses {
+  .location-#{$campus} .about-lctv-staff {
+    @include retina-image(/locations/assets/campus/#{$campus}-staff, cover, jpg);
+    padding: 13em 0 5em;
+article {
+  width: 100%;
+  text-align: center;
+  padding: 0 3em;
+}
+h2 {
+  color: #fff;
+}
+  }
+}
+
+@each $campus in $campuses {
+  .location-#{$campus} .locations-hero {
+    @include retina-image(/locations/assets/campus/#{$campus}-map, cover, jpg);
+  }
+}
+
+.group.before-spreadtheword {
+  padding-bottom: 2em;
+}
+
+.spreadtheword {
+  padding-top: 3em;
+}
+
+.location-wch #navigation .nav-live {
+  color: #8ca7b6;
+  
+  &:hover {
+    color: darken(#8ca7b6, 15%);
+  }
+}
+
+
+.view-all-states {
+  @include transition (all 0.3s ease-in-out);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  font-family: $sans-serif;
+  font-weight: 300;
+}
+
+$locations: florida, kansas, newmexico, newyork, oklahoma, tennessee, texas;
+
+@each $location in $locations {
+  .is-#{$location} ##{$location} {
+    .state-title {
+      font-size: 2em;
+    }
+
+    .view-all-states {
+      opacity: 1;
+      height: auto;
+    }
+  }
+}
+
+.social {
+  padding: 1em 0;
+}
+
+.map {
+  .state-title,
+  .view-all-states,
+  .map-list,
+  h5,
+  li,
+  .form-contact-simple,
+  .form-contact-simple-hubspot,
+  .detail,
+  .prepend-connect,
+  .close-connect-form {
+    @include transition (all 0.3s ease-in-out); 
+  }
+
+  .prepend-connect,
+  .close-connect-form {
+    max-width: 0;
+    max-height: 0;
+    display: inline-block;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .close-connect-form {
+    display: block;
+  }
+
+  .close-connect-form {
+    font-family: $sans-serif;
+    font-weight: 300;
+  }
+
+  .state-title,
+  .view-all-states,
+  h5,
+  li,
+  .detail {
+    max-height: 1000px;
+  }
+
+  .form-contact-simple,
+  .form-contact-simple-hubspot {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .more-options {
+    border-top: 1px solid $base-border-color;
+    margin: -1px -15px 0;
+    min-height: 65px;
+
+    #online {
+      border-right: 0px solid $base-border-color;
+      @include svg-image('/locations/assets/map-churchonline');
+    }
+
+    #network {
+      @include svg-image('/locations/assets/map-network');
+    }
+
+    #online {
+      display: block;
+      width: 100%;
+      float: left;
+      padding: 40px 0 10px;
+      text-align: center;
+      background-size: 25px 25px;
+      background-position: center 15px;
+      margin-bottom: -15px;
+
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+    #network {
+      display: none;
+    }
+  }
+}
+
+.map.is-connect {
+  .state-title,
+  .view-all-states,
+  h5,
+  li,
+  .detail,
+  .more-options,
+  #network {
+    opacity: 0;
+    min-height: 0;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .show-form .prepend-connect,
+  .close-connect-form {
+    max-width: 400px;
+    opacity: 1;
+    max-height: 16px;
+  }
+
+  .close-connect-form {
+    max-height: 22px;
+  }
+
+  .show-form,
+  .show-form .form-contact-simple,
+  .show-form .form-contact-simple-hubspot {
+    opacity: 1 !important;
+    max-height: 1000px !important;
+    position: relative;
+    z-index: 4;
+  }
+
+  .show-form .form-contact-simple,
+  .show-form .form-contact-simple-hubspot {
+    margin-top: 10px;
+  }
+
+  .show-form {
+    border-color: white;
+  }
+
+  li a,
+  #online {
+    cursor: default;
+
+    h6,
+    h6:hover {
+      color: $base-font-color;
+    }
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  #online {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: none !important;
+    border: none;
+    float: none;
+  }
+}
+
+.location-opk {
+  #serving-4 {
+    display: none;
+  }
+  #serving-5 {
+    clear: none;
+  }
+}

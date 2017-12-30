@@ -18,14 +18,14 @@
     time: 08-30
     day: sun
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 10:00AM
     time: 10-00
     day: sun
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 10:00AM
     time: 10-00
     day: sun
@@ -36,8 +36,8 @@
     time: 11-30
     day: sun
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 11:30AM
     time: 11-30
     day: sun
@@ -54,8 +54,8 @@
     time: 13-00
     day: sun
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 06:00PM
     time: 18-00
     day: sun
@@ -66,8 +66,8 @@
     time: 18-00
     day: sun
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 06:30PM
     time: 18-30
     day: wed
@@ -90,8 +90,8 @@
     time: 17-00
     day: sat
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   - title: 06:30PM
     time: 18-30
     day: sat
@@ -102,12 +102,12 @@
     time: 18-30
     day: sat
     duration: 60
-    type: lifekids
-    type_name: LifeKids
+    type: TCKids
+    type_name: TCKids
   missions:
   - id: 54
     title: Peppers Ranch
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: www.peppersranch.com
     description_medium: Help break the cycle of child abuse and neglect through loving
       and growth-oriented activities with children living on the ranch.
@@ -115,7 +115,7 @@
     tags: adoption,fostering,oklahoma,okc
   - id: 56
     title: Edmond Mobile Meals
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: www.edmondmobilemeals.org
     description_medium: Provide a hot meal to Edmond’s homebound elderly, disabled,
       and recuperating adults while building relationships each visit.
@@ -123,7 +123,7 @@
     tags: food,clothing,shelter,oklahoma,okc
   - id: 3
     title: Whiz Kids
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: http://www.whizkidsok.org/
     description_medium: Improve the well-being of inner city youth through academic
       tutoring, positive mentoring relationships, and communicating spiritual and
@@ -132,7 +132,7 @@
     tags: mentoring,education,oklahoma,okc
   - id: 55
     title: Autism Oklahoma
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: autismoklahoma.org
     description_medium: Grow, learn, and serve the families affected by autism in
       Oklahoma.
@@ -140,7 +140,7 @@
     tags: mentoring,education,autism,oklahoma,okc
   - id: 66
     title: True North Ministries
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: ''
     description_medium: Lead and engage men to become better husbands, fathers, and
       men through mentoring relationships, men’s events, and weekend retreats.
@@ -148,7 +148,7 @@
     tags: spiritual,development,oklahoma,okc
   - id: 80
     title: Bethel Foundation
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: ''
     description_medium: Help single mothers and their children through life skills
       mentoring and assisting to meet their basic needs.
@@ -156,7 +156,7 @@
     tags: single,mom,moms,oklahoma,okc
   - id: 78
     title: LifeTroops
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: ''
     description_medium: Help soldiers returning from combat and family members through
       spiritual mentorship, counseling, educational and other programs that will “bridge
@@ -165,7 +165,7 @@
     tags: military,depression,oklahoma,okc
   - id: 87
     title: Branch15
-    recipient: okc.serving@life.church
+    recipient: okc.serving@Thursday Church
     url: ''
     description_medium: Walk alongside women on their paths to recovery and independent,
       sustainable living.
@@ -178,8 +178,8 @@
   f1_substatus_id: 0
   title: Bicknell Campus
   email: 'bicknell@thursdaychurch.org'
-  phone: 405-680-5433
-  address: 4600 E. 2nd St. Edmond, OK 73034
+  phone: 812-502-2124
+  address: 114 South Main St. Bicknell, IN 47512
   facebook: '203568109785478'
   times: []
   missions: []

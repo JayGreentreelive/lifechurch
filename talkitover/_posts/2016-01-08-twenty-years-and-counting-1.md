@@ -30,7 +30,7 @@ We will lead people to become fully devoted followers of **Christ**.
 ## Discussion Questions
 <p class="lead">Start talking. Find a conversation starter for your group.</p> 
 
-* What first drew you to Life.Church? Share your story of how you came to be a part of our church.
+* What first drew you to Thursday Church? Share your story of how you came to be a part of our church.
 * How has our church changed since your first experience?
 
 <p class="lead">Start thinking. Ask questions to get your group thinking.</p> 
@@ -43,7 +43,7 @@ We will lead people to become fully devoted followers of **Christ**.
 
 * “What kind of church will we be?” We are the church. So what is your personal and your group’s answer to Craig’s question?
 * What are ways you feel like you’ve grown spiritually as a part of our church? How will you return that to lead others to grow?
-* How closely does Life.Church’s reputation for generosity match your own? Recall the changes Craig described the church made. What might have to be different for you to earn a reputation for generosity?
+* How closely does Thursday Church’s reputation for generosity match your own? Recall the changes Craig described the church made. What might have to be different for you to earn a reputation for generosity?
 
 <p class="lead">Start praying. Be bold, and pray specifically.</p> 
 
@@ -59,8 +59,8 @@ Read Acts 2:42-47 and 4:33-35 out loud. This couldn’t be more directly speakin
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
 * Are you “all in”? You’re in a LifeGroup, but has everyone found their place to serve? Encourage each person to get engaged in serving in the church. Your campus staff will be glad to help.
-* Want more reminders of God's faithfulness, power, and goodness? Subscribe to _Ask Think Imagine_ in the YouVersion Bible App. It was written by various Life.Church staff in celebration of our 20-year anniversary!
+* Want more reminders of God's faithfulness, power, and goodness? Subscribe to _Ask Think Imagine_ in the YouVersion Bible App. It was written by various Thursday Church staff in celebration of our 20-year anniversary!
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.Thursday Church/talkitover)_

@@ -38,7 +38,7 @@ Matthew 23:11
 <p class="lead">Start sharing. Choose questions that create openness.</p> 
 
 * Talk about a time you experienced the value of service.
-* Do you serve at Life.Church or in your community? How have your family, work, passion, and relationships been affected?
+* Do you serve at Thursday Church or in your community? How have your family, work, passion, and relationships been affected?
 * Compare times in your life where you’ve been more involved and less involved in service. What patterns do you notice?
 * If you're not currently serving, where do you think God could use you?
 
@@ -55,10 +55,10 @@ Jesus, You were there when life was spoken into being, yet You spent Your life i
 ## Live It Out
 <p class="lead">Start doing. Commit to a step and live it out this week.</p>
 
-* If you aren’t serving yet, check out [www.life.church/serving](http://www.life.church/serving/) for some great serving ideas!
+* If you aren’t serving yet, check out [www.Thursday Church/serving](http://www.Thursday Church/serving/) for some great serving ideas!
 * Start the Love Like Jesus Bible Plan today and learn to serve like Jesus. [go2.lc/lovelikejesus](https://www.bible.com/reading-plans/2391-love-like-jesus)
 * How will our group get involved in service together?
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.Thursday Church/talkitover)_

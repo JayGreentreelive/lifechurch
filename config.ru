@@ -8,14 +8,14 @@ use Rack::Deflater
 #use Rack::AppendTrailingSlash
 
 use Rack::Rewrite do
-  r301 %r{(.*)}, 'http://thursdaychurch.org$&', :if => Proc.new {|rack_env|
-    (rack_env['HTTP_HOST'] =~ /thursdaychurch.org/) == 0
+  r301 %r{(.*)}, 'http://dev.thursdaychurch.org$&', :if => Proc.new {|rack_env|
+    (rack_env['HTTP_HOST'] =~ /dev.thursdaychurch.org/) == 0
   }
 
   r301 %r{^/(?i)digerati/?$}, '/digital-missions/'
   r301 %r{^/(?i)carols/?$}, '/watch/carols/'
   r301 %r{^/(?i)welcome/?$}, '/who-we-are/'
-  r301 %r{^/(?i)lifekids_resources/?$}, '/kids/'
+  r301 %r{^/(?i)TCKids_resources/?$}, '/kids/'
   r301 %r{^/(?i)current_series/?$}, '/watch/'
   r301 %r{^/(?i)giving/digital-missions/results/?$}, 'digital-missions/'
   r301 %r{^/(?i)campus/?$}, '/locations/'
@@ -29,7 +29,7 @@ use Rack::Rewrite do
   r301 %r{^/(?i)free-church-resources/?$}, '/equipping-churches/'
   r301 %r{^/(?i)jobs/68/worship-pastor/?$}, '/jobs/'
   r301 %r{^/(?i)lgresources/?$}, '/lifegroups/'
-  r301 %r{^/(?i)lifekids_resources/series/scoundrels/?$}, '/kids/'
+  r301 %r{^/(?i)TCKids_resources/series/scoundrels/?$}, '/kids/'
   r301 %r{^/(?i)message-archive/one-prayer/3/?$}, '/watch/one-prayer-2010/'
   r301 %r{^/(?i)giving/digital-missions/?$}, '/digital-missions/'
   r301 %r{^/(?i)at-the-movies/?$}, '/atthemovies/'
@@ -71,17 +71,17 @@ use Rack::Rewrite do
   r301 %r{^/(?i)causes/5-distinctives/?$}, '/lifemissions/'
   r301 %r{^/(?i)causes/my-causes/?$}, '/lifemissions/'
   r301 %r{^/(?i)message/?$}, '/watch/'
-  r301 %r{^/(?i)resources/lifekids/?$}, '/kids/'
+  r301 %r{^/(?i)resources/TCKids/?$}, '/kids/'
   r301 %r{^/(?i)contact-us/?$}, '/contact/'
   r301 %r{^/(?i)hnv/?$}, '/locations/hnv/'
   r301 %r{^/(?i)annualreport/?$}, '/giving/'
-  r301 %r{^/(?i)lifekids_resources/menu/?$}, '/kids/'
+  r301 %r{^/(?i)TCKids_resources/menu/?$}, '/kids/'
   r301 %r{^/(?i)resources/lifegroups/print/?$}, '/lifegroups/'
   r301 %r{^/(?i)locations/int/?$}, '/locations/'
   r301 %r{^/(?i)christmas_1/?$}, '/watch/'
   r301 %r{^/(?i)leadership-team/?$}, '/who-we-are/'
   r301 %r{^/(?i)volunteer/?$}, '/serving/'
-  r301 %r{^/(?i)lifekids_resources/toon_town/series/road-trip/?$}, '/kids/'
+  r301 %r{^/(?i)TCKids_resources/toon_town/series/road-trip/?$}, '/kids/'
   r301 %r{^/(?i)leadership-development/?$}, '/digital-missions/'
   r301 %r{^/(?i)leadership/?$}, '/leadershippodcast/'
   r301 %r{^/(?i)leadershipxp/?$}, '/jobs/'
@@ -142,18 +142,18 @@ use Rack::Rewrite do
   r301 %r{^/(?i)keyboard/?$}, 'http://lifechurchkeyboard.webflow.io'
   r301 %r{^/(?i)bible/(\?.*)?}, 'http://app.bible.com/lifechurch$1'
   r301 %r{^/(?i)catalyst/(\?.*)?}, 'http://open.church/catalyst$1'
-  r301 %r{^/(?i)open/(\?.*)?}, 'http://open.life.church'
-  r301 %r{^/(?i)live/(\?.*)?}, 'http://live.life.church'
-  r301 %r{^/(?i)20/(\?.*)?}, 'http://twenty.life.church'
-  r301 %r{^/(?i)twenty/(\?.*)?}, 'http://twenty.life.church'
+  r301 %r{^/(?i)open/(\?.*)?}, 'http://open.Thursday Church'
+  r301 %r{^/(?i)live/(\?.*)?}, 'http://live.Thursday Church'
+  r301 %r{^/(?i)20/(\?.*)?}, 'http://twenty.Thursday Church'
+  r301 %r{^/(?i)twenty/(\?.*)?}, 'http://twenty.Thursday Church'
   r301 %r{^/(?i)brand/(\?.*)?}, ' https://lctv-site.s3.amazonaws.com/brand/LC_Pocket_Guidelines_Web.pdf'
 
 #OPK Redirects
 
-  r301 %r{^/(?i)more/(\?.*)?}, 'http://www.life.church/overlandpark/?utm_source=mailer&utm_medium=promoted&utm_campaign=opk_launch'
-  r301 %r{^/(?i)details/(\?.*)?}, 'http://www.life.church/overlandpark/?utm_source=door&utm_medium=promoted&utm_campaign=opk_launch'
-  r301 %r{^/(?i)info/(\?.*)?}, 'http://www.life.church/overlandpark/?utm_source=invite&utm_medium=promoted&utm_campaign=opk_launch'
-  r301 %r{^/(?i)connect/(\?.*)?}, 'http://www.life.church/overlandpark/?utm_source=perforated&utm_medium=promoted&utm_campaign=opk_launch'
+  r301 %r{^/(?i)more/(\?.*)?}, 'http://www.Thursday Church/overlandpark/?utm_source=mailer&utm_medium=promoted&utm_campaign=opk_launch'
+  r301 %r{^/(?i)details/(\?.*)?}, 'http://www.Thursday Church/overlandpark/?utm_source=door&utm_medium=promoted&utm_campaign=opk_launch'
+  r301 %r{^/(?i)info/(\?.*)?}, 'http://www.Thursday Church/overlandpark/?utm_source=invite&utm_medium=promoted&utm_campaign=opk_launch'
+  r301 %r{^/(?i)connect/(\?.*)?}, 'http://www.Thursday Church/overlandpark/?utm_source=perforated&utm_medium=promoted&utm_campaign=opk_launch'
   r301 %r{^/(?i)stories/(\?.*)?}, 'http://go2.lc/stories'
 
 end

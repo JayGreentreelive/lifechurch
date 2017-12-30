@@ -64,10 +64,10 @@ _Jesus, You said whatever we do for “the least,” we’ve done for You. We wa
 ## Live It Out
 <p class="lead">Start doing. Commit to a step and live it out this week.</p>
 
-* Connect with a local partner near you to learn about getting involved in your community. [www.life.church/localpartners](http://www.life.church/localpartners)
+* Connect with a local partner near you to learn about getting involved in your community. [www.Thursday Church/localpartners](http://www.Thursday Church/localpartners)
 * What will you do to build meaningful relationships with people who are experiencing poverty? 
 * Start reading the practical guide to loving your neighbor as yourself. [www.go2.lc/howtoneighbor](http://www.go2.lc/howtoneighbor) 
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.Thursday Church/talkitover)_

@@ -90,7 +90,7 @@
     //padding-bottom: 150px;
 
     @include media($medium-screen) {
-  //    @include retina-image(/images/home/generic-bg, cover, jpg);
+      @include retina-image(/images/home/home-bg, cover, jpg);
       height: auto;
       background-color: #490b4d;
       padding-bottom: 7em;

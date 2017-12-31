@@ -16,7 +16,7 @@
     type_name: Service
   - title: 08:30AM
     time: 08-30
-    day: sun
+    day: thur
     duration: 60
     type: TCKids
     type_name: TCKids

@@ -31,17 +31,30 @@
 
 - id: bic
   rock_campus_id: 2
-  rock_substatus_id: 0
+  f1_substatus_id: 381
   title: Bicknell Campus
-  email: 'bicknell@thursdaychurch.org'
-  phone: 812-502-2124
-  address: 114 South Main St. Bicknell, IN 47512
+  email: bicknell@thursdaychurch.org
+  phone: 812-882-2737
+  address: 114 South Main St. Bicknell, IN 47591
   facebook: '889236287834897'
-  times: 
+  times:
+  - title: 06:45PM
+    time: 06-45
+    day: thu
+    duration: 60
+    type: service
+    type_name: Service
   - title: 06:45PM
     time: 06-45
     day: thur
     duration: 60
     type: TCKids
     type_name: TCKids
-  missions: []
+  missions:
+  - id: 54
+    title: Horizon International
+    recipient: info@ThursdayChurch.org
+    url: horizonorphans.com
+    description_medium: Horizon International is a non-denominational Christian ministry guided by our mission and vision to create a world of hope through African orphans.
+    cause: Adoption & Foster Care
+    tags: adoption,fostering,oklahoma,okc

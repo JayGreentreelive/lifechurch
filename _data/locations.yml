@@ -20,97 +20,13 @@
     duration: 60
     type: TCKids
     type_name: TCKids
-  - title: 10:00AM
-    time: 10-00
-    day: sun
-    duration: 60
-    type: TCKids
-    type_name: TCKids
-  - title: 10:00AM
-    time: 10-00
-    day: sun
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 11:30AM
-    time: 11-30
-    day: sun
-    duration: 60
-    type: TCKids
-    type_name: TCKids
-  - title: 11:30AM
-    time: 11-30
-    day: sun
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 01:00PM
-    time: 13-00
-    day: sun
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 01:00PM
-    time: 13-00
-    day: sun
-    duration: 60
-    type: TCKids
-    type_name: TCKids
-  - title: 06:00PM
-    time: 18-00
-    day: sun
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 06:00PM
-    time: 18-00
-    day: sun
-    duration: 60
-    type: TCKids
-    type_name: TCKids
-  - title: 06:30PM
-    time: 18-30
-    day: wed
-    duration: 120
-    type: switch
-    type_name: Switch
-  - title: 06:30PM
-    time: 18-30
-    day: wed
-    duration: 120
-    type: roots
-    type_name: Roots
-  - title: 05:00PM
-    time: 17-00
-    day: sat
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 05:00PM
-    time: 17-00
-    day: sat
-    duration: 60
-    type: TCKids
-    type_name: TCKids
-  - title: 06:30PM
-    time: 18-30
-    day: sat
-    duration: 60
-    type: service
-    type_name: Service
-  - title: 06:30PM
-    time: 18-30
-    day: sat
-    duration: 60
-    type: TCKids
-    type_name: TCKids
   missions:
   - id: 54
-    title: Peppers Ranch
-    recipient: okc.serving@Thursday Church
-    url: www.peppersranch.com
-    description_medium: Help break the cycle of child abuse and neglect through loving
-      and growth-oriented activities with children living on the ranch.
+    title: Horizon International
+    recipient: info@ThursdayChurch.org
+    url: horizonorphans.com
+    description_medium: Horizon International is a non-denominational Christian ministry guided by our mission and vision to
+create a world of hope through African orphans.
     cause: Adoption & Foster Care
     tags: adoption,fostering,oklahoma,okc
   - id: 56

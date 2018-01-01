@@ -36,6 +36,12 @@
   email: 'bicknell@thursdaychurch.org'
   phone: 812-502-2124
   address: 114 South Main St. Bicknell, IN 47512
-  facebook: '203568109785478'
-  times: []
+  facebook: '889236287834897'
+  times: 
+  - title: 06:45PM
+    time: 06-45
+    day: thur
+    duration: 60
+    type: TCKids
+    type_name: TCKids
   missions: []

@@ -4,7 +4,7 @@ categories: locations
 permalink: /comingsoon/
 location-id: wch
 class: section-locations location-promo location-wch header-light logo-white-white
-title: Wichita
+title: Washington
 location: true
 times: true
 serving: true
@@ -31,21 +31,21 @@ connect: true
   <h2>Learn More and Spread the Word</h2> 
 
   <p>Thursday Church wants to make a lasting difference in your life, community, and in the world.<p>
-  <p>Our mission is to lead people to become fully devoted followers of Christ. That's how we want to make a difference in Wichita. Here’s how you can help:</p>
+  <p>Our mission is to lead people to become fully devoted followers of Christ. That's how we want to make a difference in Washington. Here’s how you can help:</p>
 
   <ul class="default">
-  <li>Sign up to receive updates about the LifeChurch.tv Wichita campus, launch date, and staff team.</li>
-  <li>Like the <a href="http://www.facebook.com/{{ page.facebook }}">LifeChurch.tv Wichita Facebook page</a> to get the latest news.</li>
-  <li>Invite your friends in the Wichita area:</li>
+  <li>Sign up to receive updates about the Thursday Church Washington campus, launch date, and staff team.</li>
+  <li>Like the <a href="http://www.facebook.com/{{ page.facebook }}">Thursday Church Washington Facebook page</a> to get the latest news.</li>
+  <li>Invite your friends in the Washington area:</li>
   </ul>
 
-  <a onclick="return popitup('http://twitter.com/home/?status=LifeChurch.tv is coming to Wichita, Kansas! Get more info at lifechurch.tv/wichita'); ga('send', 'event', 'Locations', 'Click', 'Wichita Share Twitter')" href="http://twitter.com/home/?status=LifeChurch.tv is coming to Wichita, Kansas! Get more info at lifechurch.tv/wichita" target="_blank" class="action"><i class="icon-social-twitter"></i> Invite on Twitter</a>
-   <a onclick="return popitup('http://www.facebook.com/sharer.php?app_id=567912296616576&amp;sdk=joey&amp;u=http%3A%2F%2Fwww.lifechurch.tv/locations/wch'); ga('send', 'event', 'Locations', 'Click', 'Wichita Share Facebook')" href="http://www.facebook.com/sharer.php?app_id=567912296616576&amp;sdk=joey&amp;u=http%3A%2F%2Fwww.lifechurch.tv/locations/wch" target="_blank" class="action"><i class="icon-social-facebook"></i> Invite on Facebook</a>
+  <a onclick="return popitup('http://twitter.com/home/?status=Thursday Church is coming to Washington, Indiana! Get more info at thursdaychurch.org/Washington'); ga('send', 'event', 'Locations', 'Click', 'Washington Share Twitter')" href="http://twitter.com/home/?status=Thursday Church is coming to Washington, Kansas! Get more info at Thursday Church/Washington" target="_blank" class="action"><i class="icon-social-twitter"></i> Invite on Twitter</a>
+   <a onclick="return popitup('http://www.facebook.com/sharer.php?app_id=567912296616576&amp;sdk=joey&amp;u=http%3A%2F%2Fwww.Thursday Church/locations/wch'); ga('send', 'event', 'Locations', 'Click', 'Washington Share Facebook')" href="http://www.facebook.com/sharer.php?app_id=567912296616576&amp;sdk=joey&amp;u=http%3A%2F%2Fwww.Thursday Church/locations/wch" target="_blank" class="action"><i class="icon-social-facebook"></i> Invite on Facebook</a>
   </article>
 
   <figure>
   <div class="panel">
-  <h6>Get email updates about LifeChurch.tv Wichita.</h6>
+  <h6>Get email updates about Thursday Church Washington.</h6>
   <p>We’ll send you information about the official launch and how you can help. But you won't get one thing: spam.</p>
 
   <!-- Begin MailChimp Signup Form -->
@@ -59,14 +59,14 @@ connect: true
   <div class="response" id="mce-success-response" style="display:none"></div>
   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;"><input type="text" name="b_b3c2f9fbc0f40f32a4499f197_54ae25fb12" tabindex="-1" value=""></div>
-  <div class="clear"><input type="submit" value="Get updates" name="subscribe" id="mc-embedded-subscribe" class="button large expand" onclick="ga('send', 'event', 'Locations', 'Click', 'Wichita Email');"></div>
+  <div class="clear"><input type="submit" value="Get updates" name="subscribe" id="mc-embedded-subscribe" class="button large expand" onclick="ga('send', 'event', 'Locations', 'Click', 'Washington Email');"></div>
   </form>
   </div>
   <!--End mc_embed_signup-->
 
   <hr />
-  <p>Get the latest news about LifeChurch.tv Wichita.</p>
-  <a class="button large expand" href="http://www.facebook.com/{{ page.facebook }}" onclick="ga('send', 'event', 'Locations', 'Click', 'Wichita Facebook Page');">Visit our Facebook Page </a>
+  <p>Get the latest news about Thursday Church Washington.</p>
+  <a class="button large expand" href="http://www.facebook.com/{{ page.facebook }}" onclick="ga('send', 'event', 'Locations', 'Click', 'Washington Facebook Page');">Visit our Facebook Page </a>
   </div>
   </figure>
 </section>

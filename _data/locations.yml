@@ -14,8 +14,8 @@
     duration: 60
     type: service
     type_name: Service
-  - title: 08:30AM
-    time: 08-30
+  - title: 06:45PM
+    time: 06-45
     day: thur
     duration: 60
     type: TCKids
@@ -28,65 +28,6 @@
     description_medium: Horizon International is a non-denominational Christian ministry guided by our mission and vision to create a world of hope through African orphans.
     cause: Adoption & Foster Care
     tags: adoption,fostering,oklahoma,okc
-  - id: 56
-    title: Edmond Mobile Meals
-    recipient: okc.serving@Thursday Church
-    url: www.edmondmobilemeals.org
-    description_medium: Provide a hot meal to Edmond’s homebound elderly, disabled,
-      and recuperating adults while building relationships each visit.
-    cause: Food, Clothing, & Shelter
-    tags: food,clothing,shelter,oklahoma,okc
-  - id: 3
-    title: Whiz Kids
-    recipient: okc.serving@Thursday Church
-    url: http://www.whizkidsok.org/
-    description_medium: Improve the well-being of inner city youth through academic
-      tutoring, positive mentoring relationships, and communicating spiritual and
-      moral values.
-    cause: Mentoring & Education
-    tags: mentoring,education,oklahoma,okc
-  - id: 55
-    title: Autism Oklahoma
-    recipient: okc.serving@Thursday Church
-    url: autismoklahoma.org
-    description_medium: Grow, learn, and serve the families affected by autism in
-      Oklahoma.
-    cause: Mentoring & Education
-    tags: mentoring,education,autism,oklahoma,okc
-  - id: 66
-    title: True North Ministries
-    recipient: okc.serving@Thursday Church
-    url: ''
-    description_medium: Lead and engage men to become better husbands, fathers, and
-      men through mentoring relationships, men’s events, and weekend retreats.
-    cause: Spiritual Development
-    tags: spiritual,development,oklahoma,okc
-  - id: 80
-    title: Bethel Foundation
-    recipient: okc.serving@Thursday Church
-    url: ''
-    description_medium: Help single mothers and their children through life skills
-      mentoring and assisting to meet their basic needs.
-    cause: Mentoring & Education
-    tags: single,mom,moms,oklahoma,okc
-  - id: 78
-    title: LifeTroops
-    recipient: okc.serving@Thursday Church
-    url: ''
-    description_medium: Help soldiers returning from combat and family members through
-      spiritual mentorship, counseling, educational and other programs that will “bridge
-      the gap” between reintegration and everyday life.
-    cause: Military
-    tags: military,depression,oklahoma,okc
-  - id: 87
-    title: Branch15
-    recipient: okc.serving@Thursday Church
-    url: ''
-    description_medium: Walk alongside women on their paths to recovery and independent,
-      sustainable living.
-    cause: Recovery & Transitional Living
-    tags: []
-
 
 - id: bic
   f1_campus_id: 7265

@@ -212,7 +212,7 @@
   }
 }
 
-$states: online, oklahoma, texas, tennessee, florida, kansas, newyork, newmexico;
+$states: online, indiana;
 
 @each $state in $states{
   .map.is-#{$state} {

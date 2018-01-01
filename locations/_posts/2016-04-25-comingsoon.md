@@ -1,7 +1,7 @@
 ---
 layout: locations
 categories: locations
-permalink: /wichita/
+permalink: /comingsoon/
 location-id: wch
 class: section-locations location-promo location-wch header-light logo-white-white
 title: Wichita
@@ -18,8 +18,8 @@ connect: true
 
   <div class="hero-inner">
   <div class="hero-copy">
-  <h1>Coming soon: LifeChurch.tv Wichita, Kansas</h1>
-  <p>Together, we can reach people in Wichita with the love of Christ. LifeChurch.tv is excited to become part of the community at Coleman Middle School this summer.</p>
+  <h1>Coming soon: Thursday Church Washington, Indiana</h1>
+  <p>Together, we can reach people in Washington with the love of Christ. Thursday Church is excited to become part of the community at Coleman Middle School this summer.</p>
   </div>
   </div>
 </section>
@@ -30,7 +30,7 @@ connect: true
   <article>
   <h2>Learn More and Spread the Word</h2> 
 
-  <p>LifeChurch.tv wants to make a lasting difference in your life, community, and in the world.<p>
+  <p>Thursday Church wants to make a lasting difference in your life, community, and in the world.<p>
   <p>Our mission is to lead people to become fully devoted followers of Christ. That's how we want to make a difference in Wichita. Here’s how you can help:</p>
 
   <ul class="default">

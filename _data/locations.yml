@@ -1,6 +1,6 @@
 ---
 - id: vin
-  f1_campus_id: 4351
+  rock_campus_id: 1
   f1_substatus_id: 381
   title: Vincennes, IN
   email: vincennes@thursdaychurch.org
@@ -30,8 +30,8 @@
     tags: adoption,fostering,oklahoma,okc
 
 - id: bic
-  f1_campus_id: 7265
-  f1_substatus_id: 0
+  rock_campus_id: 2
+  rock_substatus_id: 0
   title: Bicknell Campus
   email: 'bicknell@thursdaychurch.org'
   phone: 812-502-2124

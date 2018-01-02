@@ -102,7 +102,7 @@
     }
     
     h1 {
-     // @include hide-text;
+     @include hide-text;
      // @include retina-image(/images/home/home-title, contain);
       background-size: contain;
       background-repeat: no-repeat;

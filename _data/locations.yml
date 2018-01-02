@@ -21,7 +21,7 @@
     type: service
     type_name: Service
   missions:
-  - id: 54
+  - id: 1
     title: Horizon International
     recipient: info@ThursdayChurch.org
     url: horizonorphans.com
@@ -44,7 +44,7 @@
     type: service
     type_name: Service
   missions:
-  - id: 54
+  - id: 3
     title: Horizon International
     recipient: info@ThursdayChurch.org
     url: horizonorphans.com

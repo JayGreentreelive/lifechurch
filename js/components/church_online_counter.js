@@ -47,7 +47,7 @@ jQuery(function() {
               }
             }
           }
-          $('[data-churchonline-counter]').text("in " + (hours == "0" ? "" : (hours + "hours ")) + (minutes == "0" ? "" : (minutes + "mins ")) + (seconds + "secs"))
+          $('[data-churchonline-counter]').text("in " + (days == "0" ? "" : (days + "days ")) + (hours == "0" ? "" : (hours + "hours ")) + (minutes == "0" ? "" : (minutes + "mins ")) + (seconds + "secs"))
           if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) {
             goLive();
             return clearInterval(intervalId);

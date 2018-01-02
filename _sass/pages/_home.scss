@@ -71,7 +71,7 @@
   ///////////////////////////////////////////////////////////////////////////////
 
   &.generic {
-    //@include retina-image(/images/home/generic-bg, 200px auto, jpg);
+    @include retina-image(/images/home/generic-bg, 200px auto, jpg);
     background-position: top left;
     background-repeat: no-repeat;
 
@@ -83,7 +83,7 @@
 
   .hero {
     min-height: 200px;
-   // @include retina-image(/images/home/generic-bg, cover, jpg);
+    @include retina-image(/images/home/generic-bg, cover, jpg);
     background-position: top center;
     background-color: #490b4d;
     position: relative;

@@ -10,8 +10,8 @@
 
   #header-logo {
    @include span-columns(8);
-  // @include svg-image('../images/branding/logo-red-black');
-  // @extend %hide-text;
+   @include svg-image('../images/branding/logo-red-black');
+   @extend %hide-text;
 
     .logo-white-white & {
    //   @include svg-image('../images/branding/logo-white-white');
@@ -121,7 +121,8 @@
   border-bottom: 1px solid #DDD;
 
   #header-logo {
-  //   @include svg-image('../images/branding/logo-red-black');
+//     @include svg-image('../images/branding/logo-red-black');
+       @include svg-image('../images/branding/logo.svg');
   }
 
   div nav a {

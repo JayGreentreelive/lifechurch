@@ -6,6 +6,6 @@
 
 - active: true
   type: alert
-  icon: money
-  message: <span data-churchonline-counter></span>
-  url: /giving/
+  icon: calendar
+  message: data-churchonline-counter
+  url: /live/

@@ -1,8 +1,8 @@
 ---
 - id: vin
   rock_campus_id: 1
-  f1_substatus_id: 381
-  title: Vincennes, IN
+  f1_substatus_id: 
+  title: Vincennes
   email: vincennes@thursdaychurch.org
   phone: 812-882-2737
   address: 218 Main St. Vincennes, IN 47591
@@ -30,7 +30,7 @@
     tags: adoption,fostering,oklahoma,okc
 - id: bic
   rock_campus_id: 2
-  f1_substatus_id: 381
+  f1_substatus_id: 
   title: Bicknell Campus
   email: bicknell@thursdaychurch.org
   phone: 812-882-2737

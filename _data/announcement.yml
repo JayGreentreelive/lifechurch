@@ -7,5 +7,5 @@
 - active: true
   type: alert
   icon: calendar
-  message: data-churchonline-counter
+  message: We are live Join us online.
   url: /live/

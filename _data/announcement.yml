@@ -4,7 +4,7 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: true
+- active: false
   type: alert
   icon: calendar
   message: We are live Join us online.

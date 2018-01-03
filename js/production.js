@@ -1317,6 +1317,13 @@ $("body").delegate(".breadcrumb .current", "click", function() {
   return false;
 });
 
+
+// Indiana
+$(".map").delegate("#Indiana .state-title a, #Indiana .view-all-states", "click", function() {
+  $(".map").toggleClass("is-Indiana is-zoomed");
+  return false;
+});
+
 // Oklahoma
 $(".map").delegate("#oklahoma .state-title a, #oklahoma .view-all-states", "click", function() {
   $(".map").toggleClass("is-oklahoma is-zoomed");

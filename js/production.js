@@ -853,7 +853,7 @@ $(document).ready(function(){
     var videoId = $(this).data('video-player');
     var videoWrapper = $("#video-"+videoId);
     $('body').addClass('noscroll');
-    $("#player-"+videoId).html('<iframe src="http://player.theplatform.com/p/IfSiAC/bTc5flAyW_uT/embed/select/media/'+videoId+'?form=html" width="100%" height="100%" frameBorder="0" seamless="seamless" allowFullScreen></iframe>');
+    $("#player-"+videoId).html('<iframe src="http://youtube.com/embed/'+videoId+" width="100%" height="100%" frameBorder="0" seamless="seamless" allowFullScreen></iframe>');
     videoWrapper.show();
     LastVideoId = videoId;
   }

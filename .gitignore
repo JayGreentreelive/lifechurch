@@ -7,6 +7,7 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+<<<<<<< HEAD
 
 # Windows Installer files
 *.cab
@@ -45,10 +46,47 @@ js/production.min.js
 .Trashes
 .VolumeIcon.icns
 
+=======
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+>>>>>>> parent of b61196e... Updates 2016-10-19
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
+<<<<<<< HEAD
+>>>>>>> parent of b61196e... Updates 2016-10-19
+=======
 >>>>>>> parent of b61196e... Updates 2016-10-19

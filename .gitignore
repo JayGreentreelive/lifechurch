@@ -1,29 +1,54 @@
-# Numerous always-ignore extensions
-*.ai
-*.zip
-*.psd
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.vi
-*~
-*.sass-cache
-.sass-cache
-.sass-cache/*
-
-Files to ignore
-#Gemfile.lock
-.ruby-version
-
-# OS or Editor folders
-.DS_Store
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
 
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+<<<<<<< HEAD
 # Folders to ignore
 _site
 node_modules
 js/production.min.js
+=======
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+>>>>>>> parent of b61196e... Updates 2016-10-19

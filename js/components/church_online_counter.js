@@ -12,7 +12,6 @@ jQuery(function() {
   goLive = function() {
     $('.nav-live').addClass('is-live');
     $('[data-churchonline-counter]').text("Live Now").addClass("live");
-    $('[data-churchonline-counter-watch]').text("now!").addClass("live");
   };
   days = void 0;
   hours = void 0;
@@ -20,7 +19,7 @@ jQuery(function() {
   seconds = void 0;
   intervalId = void 0;
   return $.ajax({
-    url: "http://live.thursdaychurch.org/api/v1/events/current",
+    url: "http://live.lifechurch.tv/api/v1/events/current",
     dataType: "json",
     success: function(data) {
       var date, dateString, seconds_till;
@@ -47,12 +46,11 @@ jQuery(function() {
               }
             }
           }
-          $('[data-churchonline-counter]').text("in " + (days == "0" ? "" : (days + "days ")) + (hours == "0" ? "" : (hours + "hours ")) + (minutes == "0" ? "" : (minutes + "mins ")) + (seconds + "secs"))
+          $('[data-churchonline-counter]').text("in " + (hours == "0" ? "" : (hours + "hours ")) + (minutes == "0" ? "" : (minutes + "mins ")) + (seconds + "secs"))
           if (seconds === 0 && minutes === 0 && hours === 0 && days === 0) {
             goLive();
             return clearInterval(intervalId);
           }
-          
         }, 1000);
       }
     },

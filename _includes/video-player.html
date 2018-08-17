@@ -3,7 +3,7 @@
   <div class="video-player-inner">
 
     <div class="wistia-flex-video widescreen">
-     <!--  <iframe src="//fast.wistia.net/embed/iframe/{{include.id}}?playerColor=B9252D&version=v1" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe> -->
+      <iframe src="//fast.wistia.net/embed/iframe/{{include.id}}?playerColor=B9252D&version=v1" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="640" height="360"></iframe>
     </div>
     <div class="social">
 
@@ -15,25 +15,10 @@
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=567912296616576";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-      </script>
-
-      <!-- Track Facebook Shares in Google Analytics -->
-
-      <script>
-      $(document).ready(function() {
-       var pathName = window.location.pathname;
-
-          $('.button-facebook').click(function() {
-            var selId = $(this).attr('id');
-            ga('send', 'social', 'facebook', 'share', pathName);
-          });
-        });
-      </script>
+      }(document, 'script', 'facebook-jssdk'));</script>
 
       <div class="button-twitter">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="thursdaychurch">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="lifechurchtv">Tweet</a>
       </div>
 
       <div class="button-facebook">

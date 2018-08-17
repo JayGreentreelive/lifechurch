@@ -4,7 +4,7 @@
 
 .hero {
   background-color: black;
-  @include retina-image(/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
+  @include retina-image(/images/watch/landings/atthemovies/hero-bg-small, cover, jpg);
   background-size: cover;
   background-position: center bottom;
   height: 620px;
@@ -12,8 +12,8 @@
   position: relative;
 
   @include media($medium-screen) {
-    @include retina-image(/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
-    background-size: cover;
+    @include retina-image(/images/watch/landings/atthemovies/hero-bg, 1500px auto, jpg);
+    background-size: 1500px auto;
     height: 600px;
   }
   
@@ -26,11 +26,10 @@
     color: white;
     //padding-top: 1.5em;
     font-weight: 300;
-    text-transform: uppercase; 
   }
 
   .action {
-    color: $dark-red;
+    color: #86def7;
 
     &:hover {
       color: $blue;
@@ -46,10 +45,6 @@
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
-    
-    .lead {
-      font-size: 1.25em !important;
-    }
 
     .action {
       color: $medium-gray;

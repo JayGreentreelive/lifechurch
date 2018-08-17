@@ -1,11 +1,11 @@
 # type: notice or alert
 # active: true or false
-# icon: weather-snow, weather-rain, campus, money, calendar, maintenance, tree
+# icon: weather-snow, weather-rain, campus, money, calendar, maintenance
 # message: the message in the announcement
 # url: link or leave blank
 
 - active: false
-  type: alert
+  type: notice
   icon: calendar
-  message: We are live Join us online.
-  url: /live/
+  message: View additional Easter service times.
+  url: /easter/

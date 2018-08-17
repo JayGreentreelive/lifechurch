@@ -6,8 +6,6 @@ module.exports = function(grunt) {
     concat: {   
       dist: {
         src: [
-          'js/libs/jquery.event.move.js',
-          'js/libs/jquery.event.swipe.js',
           'js/libs/jquery.stellar.min.js',
           'js/components/*.js',
           'js/layout/*.js'

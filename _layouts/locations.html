@@ -4,147 +4,182 @@ section: locations
 hero: locations-hero
 ---
 
+</section>
+
 {% for location in site.data.locations %}
 {% if location.id == page.location-id %}
 
-  <div id="location" class="container">
-    <div class="map-panel">
-      <h1>{{ page.title }}</h1>
-      <h5>
-        {% unless page.phone == false %}{{ location.phone }}<br />{% endunless %}
-        {{ location.address }} 
-        {% if location.id == 'bnb' %}
-        <a href="http://maps.google.com/?q=Thursday Church Broadway and Britton Campus" class="action" target="_blank">(get directions)</a><br class="large-element" />
-        {% elsif location.id == 'wel' %}
-        <a href="http://maps.google.com/?q=Thursday Church Wellington" class="action" target="_blank">(get directions)</a><br class="large-element" />
-        {% else %}
-        <a href="http://maps.google.com/?q={{ location.address }}" class="action" target="_blank">(get directions)</a><br class="large-element" />
-        {% endif %}
-      </h5>
-      
-      {% if page.times == true %}
-      <section id="times">
-        <section class="calendar showing-saturday">
-        <!-- Saturday -->
-          <article class="saturday day">
-            <h6>Saturday</h6>
+{% if page.spreadtheword == true %}
+<div class="group before-spreadtheword">
+{% else %}
+<div class="group">
+{% endif %}
 
-            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' %}{% if time.day == 'sat' %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-              <time>{{ time.title }}</time>
-              <span>
-                {% if time.type == 'service' %}Service &amp; TCKids
-                {% elsif time.type == 'switch' %}Switch &amp; Roots
-                {% endif %}
-              </span>
-            </div>
-            {% endif %}{% endunless %}{% endfor %}
-          </article>
-          <!-- Sunday -->
-          <article class="sunday day">
-            <h6>Sunday</h6>
-          
-            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'sun' %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-              <time>{{ time.title }}</time>
-              <span>
-                {% if time.type == 'service' %}Service &amp; TCKids
-                {% elsif time.type == 'switch' %}Switch &amp; Roots
-                {% endif %}
-              </span>
-            </div>
-            {% endif %}{% endunless %}{% endfor %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-            {% if location.id == 'stw' %}
-             <time>09:00PM</time> <span>Service Only</span>
-             {% endif %}
-             </div>
-          </article>
-          <!-- Monday -->
-            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'mon' %}
-            <article class="monday day">
-            <h6>Monday</h6>
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-              <time>{{ time.title }}</time>
-              <span>
-                {% if time.type == 'service' %}Service &amp; TCKids
-                {% elsif time.type == 'switch' %}Switch &amp; Roots
-                {% endif %}
-              </span>
-            </div>
-            {% endif %}{% endunless %}{% endfor %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-             </div>
-          </article>
-          <!-- Wednesday -->
-          <article class="wednesday day">
-            <h6>Wednesday</h6>
-            
-            <!--<p class="detail"><em>Switch relaxes in the summer, just like you! Beginning in August, Switch experiences will be back on Wednesday nights at the time below.</em></p>-->
-            
-            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' %}{% if time.day == 'wed' %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-              <time>{{ time.title }}</time>
-              <span>
-                {% if time.type == 'service-time' %}Service &amp; TCKids
-                {% elsif time.type == 'switch' %}Switch &amp; Roots
-                {% endif %}
-              </span>
-            </div>
-            {% endif %}{% endunless %}{% endfor %}
-          </article>
-          <!-- Thursday -->
-          
-            {% for time in location.times %}{% unless time.type == 'TCKids' or time.type == 'roots' or (time.time == '21-00' and location.id == 'stw') %}{% if time.day == 'thu' %}
-            <article class="thursday day">
-            <h6>Thursday</h6>
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-              <time>{{ time.title }}</time>
-              <span>
-                {% if time.type == 'service' %}Service &amp; TCKids
-                {% elsif time.type == 'switch' %}Switch &amp; Roots
-                {% endif %}
-              </span>
-            </div>
-            {% endif %}{% endunless %}{% endfor %}
-            <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
-            <!--  {% if location.id == 'stw' %}
-             <time>09:00PM</time> <span>Service Only</span>
-             {% endif %} -->
-             </div>
-          </article>
-        </section>
-        <!-- End calendar -->
-      </section>
-      {% endif %}
-      
+  <!-- Location Header -->
+  <section class="single text-center">
+    <header>
+      <h1>{{ location.title }}</h1>
+      {% include locations-nav.html %}
+    </header>
+  </section>
 
-      {% if page.mailer and page.times == true %}
-      
-      {% endif %}
+{% if page.spreadtheword == true %}
+</div>
+{% endif %}
 
-      {% if page.form %}
-      <p>Sign up to get updates on how you can help with the campus launch in {{ page.launch-date}}!</p>
-      
-      <p><a class="button large expand" href="{{ page.form }}" onclick="ga('send', 'event', 'Locations', 'Click', '{{ location.title }} Form');">Get updates</a></p>
-      <p><a class="button large expand secondary" href="http://www.facebook.com/{{ location.facebook }}" onclick="ga('send', 'event', 'Locations', 'Click', 'Facebook Page');">Visit our Facebook Page </a></p>
-      {% elsif page.mailer %}
-      {% include locations-mailer.html %}
-      {% endif %}
-    </div>
+{% if page.spreadtheword == true and page.mailer %}
+<!-- Spread the Word with Mailer -->
+<div class="group alt spreadtheword">
+  <div class="container">
+    <section id="spreadtheword" class="article-with-figure">
+      <article>
+        <h2>Spread the Word</h2>
+        {% include locations-spreadtheword.html %}
+      </article>
+
+      <figure>
+        {% include locations-mailer.html %}
+      </figure>
+    </section>
   </div>
-</section>
+</div>
+{% elsif page.spreadtheword == true %}
+<!-- Spread the Word without Mailer -->
+<div class="group alt">
+  <section class="single">
+    <header class="text-center">
+      <h2>Spread the Word</h2>
+    </header>
+    <article>
+      {% include locations-spreadtheword.html %}
+    </article>
+  </section>
+</div>
+{% endif %}
 
-{% if page.serving == true or location.missions != empty or page.events == true %}
-<!-- Location Header -->
-<section class="single text-center">
-  {% include locations-nav.html %}
+{% if page.location == true %}
+{% if page.spreadtheword == true %}
+<div id="location" class="group">
+{% else %}
+<div id="location">
+{% endif %}
+  <!-- Location Map -->
+  {% if page.spreadtheword == true %}
+  <div class="single">
+    <article class="text-center">
+      <h2>{{ location.title }} Location</h2>
+    </article>
+  </div>
+
+  <div class="container padded">
+  {% else %}
+  <div class="container">
+  {% endif %}
+    <section class="locations-map">
+      <div class="pin"></div>
+      <div class="address">
+        {{ location.address }}<br />
+        {{ location.phone }}<br />
+        <a href="http://maps.google.com/?q={{ location.address }}" class="action">Get Directions <i class="icon icon-arrow"></i></a><br class="large-element" />
+        <a class="action" href="https://www.facebook.com/{{ location.facebook }}">Facebook Page <i class="icon icon-arrow"></i></a>
+      </div>
+    </section>
+  </div>
+</div>
+{% endif %}
+
+{% if page.spreadtheword != true %}</div>{% endif %}
+
+{% if page.times == true %}
+<section id="times" class="group alt">
+  <div class="container">
+    <header class="text-center">
+      <h2>{{ page.title }} Service Times</h2>
+    </header>
+
+    <section class="calendar showing-saturday">
+
+      <a class="calendar-left" href="javascript:void(0);"><i class="icon icon-arrow icon-arrow-left"></i> Previous</a>
+      <a class="calendar-right" href="javascript:void(0);">Next <i class="icon icon-arrow"></i></a>
+
+      <article class="saturday day">
+        <header>Saturday</header>
+
+        {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' %}{% if time.day == 'sat' %}
+        <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
+          <time>{{ time.title }}</time>
+          <span>
+            {% if time.type == 'service-time' %}Service &amp; LifeKids
+            {% elsif time.type == 'switch' %}Switch &amp; Roots
+            {% endif %}
+          </span>
+        </div>
+        {% endif %}{% endunless %}{% endfor %}
+      </article>
+
+      <article class="sunday day">
+        <header>Sunday</header>
+      
+        {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' %}{% if time.day == 'sun' %}
+        <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
+          <time>{{ time.title }}</time>
+          <span>
+            {% if time.type == 'service-time' %}Service &amp; LifeKids
+            {% elsif time.type == 'switch' %}Switch &amp; Roots
+            {% endif %}
+          </span>
+        </div>
+        {% endif %}{% endunless %}{% endfor %}
+      </article>
+
+      <article class="wednesday day">
+        <header>Wednesday</header>
+        
+        {% for time in location.times %}{% unless time.type == 'lifekids' or time.type == 'roots' %}{% if time.day == 'wed' %}
+        <div class="event is-{{ time.type }} time-{{ time.time }} duration-{{ time.duration }}">
+          <time>{{ time.title }}</time>
+          <span>
+            {% if time.type == 'service-time' %}Service &amp; LifeKids
+            {% elsif time.type == 'switch' %}Switch &amp; Roots
+            {% endif %}
+          </span>
+        </div>
+        {% endif %}{% endunless %}{% endfor %}
+      </article>
+    </div>
+    <!-- End calendar -->
+
+    <!--
+      {% if page.location-id == 'edm' or page.location-id == 'ftw' or page.location-id == 'mwc' or page.location-id == 'noc' or page.location-id == 'okc' or page.location-id == 'soc' or page.location-id == 'wel' %}
+    <p class="detail text-center"><br />Switch and Roots start back up on August 20.</p>
+
+    {% elsif page.location-id == 'klr' %}
+    <p class="detail text-center"><br />Roots start back up on September 10.</p>
+
+    {% elsif page.location-id == 'bao' or page.location-id == 'bnb' or page.location-id == 'jnk' or page.location-id == 'stw' or page.location-id == 'tul' or page.location-id == 'ykn' %}
+    <p class="detail text-center"><br />Switch and Roots start back up on August 27.</p>
+
+    {% elsif page.location-id == 'mor' %}
+    <p class="detail text-center"><br />Switch starts back up on August 27. Roots starts back up on August 20.</p>
+
+    {% elsif page.location-id == 'ows' or page.location-id == 'sto' %}
+    <p class="detail text-center"><br />Switch and Roots start back up on August 27.</p>
+
+    {% elsif page.location-id == 'hnv' %}
+    <p class="detail text-center"><br />Switch is starting back up on September 10th and Roots on August 20th.</p>
+
+    {% elsif page.location-id == 'alb' %}
+    <p class="detail text-center"><br />Switch and Roots will start on September 10th.</p>
+
+    {% endif %} -->
+  </div>
+
 </section>
 {% endif %}
 
 <div class="tile-items tile-two">
-  <a class="tile-item tile-lifegroups" href="/lifegroups/" onclick="ga('send', 'event', 'Missions', 'Click', 'Info Restore');"><span>LifeGroups are the friends that you grow, laugh, and serve with.</span></a>
-  <a class="tile-item tile-what-to-expect" href="/what-to-expect/" onclick="ga('send', 'event', 'Missions', 'Click', 'Info Principles');"><span>No matter who you are or where you’ve been, you’re welcome here. Learn more about what you can expect.</span></a>
+  <a class="tile-item tile-lifegroups" href="/lifegroups/" onclick="ga('send', 'event', 'Missions', 'Click', 'Info Restore');"><span>LifeGroups are the friends that you grow, laugh,<br />and serve with.</span></a>
+  <a class="tile-item tile-what-to-expect" href="/what-to-expect/" onclick="ga('send', 'event', 'Missions', 'Click', 'Info Principles');"><span>No matter who you are or where you’ve been, you’re<br /> welcome here. Learn more about what you can expect.</span></a>
 </div>
 
 {% if page.serving == true %}
@@ -203,7 +238,7 @@ hero: locations-hero
       <li class="grid-item panel involved-item">
         <img src="/locations/assets/event-opendoor.jpg" data-retina="/locations/assets/event-opendoor@2x.jpg" alt="Open Door" />
         <h6>Open Door</h6>
-        <p class="detail">Learn more about Thursday Church, our vision, and how you can be a part of it all. We'd love to get to know you!</p>
+        <p class="detail">Learn more about LifeChurch.tv, our vision, and how you can be a part of it all. We'd love to get to know you!</p>
 
         <div class="cta">
           <p>
@@ -221,11 +256,11 @@ hero: locations-hero
             <h6>Get Connected</h6>
             <p class="detail">Give us your name and email address and we'll get back to you on how to get started.</p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Thursday Church"
+                   value="Send to LifeChurch.tv"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Open Door');" />
           </form>
         </div>
@@ -256,11 +291,11 @@ hero: locations-hero
             <h6>Get Connected</h6>
             <p class="detail">Give us your name and email address and we'll get back to you on how to get started.</p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Thursday Church"
+                   value="Send to LifeChurch.tv"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Chazown');" />
           </form>
         </div>
@@ -290,11 +325,11 @@ hero: locations-hero
             <h6>Get Connected</h6>
             <p class="detail">Give us your name and email address and we'll get back to you on how to get started.</p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Thursday Church"
+                   value="Send to LifeChurch.tv"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Baptism');" />
           </form>
         </div>
@@ -325,11 +360,11 @@ hero: locations-hero
             <h6>Get Connected</h6>
             <p class="detail">Give us your name and email address and we'll get back to you on how to get started.</p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <input type="text" class="details" name="number" placeholder="Phone number (optional)" />
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Thursday Church"
+                   value="Send to LifeChurch.tv"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Restore');" />
           </form>
         </div>
@@ -344,7 +379,7 @@ hero: locations-hero
 <section id="connect" class="group single alt">
   <header class="text-center">
     <h2>Connect with {{ location.title }}</h2>
-    <p>We love to hear from the great people who visit and attend Thursday Church.</p>
+    <p>We love to hear from the great people who visit and attend LifeChurch.tv.</p>
   </header>
 
   <div class="container">
@@ -355,12 +390,12 @@ hero: locations-hero
 
       <li class="grid-item panel involved-item involved-item-textarea">
         <img src="{{ pastor.photo_portrait }}" data-retina="{{ pastor.photo_portrait_2x }}" alt="Campus Pastor" />
-        
         <h6>Contact Pastor {{ pastor.name }}</h6>
-        <p class="detail">At Thursday Church, each campus has its own pastor who leads the community as they learn and grow in their relationships with Christ. If you are looking for guidance or have questions about our church, your campus pastor is here for you.</p>
-        
+        <p class="detail">At LifeChurch.tv, each campus has its own pastor who leads the community as they learn and grow in their relationships with Christ. If you are looking for guidance or have questions about our church, your campus pastor is here for you.</p>
+
         <div class="cta">
-          <p><a href="#"
+          <p>
+            <a href="#"
                class="action get-involved"
                onclick="ga('send', 'event', 'Locations', 'Click', 'Expand Contact Pastor');">
                Contact the Campus Pastor <i class="icon icon-arrow"></i>
@@ -373,9 +408,9 @@ hero: locations-hero
             <input type="hidden" class="title" name="subject" value="{{ location.title }} - Contact the Pastor" />
             <hr />
             <h6>Get Connected</h6>
-            <p class="detail">Please share your name, email address, and a short message for your campus pastor below. </p>
+            <p class="detail">Give us your name and email address or phone number and we'll get back to you on how to get started. <span class="text-gray">(Email only outside of US, please.)</span></p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <textarea class="details" name="message" placeholder="Your Message"></textarea>
             <input type="submit"
                    class="button small submit-involved"
@@ -386,7 +421,7 @@ hero: locations-hero
       </li>
 
       <li class="grid-item panel involved-item involved-item-textarea">
-        <img src="/locations/assets/connect-campus.jpg" data-retina="/locations/assets/connect-campus@2x.jpg" alt="Campus" />
+        <img src="{{ pastor.photo_campus }}" data-retina="{{ pastor.photo_campus_2x }}" alt="Campus" />
         <h6>Contact the Campus</h6>
         <p class="detail">At your local campus, you can connect with others in your community and worship with people who care about you and your family. To find out how you can give, serve, and grow, just ask our team!</p>
 
@@ -405,13 +440,13 @@ hero: locations-hero
             <input type="hidden" class="title" name="subject" value="{{ location.title }} - Contact the Campus" />
             <hr />
             <h6>Get Connected</h6>
-            <p class="detail">Give us your name and email address and we'll get back to you on how to get started.</p>
+            <p class="detail">Give us your name and email address or phone number and we'll get back to you on how to get started. <span class="text-gray">(Email only outside of US, please.)</span></p>
             <input type="text" class="details" name="name" placeholder="Name" />
-            <input type="text" class="details" name="email" placeholder="Email" />
+            <input type="text" class="details" name="phone" placeholder="Email" />
             <textarea class="details" name="message" placeholder="Your Message"></textarea>
             <input type="submit"
                    class="button small submit-involved"
-                   value="Send to Thursday Church"
+                   value="Send to LifeChurch.tv"
                    onclick="ga('send', 'event', 'Locations', 'Click', 'New Contact Campus');" />
           </form>
         </div>
@@ -423,7 +458,7 @@ hero: locations-hero
       <li class="grid-item panel involved-item">
         <img src="/locations/assets/connect-facebook.jpg" data-retina="/locations/assets/connect-facebook@2x.jpg" alt="Open Door" />
         <h6>Connect with us on Facebook</h6>
-        <p class="detail">On the Thursday Church {{ location.title }} Facebook page, you can find upcoming events, get updates, engage with your community, and see behind-the-scenes pictures and posts from our staff. </p>
+        <p class="detail">On the {{ location.title }} Facebook page, you can find upcoming events, get updates, engage with your community, and see behind-the-scenes pictures and posts from our staff. </p>
 
         <div class="cta">
           <p>

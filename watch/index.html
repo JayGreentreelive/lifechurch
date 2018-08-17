@@ -2,13 +2,12 @@
 layout: default
 title: Watch a Message
 class: header-light section-watch page-watch logo-red-white
-hero: true
 hero: watch-hero
 ---
 
   <div class="hero-inner">
     <div class="hero-side alt">
-      <h1 class="h2">View a message on demand or <a href="http://live.ThursdayChurch.org" onclick="ga('send', 'event', 'Watch', 'Click', 'Live');">visit a live experience <span data-churchonline-counter-watch></span> <i class="icon-arrow"></i></a></h1>
+      <h1 class="h2">View a message on demand or <a href="http://live.lifechurch.tv" onclick="ga('send', 'event', 'Watch', 'Click', 'Live');">visit a live experience <span data-churchonline-counter></span> <i class="icon-arrow"></i></a></h1>
     </div>
   </div>
 </section>
@@ -16,7 +15,7 @@ hero: watch-hero
 
 
 <div class="container padded">
-  
+  <!-- Search form -->
   <form method="get" action="/watch" data-search-form>
     <input type="search" name="q" id="q" placeholder="Search for a series" data-search-input autofocus="autofocus" />
   </form>
@@ -59,6 +58,10 @@ hero: watch-hero
       <div class="grid-item watch-item">
         <a href="{{ post.url }}">
           <div class="panel">
+            {% if post.live == true %}
+            <div class="ribbon-wrapper"><div class="ribbon">LIVE</div></div>
+            {% endif %}
+
             <img src="{{ series.image_small }}" data-retina="{{ series.image_medium }}" />
             <h6>{{ series.title }}</h6>
           </div>
@@ -79,5 +82,3 @@ hero: watch-hero
      View more archives <i class="icon icon-play"></i>
   </a>
 </p>
-<script type="text/javascript" src="/js/search.js"></script>
-

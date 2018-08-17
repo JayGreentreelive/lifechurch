@@ -1,4 +1,4 @@
-# Thursday Church Website
+# LifeChurch.tv Website
 
 ## Requirements
 

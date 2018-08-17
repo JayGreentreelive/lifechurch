@@ -33,6 +33,34 @@
       }
     }
   }
+
+  .ribbon-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105px;
+    height: 90px;
+    font-family: $sans-serif;
+    font-size: 1.3em;
+
+    .ribbon {
+      font-size: .8em;
+      font-weight: 800;
+      text-align: center;
+      transform:rotate(45deg);
+      -ms-transform:rotate(45deg); /* IE 9 */
+      -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+      position: relative;
+      padding: 2px 7px;
+      left: 31px;
+      top: -26px;
+      width: 120px;
+      background-color: $red;
+      color: white;
+      padding-top: 50px;
+    }
+  }
 }
 
 .lt-ie9 .ribbon-wrapper {
@@ -194,18 +222,22 @@
   }
 }
 
-.hero-watch {
+.hero-watch-archive {
   background-color: #f0f1eb;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1500px; 
+  max-width: 1500px;
+  margin: -27px auto 0;
   padding: 0;
   position: relative;
   display: block;
   color: #fff;
   min-height: 340px;
-  margin: 0 auto;
+
+  @include media($medium-screen) {
+    margin: -33px auto;
+  }
 
   &:hover {
     color: #fff;
@@ -243,17 +275,32 @@
     margin-bottom: 20px;
     color: #fff !important;
   }
-
-  &.hero-watch-novideo h1 {
-    margin-top: 145px;
-  }
 }
 
-.hero-watch-archive {
-  @extend .hero-watch;
-  margin: -27px auto 0;
+.hero-watch-archive.hero-tio {
+  min-height: 220px;
+
+  .inner {
+    padding-top: 85px;
+  }
+
+  .logo-talkitover {
+    @include svg-image('../images/branding/logo-talkitover');
+    @extend %hide-text;
+    background-position: center;
+    display: block;
+    height: 63px;
+
+    @include media($medium-screen) {
+      height: 113px;
+    }
+  }
 
   @include media($medium-screen) {
-    margin: -33px auto;
+    min-height: 340px;
+
+    .inner {
+      padding-top: 140px;
+    }
   }
 }

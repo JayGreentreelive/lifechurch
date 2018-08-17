@@ -10,7 +10,8 @@ sass:
   style: :compressed
 
 prose:
-  siteurl: 'http://thursdaychurch.herokuapp.com/'
+  rooturl: 'announcements/_posts'
+  siteurl: 'http://www.lifechurch.tv/'
   metadata:
     _posts:
       - name: 'layout'

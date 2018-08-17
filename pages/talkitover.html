@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Talk It Over (Latest)
+section: talkitover
 permalink: /talkitover/
 class: section-talkitover header-red
 ---
@@ -9,18 +10,20 @@ class: section-talkitover header-red
 {% for tio in site.categories.talkitover limit:1 %}
 
 {% for data in site.data.watch %}
-{% if data.id == tio.series-id %}
+{% if data.id == series.series-id %}
+
+{% include tertiary.html %}
 
 <div {% if data.image_banner_archive == '' %}
    style="background-image: url('{{ data.image_large }}')"
    {% else %}
-   style="background-image: url('{{ data.image_banner_archive_small_2x }}')"
+   style="background-image: url('{{ data.image_banner_archive_small_2x }}')" 
    data-banner-archive-2x="background-image: url('{{ data.image_banner_archive_small_2x }}')"
    data-banner-archive-large="background-image: url('{{ data.image_banner_archive }}')"
    data-banner-archive-large-2x="background-image: url('{{ data.image_banner_archive_2x }}')"
    {% endif %}
    class="hero section-light hero-watch-archive hero-tio">
-
+   
   <div class="inner">
     <span class="logo-talkitover">Talk it over</span>
   </div>

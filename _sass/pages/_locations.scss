@@ -79,7 +79,7 @@
   }
 
   // Main panel on the map with all the content in
-  .map-panel, .social-panel {
+  .map-panel {
     @extend .panel;
     position: relative;
     margin: 265px 0 0;
@@ -127,25 +127,27 @@
   .location-state {
     @include transition (all 0.3s ease-in-out);
     overflow: hidden;
-    max-height: 1600px;
+    max-height: 1400px;
     margin: 0 -1em;
     padding: 0 1em;
 
     // Names of states in the main panel view
     .state-title {
       @include transition (all 0.3s ease-in-out);
-      margin: 10px 0 0;
-      padding-bottom: 10px;
+      margin: .5em 0 0;
+      padding-bottom: .5em;
       border-bottom: 1px solid #ddd;
     }
 
     // Add the "up" icon on state titles
-    .state-title a span:before {
+    .state-title a:before {
       @include transition (all 0.3s ease-in-out);
-      content: '\e816 ';
+      content: '\e816';
       display: inline-block; 
       font-family: 'lctv';
       font-size: .8em;
+      max-width: 0;
+      opacity: 0;
     }
   }
 
@@ -212,7 +214,7 @@
   }
 }
 
-$states: online, indianaÏÏ kansas, newyork, newmexico;
+$states: online, oklahoma, texas, tennessee, florida, kansas, newyork;
 
 @each $state in $states{
   .map.is-#{$state} {
@@ -251,11 +253,18 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
         border-bottom: 1px solid white;
       }
     }
- 
+
+    // Make the 'up' arrow
+    ##{$state} .state-title a:before {
+       margin-right: 4px;     
+      max-width: 50px;
+      opacity: 1;
+    }
+    
     ##{$state},
     ##{$state} .map-list,
     ##{$state} .location-state {
-      max-height: 1820px;  
+      max-height: 1400px;  
     }
   }
 }
@@ -267,12 +276,6 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
 
 // Locations page
 ///////////////////////////////////////////////////////////////////////////////
-.section-locations {
-  #tertiary {
-    border-bottom: none;
-  }
-}
-
 .page-locations {
   .closing .container {
     border: none;
@@ -286,7 +289,7 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
       border-bottom: none;
     }
   }
- 
+
   .map { 
     top: -145px;
     padding-top: 145px;
@@ -310,6 +313,30 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
 // Campus page
 ///////////////////////////////////////////////////////////////////////////////
 
+// "My Campus" buttons
+
+[data-unset-campus] {
+  display: none;
+}
+
+.my-campus {
+  [data-unset-campus] {
+    display: inline-block;
+  }
+
+  [data-set-campus] {
+    display: none;
+  }
+}
+
+
+// Patch
+#location.group {
+  @media only screen and (max-width: $medium-screen) {
+    padding-bottom: 140px;
+  }
+}
+
 // Page hero section
 
 .locations-hero {
@@ -318,77 +345,22 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  padding-bottom: 4em;
+  min-height: 150px;
 
   @include media($medium-screen) {
-    min-height: 620px;
-    height: auto;
+    min-height: 300px;
   }
+}
 
-  .map-panel {
-    @extend .panel;
-    max-width: 400px;
-    text-align: left;
-    float: left;
-    margin-bottom: 15px;
-  }
-  
-  .social-panel {
-    @extend .panel;
-    max-width: 100%;
-    width: 325px;
-    text-align: left;
-    float: right;
-    margin-bottom: 15px;
-    .large {
-      padding: 1em 1em;
-      width: 100%;
-      text-align: center;
-      margin-bottom: 0.5em;
-      font-size: 14px;
-    }
-    h3 {
-      font-size: 1.25em;
-      margin-top: 0;
-      font-weight: bold;
-    }
-    img {
-      border: 1px solid $medium-gray;
-      max-height: 280px;
-      text-align: center;
-    }
-    .detail {
-      font-size: 0.82em;
-    }
-    @media screen and (max-width: 640px) { 
-      float: left;
-    }
-  }
+.locations-hero-promo {
+  background-color: #f9f5ed;
+}
 
-  h1 {
-    margin: 0 0 .3em;
-  }
+.location-promo .closing {
+  padding-top: 0;
 
-  h5 {
-    margin: -4px 0px 25px;
-  }
-
-  .event time {
-    width: 80px;
-    display: inline-block;
-  }
-
-  .day {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: .7em;
-    margin-bottom: .8em;
-
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
+  .container {
+    border: none;
   }
 }
 
@@ -409,6 +381,338 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
   display: none;
 }
 
+// Map
+.locations-map {
+  background-color: #fff;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 170px;
+  border: 1px solid #ddd;
+  position: relative;
+
+  @media only screen and (max-width: $medium-screen) {
+    background-size: 800px auto;
+    background-position: 0 -100px;
+    margin-bottom: 150px;
+  }
+
+  @include media($medium-screen) {
+    height: 400px;
+  }
+
+  .pin {
+    top: 80px;
+    left: 110px;
+    position: absolute;
+
+    @include media($medium-screen) {
+      top: 180px;
+      left: 110px;
+    }
+  }
+
+  .address {
+    background: transparent;
+    padding: 15px 0;
+    width: 100%;
+    top: 172px;
+    position: relative;
+
+    a {
+      margin-right: 0;
+    }
+
+    @include media($medium-screen) {
+      padding: 15px;
+      position: absolute;
+      color: #fff;
+      width: 250px;
+      top: 165px;
+      left: 160px;
+      background: rgba(0,0,0,.8);
+      border-radius: 6px;
+
+      a {
+        color: #86def7;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 14px;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid rgba(0,0,0,.8);
+      }
+    }
+  }
+}
+
+
+// Experience Calendar
+
+  // Calendar Key
+
+    .calendar-key {
+
+      // Keep the links in the key on the same line as the colors
+      a {
+        float: left;
+      }
+
+      figure {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 2px 7px 0 0;
+        border-radius: 3px;
+      }
+
+      &.key-service-time figure {
+        background: lighten($red, 30%);
+        border: 1px solid lighten($red, 20%);
+      }
+
+      &.key-switch figure {
+        background: $blue;
+        border: 1px solid darken($blue, 10%);
+      }
+
+      &.key-lifekids figure {
+        background: #69d166;
+        border: 1px solid darken(#69d166, 10%);
+      }
+
+      &.key-roots figure {
+        background: #f0d700;
+        border: 1px solid darken(#f0d700, 10%);
+      }
+    }
+
+
+// New Experience Calendar
+
+@include media($medium-screen) {
+  .times-legend {
+    text-align: center;
+  }
+
+  .times-legend li {
+    display: inline-block;
+    margin: 1em .5em;
+  }
+}
+
+.times {
+  list-style: none;
+  margin-left: 0;
+
+  label {
+    margin-top: .3em;
+    display: inline-block;
+  }
+}
+
+.time,
+.calendar-key {
+  clear: both;
+}
+
+@include media($medium-screen) {
+  .days-times {
+    border: 1px solid #bbb;
+    background: #fff;
+    position: relative;
+    width: 100%;
+
+    h4 {
+      display: none;
+    }
+
+    // Day wrapper
+    .day {
+      height: 40px;
+      width: 100%;
+      background: #fff;
+
+      &:nth-child(even) {
+        background: #f9f9f9 !important;
+      }
+    }
+
+    // Entry wrapper
+    .times {
+      padding: 0;
+      margin: 0;
+      position: relative;
+
+      // Day title
+      label {
+        margin-left: 10px;
+      }
+    }
+
+    // Entry
+    .time {
+      height: 40px;
+      width: 5%; // default time 1 hour
+      position: absolute;
+      overflow: hidden;
+
+      label span {
+        display: none;
+      }
+
+      .time-box {
+        display: block;
+        width: 100%;
+        height: 40px;
+        font-family: $helvetica;
+        font-size: 10px;
+        background: #aaa;
+        border-radius: 2px;
+        border: 1px solid #999;
+        font-size: rem-calc(11);
+
+        .time-box-time-label,
+        .time-box-duration,
+        .time-box-duration-label {
+          display: none;
+        }
+
+        .time-box-time {
+          margin: 0px 0 0 3px;
+        }
+      }
+
+      &.type-service-time .time-box {
+        background: lighten($red, 30%);
+        border: 1px solid lighten($red, 20%);
+        color: $red;
+      }
+
+      &.type-switch .time-box {
+        background: $blue;
+        border: 1px solid darken($blue, 10%);
+        color: darken($blue, 20%);
+      }
+
+      &.type-lifekids .time-box {
+        background: #69d166;
+        border: 1px solid darken(#69d166, 10%);
+        color: darken(#69d166, 40%);
+      }
+
+      &.type-roots .time-box {
+        background: #f0d700;
+        border: 1px solid darken(#f0d700, 10%);
+        color: darken(#f0d700, 20%);
+      }
+    }
+
+    .time-07-00 { left: 20%; }
+    .time-07-30 { left: 22.5%; }
+    .time-08-00 { left: 25%; }
+    .time-08-30 { left: 27.5%; }
+    .time-09-00 { left: 30%; }
+    .time-09-30 { left: 32.5%; }
+    .time-10-00 { left: 35%; }
+    .time-10-30 { left: 37.5%; }
+    .time-11-00 { left: 40%; }
+    .time-11-30 { left: 42.5%; }
+    .time-12-00 { left: 45%; }
+    .time-12-30 { left: 47.5%; }
+    .time-13-00 { left: 50%; }
+    .time-13-30 { left: 52.5%; }
+    .time-14-00 { left: 55%; }
+    .time-14-30 { left: 57.5%; }
+    .time-15-00 { left: 60%; }
+    .time-15-30 { left: 62.5%; }
+    .time-16-00 { left: 65%; }
+    .time-16-30 { left: 67.5%; }
+    .time-17-00 { left: 70%; }
+    .time-17-30 { left: 72.5%; }
+    .time-18-00 { left: 75%; }
+    .time-18-30 { left: 77.5%; }
+    .time-19-00 { left: 80%; }
+    .time-19-30 { left: 82.5%; }
+    .time-20-00 { left: 85%; }
+    .time-20-30 { left: 87.5%; }
+    .time-21-00 { left: 90%; }
+    .time-21-30 { left: 92.5%; }
+    .time-22-00 { left: 95%; }
+
+    .overlap {
+      margin-top: 40px;
+    }
+
+    .overlap-2 {
+      margin-top: 80px;
+    }
+
+    .rows-2 {
+      height: 80px;
+    }
+
+    .rows-3 {
+      height: 120px;
+    }
+
+    // 1 hour entry
+    .duration-60 {
+      width: 5%;
+    }
+
+    // 2 hour entry
+    .duration-120 {
+      width: 10%
+    }
+
+    // 3 hour entry
+    .duration-180 {
+      width: 15%;
+    }
+
+    // 4 hour entry
+    .duration-240 {
+      width: 20%;
+    }
+
+    .time-lines .time {
+      height: 100%;
+
+      .time-line {
+        margin-top: 40px;
+        border-left: 1px solid #ccc;
+        height: 100%;
+      }
+
+      label {
+        margin: 0;
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        position: absolute;
+        top: 11px;
+        font-size: rem-calc(13);
+      }
+    }
+
+  }
+
+}
+
+@include media($large-screen) {
+  // Day title
+  .days-times .time label span {
+    display: inline;
+  }
+}
+
 // Campus contact forms
 .form-contact {
   max-width: 600px;
@@ -417,30 +721,17 @@ $states: online, indianaÏÏ kansas, newyork, newmexico;
 
 // ~4 Specific Campus Pages ***************************************
 
-$campuses: alb, bao, bnb, cen, edm, ftw, hnv, jnk, klr, mor, mus, mwc, noc, okc, opk, ows, rrn, sba, shw, soc, sto, stw, tul, wel, wch, ykn;
-
-.hs-form fieldset {
-  background: transparent;
-}
+$campuses: alb, bao, bnb, edm, ftw, hnv, jnk, klr, mor, mwc, noc, okc, ows, soc, sto, stw, tul, wel, wch, ykn;
 
 @each $campus in $campuses {
-  .location-#{$campus} .about-lctv-staff {
-    @include retina-image(/locations/assets/campus/#{$campus}-staff, cover, jpg);
-    padding: 13em 0 5em;
-article {
-  width: 100%;
-  text-align: center;
-  padding: 0 3em;
-}
-h2 {
-  color: #fff;
-}
-  }
-}
+  .location-#{$campus} {
+    .locations-hero {
+      @include retina-image(/locations/assets/campus/#{$campus}-bg, 1500px 350px, jpg);
+    }
 
-@each $campus in $campuses {
-  .location-#{$campus} .locations-hero {
-    @include retina-image(/locations/assets/campus/#{$campus}-map, cover, jpg);
+    .locations-map {
+      @include retina-image(/locations/assets/campus/#{$campus}-map, 1196px 398px, jpg);
+    }
   }
 }
 
@@ -461,191 +752,188 @@ h2 {
 }
 
 
-.view-all-states {
-  @include transition (all 0.3s ease-in-out);
-  opacity: 0;
-  height: 0;
+
+// Swipe test
+
+.calendar {
+  height: 420px; 
+  margin-bottom: 3em;
+  position: relative;
+  width: 100%;
   overflow: hidden;
-  display: block;
-  font-family: $sans-serif;
-  font-weight: 300;
-}
 
-$locations: florida, kansas, newmexico, newyork, oklahoma, tennessee, texas;
+  .day header,
+  .calendar-left,
+  .calendar-right {
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+  }
 
-@each $location in $locations {
-  .is-#{$location} ##{$location} {
-    .state-title {
-      font-size: 2em;
+  .calendar-left,
+  .calendar-right {
+    z-index: 4;
+    position: absolute;
+    
+    i {
+      font-size: 13px;
     }
 
-    .view-all-states {
-      opacity: 1;
-      height: auto;
-    }
-  }
-}
-
-.social {
-  padding: 1em 0;
-}
-
-.map {
-  .state-title,
-  .view-all-states,
-  .map-list,
-  h5,
-  li,
-  .form-contact-simple,
-  .form-contact-simple-hubspot,
-  .detail,
-  .prepend-connect,
-  .close-connect-form {
-    @include transition (all 0.3s ease-in-out); 
-  }
-
-  .prepend-connect,
-  .close-connect-form {
-    max-width: 0;
-    max-height: 0;
-    display: inline-block;
-    overflow: hidden;
-    opacity: 0;
-  }
-
-  .close-connect-form {
-    display: block;
-  }
-
-  .close-connect-form {
-    font-family: $sans-serif;
-    font-weight: 300;
-  }
-
-  .state-title,
-  .view-all-states,
-  h5,
-  li,
-  .detail {
-    max-height: 1000px;
-  }
-
-  .form-contact-simple,
-  .form-contact-simple-hubspot {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .more-options {
-    border-top: 1px solid $base-border-color;
-    margin: -1px -15px 0;
-    min-height: 65px;
-
-    #online {
-      border-right: 0px solid $base-border-color;
-      @include svg-image('/locations/assets/map-churchonline');
-    }
-
-    #network {
-      @include svg-image('/locations/assets/map-network');
-    }
-
-    #online {
-      display: block;
-      width: 100%;
-      float: left;
-      padding: 40px 0 10px;
-      text-align: center;
-      background-size: 25px 25px;
-      background-position: center 15px;
-      margin-bottom: -15px;
-
-      &:hover {
-        background-color: #fafafa;
-      }
-    }
-    #network {
+    @include media($medium-screen) {
       display: none;
     }
   }
-}
 
-.map.is-connect {
-  .state-title,
-  .view-all-states,
-  h5,
-  li,
-  .detail,
-  .more-options,
-  #network {
-    opacity: 0;
-    min-height: 0;
-    max-height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  .calendar-right {
+    right: 0;
   }
 
-  .show-form .prepend-connect,
-  .close-connect-form {
-    max-width: 400px;
-    opacity: 1;
-    max-height: 16px;
+  &.showing-saturday .calendar-left,
+  &.showing-wednesday .calendar-right {
+    opacity: 0 !important;
   }
 
-  .close-connect-form {
-    max-height: 22px;
+  time {
+    float: right;
+    opacity: .7;
   }
 
-  .show-form,
-  .show-form .form-contact-simple,
-  .show-form .form-contact-simple-hubspot {
-    opacity: 1 !important;
-    max-height: 1000px !important;
-    position: relative;
-    z-index: 4;
-  }
-
-  .show-form .form-contact-simple,
-  .show-form .form-contact-simple-hubspot {
-    margin-top: 10px;
-  }
-
-  .show-form {
-    border-color: white;
-  }
-
-  li a,
-  #online {
-    cursor: default;
-
-    h6,
-    h6:hover {
-      color: $base-font-color;
-    }
-
-    &:hover {
-      background: white;
-    }
-  }
-
-  #online {
+  b {
+    display: block;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    background: none !important;
-    border: none;
-    float: none;
-  }
-}
+    height: 30px;
+    border-top: 1px solid #e0e4e5;
+    font-size: 11px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
 
-.location-opk {
-  #serving-4 {
-    display: none;
+    span {
+      top: -6px;
+      position: relative;
+      background: $off-white;
+      width: 4%;
+      height: 30px;
+      display: block;
+      text-align: right;
+      padding-right: 10px;
+
+      i {
+        display: none;
+
+        @include media($large-screen) {
+          display: inline;
+          font-style: normal;
+        }
+      }
+    }
   }
-  #serving-5 {
-    clear: none;
+
+  b.first {
+    margin-top: 30px;
   }
+
+  .icon-arrow-left {
+    @include transform(rotate(180deg));
+    margin-left: 2px;
+  }
+
+  .saturday,
+  .sunday,
+  .wednesday {
+    height: 320px;
+    width: 100%;
+    float: left;
+    position: absolute;
+    top: 0;
+
+    @include media($medium-screen) {
+      width: 33%;
+    }
+  }
+
+  .sunday {
+    left: 100%;
+
+    @include media($medium-screen) {
+      left: 33%;
+    }
+  }
+
+  .wednesday {
+    left: 200%;
+
+    @include media($medium-screen) {
+      left: 66%;
+    }
+  }
+
+  
+
+  .event {
+    height: 20px;
+    padding: 6px 9px;
+    font-size: 11px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 18px;
+    border-radius: 3px;
+    margin-left: 9%;
+    position: absolute;
+    width: 90%;
+    color: white;
+    font-weight: bold;
+
+    @include media($medium-screen) {
+      margin-left: 13%;
+    }
+
+    &.is-service-time {
+      background: #e98f93;
+    }
+
+    &.is-switch {
+      background: #0ea9d6;
+    }
+
+    &.is-lifekids {
+      background: #69d166;
+    }
+
+    &.is-roots {
+      color: #8a7c00;
+      background: #f0d700;
+      border: 1px solid #bda900;
+    }
+  }
+
+  .time-08-00 { top: 30px; }
+  .time-08-30 { top: 45px; }
+  .time-09-00 { top: 60px; }
+  .time-09-30 { top: 75px; }
+  .time-10-00 { top: 90px; }
+  .time-10-30 { top: 105px; }
+  .time-11-00 { top: 120px; }
+  .time-11-30 { top: 135px; }
+  .time-12-00 { top: 150px; }
+  .time-12-30 { top: 165px; }
+  .time-13-00 { top: 180px; }
+  .time-13-30 { top: 195px; }
+  .time-14-00 { top: 210px; }
+  .time-14-30 { top: 225px; }
+  .time-15-00 { top: 240px; }
+  .time-15-30 { top: 255px; }
+  .time-16-00 { top: 270px; }
+  .time-16-30 { top: 285px; }
+  .time-17-00 { top: 300px; }
+  .time-17-30 { top: 315px; }
+  .time-18-00 { top: 330px; }
+  .time-18-30 { top: 345px; }
+  .time-19-00 { top: 360px; }
+  .time-19-30 { top: 375px; }
+  .time-20-00 { top: 390px; }
+
+  .duration-30  { height: 16px; }
+  .duration-60  { height: 30px; }
+  .duration-120 { height: 61px; }
 }

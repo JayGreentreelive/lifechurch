@@ -27,3 +27,5 @@ Thumbs.db
 _site
 node_modules
 js/production.min.js
+lifechurch.sublime-project
+lifechurch.sublime-workspace

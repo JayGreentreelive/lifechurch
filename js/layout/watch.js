@@ -12,7 +12,7 @@ $(document).ready(function(){
   }
   $('[data-search-form]').keyup(function() {
     if(!$('[data-search-input]').val()) {
-      $('[data-search-results]').hide();
+      $('[data-search-results]').show();
       $('.search-description').hide();
       $('.group.of-grid-items').show();
     } else {
@@ -64,6 +64,11 @@ $(document).ready(function(){
         $(this).removeAttr('data-banner-archive-2x');
       });
     }
+  }
+
+  if ($('.section-talkitover').length > 0) {
+    var boundary = $('.single article h2:contains("Discussion Questions")');
+    $("<article>").insertAfter(boundary.parent()).append(boundary.nextAll().andSelf());
   }
 
 });

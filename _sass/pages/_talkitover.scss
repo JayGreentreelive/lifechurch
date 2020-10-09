@@ -1,0 +1,130 @@
+.section-talkitover {
+
+  // Hero section
+
+  .hero-watch-archive.hero-tio {
+    min-height: 220px;
+
+    .inner {
+      padding-top: 85px;
+    }
+
+    .logo-talkitover {
+      @include svg-image('../images/branding/logo-talkitover');
+      @extend %hide-text;
+      background-position: center;
+      display: block;
+      height: 63px;
+
+      @include media($medium-screen) {
+        height: 113px;
+      }
+    }
+
+    @include media($medium-screen) {
+      min-height: 340px;
+
+      .inner {
+        padding-top: 140px;
+      }
+    }
+  }
+
+  .single article a {
+    display: inline-block;
+    padding: 0 15px 0 0;
+    margin-bottom: 5px;
+  }
+
+
+  // Print styles
+  @media only print { 
+    font-size: .6em !important;
+
+    h1 {
+      margin-bottom: -10px;
+      color: black;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: black;
+    }
+    
+    .single article ul li {
+      line-height: 1.3em;
+      list-style: disc!important;
+    }
+
+    p {
+      line-height: 1.3em;
+    }
+
+    .wistia_embed {
+      display: none !important;
+    }
+
+    .single article a,
+    a {
+      color: black !important;
+      text-decoration: underline;
+    }
+
+    .lead {
+      font-size: 1.4em;
+      margin: 0 0 .5em;
+    }
+
+    .navigation-wrapper,
+    #tertiary,
+    .hero-tio,
+    .closing,
+    .rapid-feedback,
+    .announcement {
+      display: none;
+    }
+
+    .container,
+    .single,
+    .single header {
+      max-width: 100%;
+    }
+
+    .single article:nth-child(1) {
+      width: 100%;
+    }
+
+    .single article:nth-child(2) {
+      width: 30%;
+      float: left;
+      padding-right: 4%;
+    }
+
+    .single article:nth-child(3) {
+      width: 70%;
+      float: left;
+    }
+
+    .padded {
+      padding-top: 1em;
+    }
+  }
+  
+  .tio-video {
+    max-width:100%; 
+    width: 800px; 
+    height: 450px; 
+    padding-bottom: 0px;
+    clear: both;
+      @media screen and (max-width: 500px) {
+        max-height:  280px;
+        iframe {
+          max-height: 270px;
+        }
+      }
+  }
+  .clear {
+    clear: both;
+  }
+}

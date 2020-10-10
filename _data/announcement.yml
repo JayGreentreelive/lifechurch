@@ -11,7 +11,7 @@
   url: /campus/
 
 
-- active: true
+- active: false
   type: notice
   icon: weather-snow
   message: Due to severe weather All services are now cancelled

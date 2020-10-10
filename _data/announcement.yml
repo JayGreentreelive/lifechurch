@@ -6,6 +6,13 @@
 
 - active: true
   type: notice
-  icon: campus weather-snow
+  icon: campus
   message: All campuses are closed due to snow. all services will be online only
-  url: 
+  url: /campus/
+
+
+- active: true
+  type: notice
+  icon: weather-snow
+  message: Due to severe weather live services are nopw cancelled
+  url: /weather/

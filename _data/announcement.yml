@@ -6,6 +6,6 @@
 
 - active: true
   type: notice
-  icon: weather-snow
-  message: campuses closed due to snow. all services will be online only
-  url: /announcements/weather/
+  icon: campus weather-snow
+  message: All campuses are closed due to snow. all services will be online only
+  url: 

@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 $tile-color: white;
-$tile-color-alt: $black;
+$tile-color-alt: $dark-gray;
 
 .tile-one,
 .tile-two,
@@ -16,16 +16,26 @@ $tile-color-alt: $black;
   .tile-item {
     width: 100%;
     height: 180px;
-    padding: 80px 1em 0;
+    padding: 0 1em;
     text-align: center;
     font-family: $sans-serif;
     border-bottom: 2px solid $tile-color;
     background-size: cover !important;
+    display: table;
+    vertical-align: middle;
 
     @include media($medium-screen) {
       height: 252px;
       padding: 1em;
-      line-height: 200px;
+      line-height: 200px; 
+    }
+
+    span {
+      display: table-cell;
+      position: relative;
+      z-index: 1;
+      vertical-align: middle;
+      line-height: normal;
     }
   }
 
@@ -33,7 +43,6 @@ $tile-color-alt: $black;
     color: white;
     font-size: 1.4em;
     text-shadow: 0 1px 2px $black;
-    display: block;
     position: relative;
     
     @include media($medium-screen) {
@@ -52,23 +61,13 @@ $tile-color-alt: $black;
         background: rgba(0, 0, 0, 0.5);
       }
     }
-
-    // When the tile is a link, put any copy in a span to prevent it being blown
-    // out by the hover color.
-    span {
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      vertical-align: middle;
-      line-height: normal;
-    }
   }
 }
 
 @include media($medium-screen) {
   .tile-one .tile-item {
     width: 100%;
-    border: 2px solid $tile-color;
+    border: 1px solid $tile-color;
   }
   
   .tile-two .tile-item {
@@ -93,6 +92,7 @@ $tile-color-alt: $black;
 
 .tile-alt .tile-item {
   border-color: $tile-color-alt;
+  border-width: 1px;
 }
 
 .lt-ie9 .tile-one .tile-item {

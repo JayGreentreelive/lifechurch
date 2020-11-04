@@ -10,8 +10,7 @@ sass:
   style: :compressed
 
 prose:
-  rooturl: 'announcements/_posts'
-  siteurl: 'http://www.lifechurch.tv/'
+  siteurl: 'http://new.thursdaychurch.org/'
   metadata:
     _posts:
       - name: 'layout'

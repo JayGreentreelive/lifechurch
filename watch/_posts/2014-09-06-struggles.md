@@ -1,6 +1,7 @@
 ---
 published: true
 layout: watch-archive
-categories: promo
+categories: watch
 series-id: struggles
+title: Struggles
 ---

@@ -1,11 +1,18 @@
 # type: notice or alert
 # active: true or false
-# icon: weather-snow, weather-rain, campus, money, calendar, maintenance
+# icon: weather-snow, weather-rain, campus, money, calendar, maintenance, tree
 # message: the message in the announcement
 # url: link or leave blank
 
 - active: false
   type: notice
-  icon: calendar
-  message: View additional Easter service times.
-  url: /easter/
+  icon: campus
+  message: All campuses are closed due to snow.
+  url: /campus/
+
+
+- active: false
+  type: notice
+  icon: weather-snow
+  message: Due to severe weather All services are now cancelled
+  url: /weather/

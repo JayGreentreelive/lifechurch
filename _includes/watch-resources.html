@@ -15,7 +15,8 @@
   </li>
 
   {% for talkitover in site.categories.talkitover reversed %}
-  {% if page.series-id == talkitover.series-id %}
+  {% if page.series-id == talkitover.series-id or talkitover.series-id == series.id %}
+  <!-- For Watch Archives or /Recent -->
   <li>
     <a href="{{ talkitover.url }}"
        class="watch-talkitover"
@@ -24,11 +25,12 @@
     </a>
   </li>
   {% endif %}
+
   {% endfor %}
 
   {% unless series.resources_url == '' or page.section == 'watch-promo' %}
   <li>
-    <a href="{% unless series.resources_url == '' %}{{ series.resources_url }}{% else %}http://resources.lifechurch.tv{% endunless %}"
+    <a href="{% unless series.resources_url == '' %}{{ series.resources_url }}{% else %}http://resources.life.church{% endunless %}"
        class="watch-talkitover"
        onclick="ga('send', 'event', 'Series', 'Click', 'Resource Resources');">
        Notes &amp; Downloads
@@ -38,7 +40,7 @@
 
   {% unless page.section == 'watch-promo' %}
   <li>
-    <a href="{% unless series.open_url == '' %}{{ series.open_url }}{% else %}http://open.lifechurch.tv{% endunless %}"
+    <a href="{% unless series.open_url == '' %}{{ series.open_url }}{% else %}http://open.life.church{% endunless %}"
        class="watch-open"
        onclick="ga('send', 'event', 'Series', 'Click', 'Resource OPEN');">
        For Churches

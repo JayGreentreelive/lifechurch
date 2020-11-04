@@ -7,6 +7,10 @@ $more-transition: .25s ease-in-out;
   @include svg-image('../images/branding/logo-red-black');
 }
 
+.more-is-visible.has-announcement .more-menu {
+  padding-top: 7em !important;
+}
+
 .more-menu {
   @include transition(all $more-transition);
   background: rgba(255, 255, 255, .97);

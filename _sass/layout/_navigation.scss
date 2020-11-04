@@ -29,8 +29,8 @@
       @include svg-image('../images/branding/logo-black-black');
     }
 
-    height: 30px;
-    background-size: auto 20px;
+    height: 33px;
+    background-size: auto 25px;
     background-position: left center;
 
     @include media($large-screen) {
@@ -52,7 +52,7 @@
       display: none;
       text-transform: uppercase;
       font-weight: bold;
-      font-family: $helvetica;
+      font-family: $serif;
       font-size: 14px; // Fixed px size to force across all screen sizes
 
       &.js-more-trigger {

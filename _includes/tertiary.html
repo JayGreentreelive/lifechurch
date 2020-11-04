@@ -11,34 +11,43 @@
       {% if page.section == "lifemissions"    %}<a href="/lifemissions/">LifeMissions</a>{% endif %}
       {% if page.section == "jobs"            %}<a href="/jobs/">Jobs</a>{% endif %}
       {% if page.section == "announcements"   %}<a href="/announcements/">Announcements</a>{% endif %}
-      {% if page.section == "talkitover"      %}<a href="/watch">Watch</a><a href="{{ series.url }}">{{ data.title }}</a>{% endif %}
+      {% if page.section == "podcast"         %}<a href="/leadershippodcast/">Leadership Podcast</a>{% endif %}
+      {% if page.section == "talkitover"      %}<a href="/watch">Watch</a><a href="{{ series.url }}{{ page.parent }}">{{ data.title }}</a>{% endif %}
       <a class="current" href="#">{{ page.title }}</a>
     </nav>
     <div class="resources">
-      {% if page.section == "watch" or page.section == "watch-promo" %}
+      {% if page.section == "watch" or page.section == "watch-promo" or page.section == "watch-novideo" or page.section == "watch latest" or page.title == "Talk It Over (Latest)" or page.title == "Talk It Over (Previous)" %}
+      {% if page.title == "Talk It Over (Latest)" %}
+        <a class="button secondary" href="/previous/"><i class="fa fa-angle-left"></i> &nbsp; Previous Notes</a>
+      {% elsif page.title == "Talk It Over (Previous)" %}
+      <a class="button secondary" href="/talkitover/">Next Notes &nbsp; <i class="fa fa-angle-right"></i></a>
+      {% else %}
       <div class="button-with-options">
         <a class="button secondary" href="#" onclick="ga('send', 'event', 'Series', 'Click', 'Resources Expand');">Downloads &amp; Resources</a>
         {% include watch-resources.html %}
       </div>
       {% endif %}
-
-      {% if page.section == "locations" %}
-      <div>
-      <a href="#"
-         data-set-campus="{{page.location-id}}"
-         class="locations-mycampus button tiny"
-         onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Mine');">
-         Save as your campus?
-      </a>
-      <a href="#"
-         data-unset-campus
-         class="locations-mycampus button tiny secondary"
-         onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Not Mine');">
-         Not your campus?
-      </a>
+      
+    </div>
+    {% endif %}
+    {% if page.title == "Life.Church App" %}
+        <div class="persistent-navigation-wrapper large-element text-center">
+        <ul id="persistent-navigation" class="large-element">
+          <li><img width="29" src="/images/app/smartphone-dark.png" class="icon-smartphone" /> <a href="#smartphone">Smartphone</a></li>
+          <li><img width="29" src="/images/app/tablet-dark.png" class="icon-tablet" /> <a href="#tablet">Tablet</a></li>
+          <li><img width="29" src="/images/app/tv-dark.png" class="icon-tv" /> <a href="#tv">TV</a></li>
+        </ul>
       </div>
       {% endif %}
-    </div>
+    {% if page.title == "Worship" %}
+        <div class="persistent-navigation-wrapper large-element text-center">
+        <ul id="persistent-navigation" class="large-element">
+          <li><a href="#latest-release">Latest Release</a></li>
+          <li><a href="#get-resources">Resources</a></li>
+          <li><a href="#join">Join the Team</a></li>
+          <li><a href="#get-social">Get Social</a></li>
+        </ul>
+      </div>
+    {% endif %}
   </section>
-</div> 
-
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Reach Us
+title: Contact Us
 permalink: /contact/
 class: header-red contact about
 ---
@@ -13,61 +13,114 @@ class: header-red contact about
 
   <article>
     <form class="form-contact panel" action="http://lifechurch-site-mailer.herokuapp.com/contact" method="post">
-      <input type="hidden" class="recipient" name="recipient" value="info@lifechurch.tv" />
+      <input type="hidden" class="recipient" name="recipient" value="info@life.church" />
 
       <label>How can we help you?</label>
       <p class="detail">Select the option below that best meets your needs.</p>
       <select name="subject">
         <option value="select">Select an option</option>
-        <option value="Giving Question|info@lifechurch.tv">I have a question about giving at LifeChurch.tv.</option>
-        <option value="Serving Question|info@lifechurch.tv">I'm interested in serving at LifeChurch.tv.</option>
-        <option value="Media Question / Interview Request|info@lifechurch.tv">I'm a member of the media with a question or interview request.</option>
-        <option value="Site Technical Issue|info@lifechurch.tv">I'm having a technical issue with the LifeChurch.tv site.</option>
-        <option value="Campus Question|info@lifechurch.tv">I have a question about a specific LifeChurch.tv location.</option>
-        <option value="Job Question|info@lifechurch.tv">I'm interested in a job at LifeChurch.tv.</option>
-        <option value="Misc Question|info@lifechurch.tv">I have another need not included in this list.</option>
-      </select>
+        <option value="Giving Question|giving@life.church">I have a question about giving at Life.Church.</option>
+        <option value="Serving Question|info@life.church">I'm interested in serving at Life.Church.</option>
+        <option value="Media Question / Interview Request|media@life.church">I'm a member of the media with a question or interview request.</option>
+        <option value="YouVersion Question (Life.Church Site)|admin@youversion.com">I have a question about the YouVersion Bible App.</option>
+        <option value="Site Technical Issue|interactive@life.church">I'm having a technical issue with the Life.Church site or app.</option>
+        <option value="Campus Question|info@life.church">I have a question about a specific Life.Church location.</option>
+        <option value="Job Question|jobs@life.church">I'm interested in a job at Life.Church.</option>
+        <option value="Prayer Request|prayer@life.church">I have a prayer request.</option>
+        <option value="Open Request|open@life.church"> I’m a pastor or church leader with a question.</option>
+        <option value="Leadership Podcast Question (Life.Church Site)|leadership@life.church">I have a question about the Craig Groeschel Leadership Podcast.</option>
+        <option value="Misc Question|info@life.church">I have another need not included in this list.</option>
+      </select>  
 
-      <hr />
+      <div class="subject-details subject-giving" style="display:none">
+        <hr />
+        <h6>Did you know we have giving info on our website?</h6>
+        <p>If you're ready to give or if you're curious about how it works, the Giving section of our website has the details.</p>
+        <p><a href="/giving/" class="action">Learn about giving <i class="icon icon-arrow"></i></a></p>
+        <p><a href="/giving/ways/" class="action">Learn about ways you can give <i class="icon icon-arrow"></i></a></p>
+        <p><a href="//giving.life.church" class="action">Sign in to give online <i class="icon icon-arrow"></i></a></p>
+        <hr />
+        <p>Still have questions? Fill out the contact form below and we'll see how we can help.</p>
+      </div>
 
-      <label>What is your specific question, comment, or issue?</label>
-      <p class="detail">The more we know, the better we can help you.</p>
-      <textarea name="message"></textarea>
+      <div class="subject-details subject-serving" style="display:none">
+        <hr />
+        <h6>Did you know we have serving info on our website?</h6>
+        <p>If you're looking to serve with us at a campus, at our central offices or at Church Online, we have details and registration forms available from our <a href="/serving/">Serving Opportunities</a> page.</p>
+        <p><a href="/serving/" class="action">Learn about Serving Opportunities <i class="icon icon-arrow"></i></a></p>
+      </div>
 
-      <hr />
+      <div class="subject-details subject-campus" style="display:none">
+        <hr />
+        <h6>Did you know each campus has its own page on our website?</h6>
+        <p>If you have any campus-specific questions, please direct them to that campus. Select your campus below:</p> 
+      </div>
 
-      <label>What is the best way to reach you?</label>
-      <p class="detail">Please share your name and email address below.</p>
+      <div class="subject-details subject-jobs" style="display:none">
+        <hr />
+        <h6>Did you know we list available jobs on our website?</h6>
+        <p>If you're interested in working with Life.Church, or in learning more about our corporate culture, the Jobs section of our website should help you.</p>
+        <p><a href="//jobs.life.church/" class="action">View our job openings <i class="icon icon-arrow"></i></a></p>
+        <p><a href="/jobs/" class="action">Learn about working at Life.Church <i class="icon icon-arrow"></i></a></p>
+        <hr />
+        <p>Still have questions? Fill out the contact form below and we'll see how we can help.</p>
+      </div>
 
-      <input name="name" type="text" placeholder="Enter your name" />
-      <input name="phone" type="text" placeholder="Enter your email address" />
+      <div class="subject-details subject-prayer" style="display:none">
+        <hr />
+        <h6>Did you know we have a page just for prayer requests?</h6>
+        <p>If you're interested in getting prayer online at Life.Church, you can go straight to the Prayer page:</p>
+        <p><a href="/prayer/" class="action">Get Prayer Online <i class="icon icon-arrow"></i></a></p>
+      </div>
 
-      <hr />
+      <div class="subject-details subject-youversion" style="display:none">
+        <hr />
+        <h6>Did you know there is a YouVersion help website?</h6>
+        <p>If you're needing help using YouVersion or have a question, visit the <a href="https://help.youversion.com/" target="new">YouVersion Help Site.</a></p>
+        <p><a href="https://help.youversion.com/" target="new" class="action">Go to the YouVersion Help Site <i class="icon icon-arrow"></i></a></p>
+      </div>
 
-      <input type="submit" class="button small submit-contact" value="Submit this contact form" />
+      <div class="form-fields" style="display:none">
+        <label>What is your specific question, comment, or issue?</label>
+        <p class="detail">The more we know, the better we can help you.</p>
+        <textarea name="message"></textarea>
 
-      <p class="detail"><em>(We are generally able to respond within one to three days of your request.)</em></p>
+        <hr />
+
+        <label>What is the best way to reach you?</label>
+        <p class="detail">Please share your name and email address below.</p>
+
+        <input name="name" type="text" placeholder="Enter your name" />
+        <input name="email" type="text" placeholder="Enter your email address" />
+
+        <hr />
+
+        <input type="submit" class="button small submit-contact" value="Submit this contact form" />
+      </div>
 
     </form>
   </article>
 </section>
 
+<div class="subject-details subject-campus padded" style="display:none">
+  {% include map.html for='connect' %}
+</div>
+
 <div class="padded">
   <div class="container">
-    <section class="additional-contact-information grid-items grid-two">
+    <section class="additional-contact-information grid-items grid-two" style="display:none">
       <div class="grid-item">
         <h6>Church, Ministry, &amp; Organization Leaders</h6>
-        <p class="detail">We truly believe we can do more together than apart to lead people to become fully devoted followers of Christ. If you have any questions about ministries or departments at LifeChurch.tv, we’d love to help.<br />
-          <a class="action" href="http://open.lifechurch.tv/ask">Ask LifeChurch.tv <i class="icon icon-arrow"></i></a>
+        <p class="detail">We truly believe we can do more together than apart to lead people to become fully devoted followers of Christ. If you have any questions about ministries or departments at Life.Church, we’d love to help.<br />
+          <a class="action" href="http://open.life.church/ask">Ask Life.Church <i class="icon icon-arrow"></i></a>
         </p>
       </div>
       <div class="grid-item">
-        <h6>Central Support OFfice</h6>
+        <h6>Central Support Office</h6>
         <p class="detail">
           4600 E. 2nd Street<br />
           Edmond, OK 73034<br />
           (405) 680-LIFE (5433)<br />
-          <a href="mailto:info@lifechurch.tv">info@lifechurch.tv</a><br />
         </p>
       </div>
     </section>

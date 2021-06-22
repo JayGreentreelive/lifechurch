@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
-ruby '2.3.0'
+ruby '3.0.1'
 
-gem 'jekyll', '~> 2.5.3'
+gem 'jekyll'
 
-gem "rack-contrib", "1.1.0"
-gem "rack-rewrite", "1.4.1"
-gem "puma", "2.7.1"
-gem "rake", "10.1.1"
-gem 'rdiscount'
+gem "rack-contrib"
+gem "rack-rewrite"
+gem "puma"
+gem "rake"
+gem 'kramdown'
 gem 'rack-slashenforce', :require => 'rack'

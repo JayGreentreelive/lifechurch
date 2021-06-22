@@ -1,0 +1,17 @@
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/fast-stemmer-1.0.2/ext
+C:/Bitnami/rubystack/ruby/bin/ruby.exe -I C:/Bitnami/rubystack/ruby/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210622-7196-annjl3.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/fast-stemmer-1.0.2/ext
+make DESTDIR\= clean
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/fast-stemmer-1.0.2/ext
+make DESTDIR\=
+generating stemmer-x64-mingw32.def
+compiling porter.c
+compiling porter_wrap.c
+linking shared-object stemmer.so
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/fast-stemmer-1.0.2/ext
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 stemmer.so ./.gem.20210622-7196-wbe9ac

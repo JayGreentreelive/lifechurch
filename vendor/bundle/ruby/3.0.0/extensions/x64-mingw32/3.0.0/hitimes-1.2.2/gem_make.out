@@ -1,0 +1,21 @@
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/hitimes-1.2.2/ext/hitimes/c
+C:/Bitnami/rubystack/ruby/bin/ruby.exe -I C:/Bitnami/rubystack/ruby/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210622-7196-n46d7h.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/hitimes-1.2.2/ext/hitimes/c
+make DESTDIR\= clean
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/hitimes-1.2.2/ext/hitimes/c
+make DESTDIR\=
+generating hitimes-x64-mingw32.def
+compiling hitimes.c
+compiling hitimes_instant_clock_gettime.c
+compiling hitimes_instant_osx.c
+compiling hitimes_instant_windows.c
+compiling hitimes_interval.c
+compiling hitimes_stats.c
+linking shared-object hitimes/3.0/hitimes.so
+
+current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/hitimes-1.2.2/ext/hitimes/c
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 hitimes.so ./.gem.20210622-7196-14pzwi/hitimes/3.0

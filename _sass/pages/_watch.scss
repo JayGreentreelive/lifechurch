@@ -4,7 +4,7 @@
 .page-watch {
 
   .watch-hero {
-    @include retina-image(/images/watch/watch-bg, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/watch/watch-bg, cover, jpg);
     background-color: #000;
     background-position: center top;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     margin-right: auto;
 
     @media only screen and (max-width: $medium-screen) {
-      @include retina-image(/images/watch/watch-bg-small, cover, jpg);
+      @include retina-image(/lifechurch.github.io/images/watch/watch-bg-small, cover, jpg);
       background-color: #000;
       background-position: top left;
       background-repeat: no-repeat;
@@ -156,15 +156,15 @@
 }
 
 .watch-podcast:before {
-  @include svg-image('/images/watch/watch-podcast');
+  @include svg-image('/lifechurch.github.io/images/watch/watch-podcast');
 }
 
 .watch-talkitover:before {
-  @include svg-image('/images/watch/watch-talkitover');
+  @include svg-image('/lifechurch.github.io/images/watch/watch-talkitover');
 }
 
 .watch-open:before {
-  @include svg-image('/images/watch/watch-open');
+  @include svg-image('/lifechurch.github.io/images/watch/watch-open');
 }
 
 .watch-message-first-archive {
@@ -221,7 +221,7 @@
   }
 
   .play-large {
-    @include svg-image('/images/watch/watch-play-large');
+    @include svg-image('/lifechurch.github.io/images/watch/watch-play-large');
     width: 44px;
     height: 53px;
     padding: 60px;

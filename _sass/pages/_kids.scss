@@ -23,13 +23,13 @@
   }
 
   .kids-bg {
-    @include retina-image(/images/kids/kids-bg-small, 472px 408px, jpg);
+    @include retina-image(/lifechurch.github.io/images/kids/kids-bg-small, 472px 408px, jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #eadcbf;
 
     @include media($medium-screen) {
-      @include retina-image(/images/kids/kids-bg-large, 1500px 876px, jpg);
+      @include retina-image(/lifechurch.github.io/images/kids/kids-bg-large, 1500px 876px, jpg);
 
       h1 {
         margin-top: 410px;
@@ -50,7 +50,7 @@
   }
 
   #switch {
-    @include retina-image(/images/kids/switch-bg-small, 506px 403px, jpg);
+    @include retina-image(/lifechurch.github.io/images/kids/switch-bg-small, 506px 403px, jpg);
     background-color: #191913;
     background-repeat: no-repeat;
     background-position: center top;
@@ -58,7 +58,7 @@
     padding-bottom: 40px;
     
     @include media($medium-screen) {
-      @include retina-image(/images/kids/switch-bg, 1500px 403px, jpg);
+      @include retina-image(/lifechurch.github.io/images/kids/switch-bg, 1500px 403px, jpg);
     }
 
     .grade {

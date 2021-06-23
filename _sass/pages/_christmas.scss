@@ -13,7 +13,7 @@
     padding: 0;
     h1 {
       @include hide-text;
-      @include retina-image(/images/christmas/title, contain);
+      @include retina-image(/lifechurch.github.io/images/christmas/title, contain);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -50,16 +50,16 @@
   }
 
   .hero-christmas {
-    @include retina-image(/images/christmas/christmas-hero, 1500px auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/christmas/christmas-hero, 1500px auto, jpg);
     max-width: 1500px;
     margin: auto;
     @media screen and (max-width: 640px) {
-      @include retina-image(/images/christmas/christmas-hero-mobile, 640px auto, jpg);
+      @include retina-image(/lifechurch.github.io/images/christmas/christmas-hero-mobile, 640px auto, jpg);
     }
   }
   
   .hero-i-deserve-it {
-    @include retina-image(/announcements/assets/2015-11-12-christmas, 1500px auto, jpg);
+    @include retina-image(/lifechurch.github.io/announcements/assets/2015-11-12-christmas, 1500px auto, jpg);
     min-height: 340px !important;
   }
   
@@ -92,7 +92,7 @@
     height: 132%;
     overflow: hidden;
     z-index: 0;
-    background: url(/images/christmas/christmas-hero@2x.jpg) no-repeat center;
+    background: url(/lifechurch.github.io/images/christmas/christmas-hero@2x.jpg) no-repeat center;
     background-size: cover;
     &:after {
       content: " ";
@@ -105,7 +105,7 @@
       right: 0;
       background: rgba(157, 111, 95, 0.2);
       @media screen and (max-width: 640px) {
-        background: url(/images/christmas/christmas-hero-mobile.jpg) no-repeat center;
+        background: url(/lifechurch.github.io/images/christmas/christmas-hero-mobile.jpg) no-repeat center;
         background-size: cover;
         }
       }
@@ -116,7 +116,7 @@
     min-height: 100% !important;
     object-fit: cover;
     @media screen and (max-width: 640px) {
-      background: url(/images/christmas/christmas-hero-mobile.jpg) no-repeat center;
+      background: url(/lifechurch.github.io/images/christmas/christmas-hero-mobile.jpg) no-repeat center;
       background-size: cover;
       visibility: hidden;
     }
@@ -130,12 +130,12 @@
 }
 
 .group.about-lctv {
-  @include retina-image(/images/watch/landings/about-bg-small, cover, jpg);
+  @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg-small, cover, jpg);
   background-size: cover;
   background-position: center bottom;
 
   @include media($medium-screen) {
-    @include retina-image(/images/watch/landings/about-bg, 1500px auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg, 1500px auto, jpg);
     background-size: 1500px auto;
   }
 }

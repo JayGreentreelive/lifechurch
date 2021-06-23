@@ -5,13 +5,13 @@
   background: #fff;
   
   .hero {
-    @include retina-image(/images/prayer/prayer-bg-small, 559px auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/prayer/prayer-bg-small, 559px auto, jpg);
     background-color: black;
     background-position: center top;
     min-height: 200px;
 
     @include media($medium-screen) {
-      @include retina-image(/images/prayer/prayer-bg, 1500px auto, jpg);
+      @include retina-image(/lifechurch.github.io/images/prayer/prayer-bg, 1500px auto, jpg);
       background-color: black;
       padding-bottom: 40px;
       background-position: center top;

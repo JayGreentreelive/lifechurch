@@ -64,7 +64,7 @@ $connect-locally-orange: #ff4611;
   }
 
   .connectlocally-logo {
-    @include svg-image('../images/branding/connectlocally-white');
+    @include svg-image('/lifechurch.github.io/images/branding/connectlocally-white');
     width: 250px;
     height: 115px;
     margin: 0 auto;

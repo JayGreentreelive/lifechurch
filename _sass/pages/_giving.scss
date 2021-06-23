@@ -8,7 +8,7 @@
     width: 100%;
     padding: 0.5em 0;
     .giving-icon {
-      @include svg-image('/images/giving/giving-icon');
+      @include svg-image('/lifechurch.github.io/images/giving/giving-icon');
       background-repeat: no-repeat;
       width: 30px;
       height: 30px;
@@ -41,12 +41,12 @@
 }
 
   .giving-bg {
-    @include retina-image(/images/giving/giving-bg-small, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/giving/giving-bg-small, cover, jpg);
     background-position: center bottom;
     position: relative;
 
     @include media($medium-screen) {
-      @include retina-image(/images/giving/giving-bg, 1500px 673px, jpg);
+      @include retina-image(/lifechurch.github.io/images/giving/giving-bg, 1500px 673px, jpg);
       background-repeat: no-repeat;
 
       .detail {
@@ -62,7 +62,7 @@
   }
 
   .hero-giving-tithe {
-    @include retina-image(/images/giving/giving-bg, cover);
+    @include retina-image(/lifechurch.github.io/images/giving/giving-bg, cover);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -72,7 +72,7 @@
   }
 
   .hero-giving-spacesplaces {
-    @include retina-image(/images/giving/spaces-places, auto 100%, jpg);
+    @include retina-image(/lifechurch.github.io/images/giving/spaces-places, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -82,7 +82,7 @@
   }
 
   .hero-giving-reliefrestoration {
-    @include retina-image(/images/giving/relief-restoration, auto 100%, jpg);
+    @include retina-image(/lifechurch.github.io/images/giving/relief-restoration, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -92,7 +92,7 @@
   }
 
   .hero-giving-digitalmissions {
-    @include retina-image(/images/giving/digital-missions, auto 100%, jpg);
+    @include retina-image(/lifechurch.github.io/images/giving/digital-missions, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -184,7 +184,7 @@
   }
 
   .section-restore-1 {
-    background: #000 url("/images/giving/restore-bg-1.jpg") center bottom no-repeat;
+    background: #000 url("/lifechurch.github.io/images/giving/restore-bg-1.jpg") center bottom no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -208,7 +208,7 @@
   }
 
   .hero-restore {
-    @include retina-image(/images/giving/restore-bg-2, 100% auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/giving/restore-bg-2, 100% auto, jpg);
     background-repeat: no-repeat;
   }
 
@@ -227,7 +227,7 @@
   .digital-missions {
     .digital-missions-bg {
       height: 600px;
-      @include retina-image(/images/digital-missions/dm-bg, 100% auto, jpg);
+      @include retina-image(/lifechurch.github.io/images/digital-missions/dm-bg, 100% auto, jpg);
       background-color: #eaeae8;
       background-repeat: no-repeat;
       background-position: center bottom;
@@ -266,7 +266,7 @@
 // LifeMissions page
 
   .hero-lifemissions  {
-    @include retina-image(/images/lifemissions/lm-lifemissions, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifemissions/lm-lifemissions, cover, jpg);
     background-color: #F9F9F9;
     background-repeat: no-repeat;
     background-position: center top;
@@ -292,18 +292,18 @@
 
   .lifemissions {
     .tile-restore {
-      @include retina-image(/images/lifemissions/lm-tile-restore, cover, jpg);
+      @include retina-image(/lifechurch.github.io/images/lifemissions/lm-tile-restore, cover, jpg);
       background-position: center;
     }
     
     .tile-principles {
-      @include retina-image(/images/lifemissions/lm-tile-principles, cover, jpg);
+      @include retina-image(/lifechurch.github.io/images/lifemissions/lm-tile-principles, cover, jpg);
       background-position: center;
     }
   }
 
   .hero-lifemissions-2 {
-    @include retina-image(/images/lifemissions/lm-bg-2, auto 100%, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifemissions/lm-bg-2, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -313,7 +313,7 @@
   }
 
   .hero-lifemissions-3 {
-    @include retina-image(/images/lifemissions/lm-bg-3, auto 100%, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifemissions/lm-bg-3, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center;
 

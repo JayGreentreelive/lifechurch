@@ -54,22 +54,22 @@
 
 // Tile 1
 .lifegroups-tile-1 {
-  @include retina-image(/images/lifegroups/lifegroups-1-tile, cover, jpg);
+  @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-1-tile, cover, jpg);
 }
 
 // Tile 2
 .lifegroups-tile-2 {
-  @include retina-image(/images/lifegroups/lifegroups-2-tile, cover, jpg);
+  @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-2-tile, cover, jpg);
 }
 
 // Tile 3
 .lifegroups-tile-3 {
-  @include retina-image(/images/lifegroups/lifegroups-3-tile, cover, jpg);
+  @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-3-tile, cover, jpg);
 }
 
 // Tile 4
 .lifegroups-tile-4 {
-  @include retina-image(/images/lifegroups/lifegroups-4-tile, cover, jpg);
+  @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-4-tile, cover, jpg);
 }
 
 
@@ -91,13 +91,13 @@
   background-color: #222;
 
   @media only screen and (max-width: $medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-1-thin, 100% auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-1-thin, 100% auto, jpg);
     background-color: #d9e5cd;
     background-position: left top;
   }
  
   @include media($medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-1, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-1, cover, jpg);
     background-position: -320px top;
   }
 
@@ -106,7 +106,7 @@
   }
 
   .lt-ie9 & {
-    background: url("/images/lifegroups/lifegroups-1.jpg") center top no-repeat;
+    background: url("/lifechurch.github.io/images/lifegroups/lifegroups-1.jpg") center top no-repeat;
   }
 }
 
@@ -116,13 +116,13 @@
   background-color: #222;
 
   @media only screen and (max-width: $medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-2-thin, 100% auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-2-thin, 100% auto, jpg);
     background-position: left top;
     background-color: #fefff1;
   }
 
   @include media($medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-2, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-2, cover, jpg);
     background-position: -320px top;
   }
 
@@ -131,7 +131,7 @@
   }
 
   .lt-ie9 & {
-    background: url("/images/lifegroups/lifegroups-2.jpg") center top no-repeat;
+    background: url("/lifechurch.github.io/images/lifegroups/lifegroups-2.jpg") center top no-repeat;
   }
 }
 
@@ -141,13 +141,13 @@
   background-color: #222;
 
   @media only screen and (max-width: $medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-3-thin, 100% auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-3-thin, 100% auto, jpg);
     background-position: left top;
     background-color: #000;
   }
 
   @include media($medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-3, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-3, cover, jpg);
     background-position: -320px top;
   }
 
@@ -156,7 +156,7 @@
   }
 
   .lt-ie9 & {
-    background: url("/images/lifegroups/lifegroups-3.jpg") center top no-repeat;
+    background: url("/lifechurch.github.io/images/lifegroups/lifegroups-3.jpg") center top no-repeat;
   }
 }
 
@@ -166,13 +166,13 @@
   background-color: #222;
 
   @media only screen and (max-width: $medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-4-thin, 100% auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-4-thin, 100% auto, jpg);
     background-position: left top;
     background-color: #faf9dd;
   }
 
   @include media($medium-screen) {
-    @include retina-image(/images/lifegroups/lifegroups-4, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/lifegroups/lifegroups-4, cover, jpg);
     background-position: -320px top;
   }
 
@@ -181,6 +181,6 @@
   }
 
   .lt-ie9 & {
-    background: url("/images/lifegroups/lifegroups-4.jpg") center top no-repeat;
+    background: url("/lifechurch.github.io/images/lifegroups/lifegroups-4.jpg") center top no-repeat;
   }
 }

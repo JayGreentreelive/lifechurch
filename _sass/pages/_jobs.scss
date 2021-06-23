@@ -4,7 +4,7 @@
 .jobs {
 
   .section-jobs-top { 
-    @include retina-image(/images/jobs/jobs-bg-small, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/jobs/jobs-bg-small, cover, jpg);
     min-height: 300px;
 
 
@@ -13,7 +13,7 @@
     }
 
     @include media($medium-screen) {
-      @include retina-image(/images/jobs/jobs-bg, contain, jpg);
+      @include retina-image(/lifechurch.github.io/images/jobs/jobs-bg, contain, jpg);
       background-position: center top;
       background-repeat: no-repeat;
       height: 570px;
@@ -24,7 +24,7 @@
     }
 
     .lt-ie9 & {
-      background: url('/images/jobs/jobs-bg.jpg') center top no-repeat;
+      background: url('/lifechurch.github.io/images/jobs/jobs-bg.jpg') center top no-repeat;
     }
   }
 

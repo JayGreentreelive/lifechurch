@@ -4,13 +4,13 @@
 .leadership {
   
   .hero-leadership {
-    @include retina-image(/images/leadership/hero-bg, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/leadership/hero-bg, cover, jpg);
     min-height: 400px !important;
     .inner {
       text-align: left;
       h1 {
         @include hide-text;
-        @include retina-image(/images/leadership/logo, contain);
+        @include retina-image(/lifechurch.github.io/images/leadership/logo, contain);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
@@ -49,7 +49,7 @@
     
     .icon-youtube {
       @include hide-text;
-      @include svg-image('/images/tools/tools-social-youtube');
+      @include svg-image('/lifechurch.github.io/images/tools/tools-social-youtube');
       background-size: cover;
       background-position: center;
       width: 65px;
@@ -59,7 +59,7 @@
     
     .icon-google-play {
       @include hide-text;
-      @include svg-image('/images/worship/icon-google-play');
+      @include svg-image('/lifechurch.github.io/images/worship/icon-google-play');
       background-size: 65px 65px;
       width: 65px;
       height: 65px;
@@ -97,7 +97,7 @@
       }
       .icon-google-play {
         @include hide-text;
-        @include retina-image(/images/app/google-play, contain);
+        @include retina-image(/lifechurch.github.io/images/app/google-play, contain);
         background-position: center;
         background-repeat: no-repeat;
         width: 125px;

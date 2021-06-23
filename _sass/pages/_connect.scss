@@ -5,12 +5,12 @@
   background: black;
 
   .hero {
-    @include retina-image(/images/connect/connect-bg-small, 559px auto, jpg);
+    @include retina-image(/lifechurch.github.io/images/connect/connect-bg-small, 559px auto, jpg);
     background-color: black;
     background-position: right top;
 
     @include media($medium-screen) {
-      @include retina-image(/images/connect/connect-bg, cover, jpg);
+      @include retina-image(/lifechurch.github.io/images/connect/connect-bg, cover, jpg);
       background-color: black;
       padding-bottom: 150px;
       background-position: center;
@@ -47,7 +47,7 @@
   }
 
   .hero-connect-thankyou {
-    @include retina-image(/images/connect/connect-bg-2, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/connect/connect-bg-2, cover, jpg);
     background-color: black;
   }
 
@@ -87,12 +87,12 @@
   }
 
   .group.about-lctv {
-    @include retina-image(/images/watch/landings/about-bg-small, cover, jpg);
+    @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg-small, cover, jpg);
     background-size: cover;
     background-position: center bottom;
 
     @include media($medium-screen) {
-      @include retina-image(/images/watch/landings/about-bg, 1500px auto, jpg);
+      @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg, 1500px auto, jpg);
       background-size: 1500px auto;
     }
   }

@@ -4,7 +4,7 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: true
+- active: false
   type: notice
   icon: campus
   message: All campuses are closed due to snow.

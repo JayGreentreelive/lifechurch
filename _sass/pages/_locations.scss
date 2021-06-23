@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 .pin {
-  @include svg-image('/lifechurch.github.io/locations/assets/pin');
+  @include svg-image('/locations/assets/pin');
   background-repeat: no-repeat;
   background-position: center top;
   color: #ada5a5;
@@ -18,7 +18,7 @@
 
 .pin-state.pin-ok,
 .pin-state.pin-tx {
-  @include svg-image('/lifechurch.github.io/locations/assets/pin2');
+  @include svg-image('/locations/assets/pin2');
 }
 
 // Maps General
@@ -63,8 +63,8 @@
     background-size: auto 270px;
     opacity: 1;
 
-    .svg & { background-image: url('/lifechurch.github.io/locations/assets/map-default-small.svg'); }
-    .no-svg & { background-image: url('/lifechurch.github.io/locations/assets/map-default-small.gif'); }
+    .svg & { background-image: url('/locations/assets/map-default-small.svg'); }
+    .no-svg & { background-image: url('/locations/assets/map-default-small.gif'); }
 
     @include media($medium-screen) {
       background-size: auto 390px;
@@ -73,8 +73,8 @@
     @include media(1050px) {
       background-size: auto 750px;
 
-      .svg & { background-image: url('/lifechurch.github.io/locations/assets/map-default-large.svg'); }
-      .no-svg & { background-image: url('/lifechurch.github.io/locations/assets/map-default-large.gif'); }
+      .svg & { background-image: url('/locations/assets/map-default-large.svg'); }
+      .no-svg & { background-image: url('/locations/assets/map-default-large.gif'); }
     }
   }
 
@@ -228,15 +228,15 @@ $states: online, oklahoma, texas, tennessee, florida, kansas, newyork, newmexico
         background-size: auto 460px;
       }
 
-      .svg & { background-image: url('/lifechurch.github.io/locations/assets/map-#{$state}-small.svg'); }
-      .no-svg & { background-image: url('/lifechurch.github.io/locations/assets/map-#{$state}-small.gif'); }
+      .svg & { background-image: url('/locations/assets/map-#{$state}-small.svg'); }
+      .no-svg & { background-image: url('/locations/assets/map-#{$state}-small.gif'); }
 
       @include media(1050px) {
         background-size: auto 790px;
         background-position: center top;
 
-        .svg & { background-image: url('/lifechurch.github.io/locations/assets/map-#{$state}-large.svg'); }
-        .no-svg & { background-image: url('/lifechurch.github.io/locations/assets/map-#{$state}-large.gif'); }
+        .svg & { background-image: url('/locations/assets/map-#{$state}-large.svg'); }
+        .no-svg & { background-image: url('/locations/assets/map-#{$state}-large.gif'); }
       }
     }
 
@@ -544,11 +544,11 @@ $locations: florida, kansas, newmexico, newyork, oklahoma, tennessee, texas;
 
     #online {
       border-right: 0px solid $base-border-color;
-      @include svg-image('/lifechurch.github.io/locations/assets/map-churchonline');
+      @include svg-image('/locations/assets/map-churchonline');
     }
 
     #network {
-      @include svg-image('/lifechurch.github.io/locations/assets/map-network');
+      @include svg-image('/locations/assets/map-network');
     }
 
     #online {

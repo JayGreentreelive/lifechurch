@@ -1,11 +1,11 @@
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
 C:/Bitnami/rubystack/ruby/bin/ruby.exe -I C:/Bitnami/rubystack/ruby/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210622-14128-ewxszf.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
 make DESTDIR\= clean
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/puma-2.7.1/ext/puma_http11
 make DESTDIR\=
 generating puma_http11-x64-mingw32.def
 compiling http11_parser.c

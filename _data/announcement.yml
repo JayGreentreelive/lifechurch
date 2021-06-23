@@ -8,11 +8,11 @@
   type: notice
   icon: campus
   message: All campuses are closed due to snow.
-  url: /lifechurch.github.io/campus/
+  url: /campus/
 
 
 - active: false
   type: notice
   icon: weather-snow
   message: Due to severe weather All services are now cancelled
-  url: /lifechurch.github.io/weather/
+  url: /weather/

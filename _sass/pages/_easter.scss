@@ -10,12 +10,12 @@
     position: relative;
     width: 100%;
     padding: 0;
-    @include retina-image(/lifechurch.github.io/images/easter/hero-easter, cover, jpg);
+    @include retina-image(/images/easter/hero-easter, cover, jpg);
     .hero-inner {
       padding: 100px 0 300px;
       h1 {
         @include hide-text;
-        @include retina-image(/lifechurch.github.io/images/easter/title, contain);
+        @include retina-image(/images/easter/title, contain);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -60,7 +60,7 @@
   }
 
   .hero-like-jesus {
-    @include retina-image(/lifechurch.github.io/images/easter/like-jesus, auto 100%, jpg);
+    @include retina-image(/images/easter/like-jesus, auto 100%, jpg);
     background-repeat: no-repeat;
     background-position: center top;
     max-height: 550px;
@@ -73,12 +73,12 @@
   
 
 .group.about-lctv {
-  @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg-small, cover, jpg);
+  @include retina-image(/images/watch/landings/about-bg-small, cover, jpg);
   background-size: cover;
   background-position: center bottom;
 
   @include media($medium-screen) {
-    @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg, 1500px auto, jpg);
+    @include retina-image(/images/watch/landings/about-bg, 1500px auto, jpg);
     background-size: 1500px auto;
   }
 }

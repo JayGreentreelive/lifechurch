@@ -13,12 +13,12 @@
   }
 
   .who-we-are-bg {
-    @include retina-image(/lifechurch.github.io/images/about/whoweare-bg-small, cover, jpg);
+    @include retina-image(/images/about/whoweare-bg-small, cover, jpg);
     background-position: center top;
     background-repeat: no-repeat;
 
     @include media($medium-screen) {
-      @include retina-image(/lifechurch.github.io/images/about/whoweare-bg, 1500px 636px, jpg);
+      @include retina-image(/images/about/whoweare-bg, 1500px 636px, jpg);
     }
 
     blockquote p {
@@ -41,12 +41,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 .challenge-bg {
-  @include retina-image(/lifechurch.github.io/images/about/challenge-bg-small, cover, jpg);
+  @include retina-image(/images/about/challenge-bg-small, cover, jpg);
   background-position: center top;
   background-repeat: no-repeat;
 
   @include media($medium-screen) {
-    @include retina-image(/lifechurch.github.io/images/about/challenge-bg, 1500px 701px, jpg);
+    @include retina-image(/images/about/challenge-bg, 1500px 701px, jpg);
     height: 700px;
   }
 }

@@ -1,11 +1,11 @@
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
 C:/Bitnami/rubystack/ruby/bin/ruby.exe -I C:/Bitnami/rubystack/ruby/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210622-14128-5rhdih.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
 make DESTDIR\= clean
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
 make DESTDIR\=
 generating yajl-x64-mingw32.def
 compiling yajl.c
@@ -234,6 +234,6 @@ yajl_version.c:6:1: warning: visibility attribute not supported in this configur
  ^
 linking shared-object yajl/yajl.so
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/yajl-ruby-1.2.3/ext/yajl
 make DESTDIR\= install
 /usr/bin/install -c -m 0755 yajl.so ./.gem.20210622-14128-qhp81h/yajl

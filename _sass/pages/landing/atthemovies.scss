@@ -4,7 +4,7 @@
 
 .hero {
   background-color: black;
-  @include retina-image(/lifechurch.github.io/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
+  @include retina-image(/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
   background-size: cover;
   background-position: center bottom;
   height: 620px;
@@ -12,7 +12,7 @@
   position: relative;
 
   @include media($medium-screen) {
-    @include retina-image(/lifechurch.github.io/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
+    @include retina-image(/images/watch/landings/atthemovies/hero-bg, cover, jpg)!important;
     background-size: cover;
     height: 600px;
   }
@@ -62,12 +62,12 @@
 }
 
 .group.about-lctv {
-  @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg-small, cover, jpg);
+  @include retina-image(/images/watch/landings/about-bg-small, cover, jpg);
   background-size: cover;
   background-position: center bottom;
 
   @include media($medium-screen) {
-    @include retina-image(/lifechurch.github.io/images/watch/landings/about-bg, 1500px auto, jpg);
+    @include retina-image(/images/watch/landings/about-bg, 1500px auto, jpg);
     background-size: 1500px auto;
   }
 }

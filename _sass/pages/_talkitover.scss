@@ -10,7 +10,7 @@
     }
 
     .logo-talkitover {
-      @include svg-image('/lifechurch.github.io/images/branding/logo-talkitover');
+      @include svg-image('/images/branding/logo-talkitover');
       @extend %hide-text;
       background-position: center;
       display: block;

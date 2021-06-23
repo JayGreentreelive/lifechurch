@@ -1,11 +1,11 @@
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
 C:/Bitnami/rubystack/ruby/bin/ruby.exe -I C:/Bitnami/rubystack/ruby/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210622-14128-11l128.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
 make DESTDIR\= clean
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
 make DESTDIR\=
 generating redcarpet-x64-mingw32.def
 compiling autolink.c
@@ -34,6 +34,6 @@ compiling rc_render.c
 compiling stack.c
 linking shared-object redcarpet.so
 
-current directory: C:/Users/Jay/Documents/GitHub/lifechurch.github.io/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
+current directory: C:/Users/Jay/Documents/GitHub/vendor/bundle/ruby/3.0.0/gems/redcarpet-3.5.1/ext/redcarpet
 make DESTDIR\= install
 /usr/bin/install -c -m 0755 redcarpet.so ./.gem.20210622-14128-ef2zps

@@ -173,7 +173,7 @@
 }
 
 .video-thumb .play-small {
-  @include svg-image('/lifechurch.github.io/images/watch/watch-play-large');
+  @include svg-image('/images/watch/watch-play-large');
   width: 44px;
   height: 53px;
   padding: 30px;
@@ -187,22 +187,22 @@
 }
 
 .video-thumb-open-1 {
-  @include retina-image(/lifechurch.github.io/images/equipping-churches/ec-open-thumb-1, cover, jpg);
+  @include retina-image(/images/equipping-churches/ec-open-thumb-1, cover, jpg);
   background-size: cover;
 }
 
 .video-thumb-open-2 {
-  @include retina-image(/lifechurch.github.io/images/equipping-churches/ec-open-thumb-2, cover, jpg);
+  @include retina-image(/images/equipping-churches/ec-open-thumb-2, cover, jpg);
   background-size: cover;
 }
 
 .video-thumb-network-1 {
-  @include retina-image(/lifechurch.github.io/images/equipping-churches/ec-network-thumb-1, cover, jpg);
+  @include retina-image(/images/equipping-churches/ec-network-thumb-1, cover, jpg);
   background-size: cover; 
 }
 
 .video-thumb-network-2 {
-  @include retina-image(/lifechurch.github.io/images/equipping-churches/ec-network-thumb-2, cover, jpg);
+  @include retina-image(/images/equipping-churches/ec-network-thumb-2, cover, jpg);
   background-size: cover;
 }
 

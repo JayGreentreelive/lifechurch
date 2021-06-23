@@ -4,7 +4,7 @@
 .castandcrew {
 
   .hero-castandcrew {
-    @include retina-image(/lifechurch.github.io/images/castandcrew/hero-bg, 1500px auto, jpg);
+    @include retina-image(/images/castandcrew/hero-bg, 1500px auto, jpg);
       h1 {
         font-size: 2em;
         margin: 155px auto 0;
@@ -12,7 +12,7 @@
   }
   
   .hero-subscribe {
-    @include retina-image(/lifechurch.github.io/images/castandcrew/join-bg, 1021px cover, jpg);
+    @include retina-image(/images/castandcrew/join-bg, 1021px cover, jpg);
     background-color: #010002;
     background-position: center bottom;
     padding-bottom: 250px;
@@ -20,7 +20,7 @@
   
   .icon-facebook {
     @include hide-text;
-    @include svg-image('/lifechurch.github.io/images/tools/tools-social-facebook');
+    @include svg-image('/images/tools/tools-social-facebook');
     background-size: 70px 60px;
     width: 80px;
     height: 70px;
@@ -28,7 +28,7 @@
   
   .icon-twitter {
     @include hide-text;
-    @include svg-image('/lifechurch.github.io/images/tools/tools-social-twitter');
+    @include svg-image('/images/tools/tools-social-twitter');
     background-size: 70px 60px;
     width: 80px;
     height: 70px;
@@ -36,7 +36,7 @@
   
   .icon-instagram {
     @include hide-text;
-    @include svg-image('/lifechurch.github.io/images/tools/tools-social-instagram');
+    @include svg-image('/images/tools/tools-social-instagram');
     background-size: 70px 60px;
     width: 80px;
     height: 70px;

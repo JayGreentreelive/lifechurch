@@ -22,29 +22,29 @@ file 'ext/Makefile' => FileList['ext/*.{c,h,rb}', "ext/ruby-#{RUBYDIGEST}"] do
 end
 CLEAN.include 'ext/Makefile', 'ext/mkmf.log'
 
-file "ext/rdiscount.#{DLEXT}" => FileList["ext/Makefile"] do |f|
+file "ext/kramdown.#{DLEXT}" => FileList["ext/Makefile"] do |f|
   sh 'cd ext && make clean && make && rm -rf conftest.dSYM'
 end
 CLEAN.include 'ext/*.{o,bundle,so,dll}'
 
-file "lib/rdiscount.#{DLEXT}" => "ext/rdiscount.#{DLEXT}" do |f|
+file "lib/kramdown.#{DLEXT}" => "ext/kramdown.#{DLEXT}" do |f|
   cp f.prerequisites, "lib/", :preserve => true
 end
 
-desc 'Build the rdiscount extension'
-task :build => "lib/rdiscount.#{DLEXT}"
+desc 'Build the kramdown extension'
+task :build => "lib/kramdown.#{DLEXT}"
 
 # ==========================================================
 # Manual
 # ==========================================================
 
-file 'man/rdiscount.1' => 'man/rdiscount.1.ronn' do
-  sh "ronn --manual=RUBY -b man/rdiscount.1.ronn"
+file 'man/kramdown.1' => 'man/kramdown.1.ronn' do
+  sh "ronn --manual=RUBY -b man/kramdown.1.ronn"
 end
-CLOBBER.include 'man/rdiscount.1'
+CLOBBER.include 'man/kramdown.1'
 
 desc 'Build manpages'
-task :man => 'man/rdiscount.1'
+task :man => 'man/kramdown.1'
 
 # ==========================================================
 # Testing
@@ -59,7 +59,7 @@ task 'test:unit' => [:build]
 
 desc 'Run conformance tests (MARKDOWN_TEST_VER=1.0)'
 task 'test:conformance' => [:build] do |t|
-  script = "#{pwd}/bin/rdiscount"
+  script = "#{pwd}/bin/kramdown"
   test_version = ENV['MARKDOWN_TEST_VER'] || '1.0.3'
   lib_dir = "#{pwd}/lib"
   chdir("test/MarkdownTest_#{test_version}") do
@@ -100,7 +100,7 @@ task :doc => 'doc/index.html'
 file 'doc/index.html' => FileList['lib/*.rb'] do |f|
   sh((<<-end).gsub(/\s+/, ' '))
     hanna --charset utf8 --fmt html --inline-source --line-numbers \
-          --main RDiscount --op doc --title 'RDiscount API Documentation' \
+          --main kramdown --op doc --title 'kramdown API Documentation' \
           #{f.prerequisites.join(' ')}
   end
 end
@@ -114,10 +114,10 @@ CLEAN.include 'doc'
 desc 'Gather required discount sources into extension directory'
 task :gather => 'discount/markdown.h' do |t|
   # Files unique to /ext that should not be overridden
-  rdiscount_ext_files = [
+  kramdown_ext_files = [
     "config.h",
     "extconf.rb",
-    "rdiscount.c",
+    "kramdown.c",
   ]
   
   # Files in /discount that have a main function and should not be copied to /ext
@@ -133,23 +133,23 @@ task :gather => 'discount/markdown.h' do |t|
     abort "discount/mkdio.h not found. Did you run ./configure.sh in the discount directory?"
   end
   
-  # Delete all *.c and *.h files from ext that are not specific to RDiscount.
+  # Delete all *.c and *.h files from ext that are not specific to kramdown.
   Dir.chdir("ext") do
-    c_files_to_delete = Dir["*.c"].select { |e| !rdiscount_ext_files.include? e }
-    h_files_to_delete = Dir["*.h"].select { |e| !rdiscount_ext_files.include? e }
+    c_files_to_delete = Dir["*.c"].select { |e| !kramdown_ext_files.include? e }
+    h_files_to_delete = Dir["*.h"].select { |e| !kramdown_ext_files.include? e }
     
     rm (c_files_to_delete + h_files_to_delete),
       :verbose => true
   end
   
   # Copy all *.c and *.h files from discount -> ext except those that
-  # RDiscount overrides. Also exclude Discount files with main functions.
+  # kramdown overrides. Also exclude Discount files with main functions.
   Dir.chdir("discount") do
     c_files_to_copy = Dir["*.c"].select { |e|
-      (!rdiscount_ext_files.include? e) &&
+      (!kramdown_ext_files.include? e) &&
       (!discount_c_files_with_main_function.include? e)
     }
-    h_files_to_copy = Dir["*.h"].select { |e| !rdiscount_ext_files.include? e }
+    h_files_to_copy = Dir["*.h"].select { |e| !kramdown_ext_files.include? e }
   
     cp (c_files_to_copy + h_files_to_copy), '../ext/',
       :preserve => true,
@@ -171,10 +171,10 @@ end
 # PACKAGING =================================================================
 
 require 'rubygems'
-$spec = eval(File.read('rdiscount.gemspec'))
+$spec = eval(File.read('kramdown.gemspec'))
 
 def package(ext='')
-  "pkg/rdiscount-#{$spec.version}" + ext
+  "pkg/kramdown-#{$spec.version}" + ext
 end
 
 desc 'Build packages'
@@ -187,8 +187,8 @@ end
 
 directory 'pkg/'
 
-file package('.gem') => %w[pkg/ rdiscount.gemspec] + $spec.files do |f|
-  sh "gem build rdiscount.gemspec"
+file package('.gem') => %w[pkg/ kramdown.gemspec] + $spec.files do |f|
+  sh "gem build kramdown.gemspec"
   mv File.basename(f.name), f.name
 end
 
@@ -199,11 +199,11 @@ end
 # GEMSPEC HELPERS ==========================================================
 
 def source_version
-  line = File.read('lib/rdiscount.rb')[/^\s*VERSION = .*/]
+  line = File.read('lib/kramdown.rb')[/^\s*VERSION = .*/]
   line.match(/.*VERSION = '(.*)'/)[1]
 end
 
-file 'rdiscount.gemspec' => FileList['Rakefile','lib/rdiscount.rb'] do |f|
+file 'kramdown.gemspec' => FileList['Rakefile','lib/kramdown.rb'] do |f|
   # read spec file and split out manifest section
   spec = File.read(f.name)
   head, manifest, tail = spec.split("  # = MANIFEST =\n")

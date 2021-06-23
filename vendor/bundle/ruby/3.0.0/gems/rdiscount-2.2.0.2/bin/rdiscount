@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Usage: rdiscount [<file>...]
+# Usage: kramdown [<file>...]
 # Convert one or more Markdown files to HTML and write to standard output. With
 # no <file> or when <file> is '-', read Markdown source text from standard input.
 if ARGV.include?('--help')
@@ -9,5 +9,5 @@ if ARGV.include?('--help')
   exit 0
 end
 
-require 'rdiscount'
-STDOUT.write(RDiscount.new(ARGF.read).to_html)
+require 'kramdown'
+STDOUT.write(kramdown.new(ARGF.read).to_html)

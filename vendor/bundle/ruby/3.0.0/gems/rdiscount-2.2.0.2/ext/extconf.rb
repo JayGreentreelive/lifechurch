@@ -1,6 +1,6 @@
 require 'mkmf'
 
-dir_config('rdiscount')
+dir_config('kramdown')
 
 HAVE_RANDOM = have_func('random')
 HAVE_SRANDOM = have_func('srandom')
@@ -46,4 +46,4 @@ if /mswin/.match RbConfig::CONFIG['host_os']
   $defs.push("-Dinline=__inline")
 end
 
-create_makefile('rdiscount')
+create_makefile('kramdown')

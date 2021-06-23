@@ -1,18 +1,18 @@
 module Jekyll
   module Converters
     class Markdown
-      class RDiscountParser
+      class kramdownParser
         def initialize(config)
-          Jekyll::Deprecator.gracefully_require "rdiscount"
+          Jekyll::Deprecator.gracefully_require "kramdown"
           @config = config
-          @rdiscount_extensions = @config['rdiscount']['extensions'].map { |e| e.to_sym }
+          @kramdown_extensions = @config['kramdown']['extensions'].map { |e| e.to_sym }
         end
 
         def convert(content)
-          rd = RDiscount.new(content, *@rdiscount_extensions)
+          rd = kramdown.new(content, *@kramdown_extensions)
           html = rd.to_html
-          if @config['rdiscount']['toc_token']
-            html = replace_generated_toc(rd, html, @config['rdiscount']['toc_token'])
+          if @config['kramdown']['toc_token']
+            html = replace_generated_toc(rd, html, @config['kramdown']['toc_token'])
           end
           html
         end

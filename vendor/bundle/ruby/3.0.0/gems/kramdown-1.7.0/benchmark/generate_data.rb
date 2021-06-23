@@ -22,7 +22,7 @@ if options[:others]
   require 'maruku'
   require 'maruku/version'
   begin
-    require 'rdiscount'
+    require 'kramdown'
   rescue LoadError
   end
   #require 'bluefeather'
@@ -45,9 +45,9 @@ if options[:others]
         labels << "BlueFeather #{BlueFeather::VERSION}"
         x.report { BlueFeather.parse(mddata) }
       end
-      if self.class.const_defined?(:RDiscount)
-        labels << "RDiscount #{RDiscount::VERSION}"
-        x.report { RDiscount.new(mddata).to_html }
+      if self.class.const_defined?(:kramdown)
+        labels << "kramdown #{kramdown::VERSION}"
+        x.report { kramdown.new(mddata).to_html }
       end
     end
   end

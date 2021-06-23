@@ -1,5 +1,5 @@
 /*
- * rdiscount extension discount configuration
+ * kramdown extension discount configuration
  */
 #ifndef __MARKDOWN_D
 #define __MARKDOWN_D 1

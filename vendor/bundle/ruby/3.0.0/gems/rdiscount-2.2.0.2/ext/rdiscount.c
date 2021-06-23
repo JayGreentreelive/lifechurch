@@ -9,17 +9,17 @@ typedef struct {
 } AccessorFlagPair;
 
 /* 
- * Maps accessor names on the RDiscount object to Discount flags.
+ * Maps accessor names on the kramdown object to Discount flags.
  * 
  * The following flags are handled specially:
  * - MKD_TABSTOP: Always set.
  * - MKD_NOHEADER: Always set.
- * - MKD_DLEXTRA: Always set. (For compatibility with RDiscount 2.1.8 and earlier.)
- * - MKD_FENCEDCODE: Always set. (For compatibility with RDiscount 2.1.8 and earlier.)
- * - MKD_GITHUBTAGS: Always set. (For compatibility with RDiscount 2.1.8 and earlier.)
+ * - MKD_DLEXTRA: Always set. (For compatibility with kramdown 2.1.8 and earlier.)
+ * - MKD_FENCEDCODE: Always set. (For compatibility with kramdown 2.1.8 and earlier.)
+ * - MKD_GITHUBTAGS: Always set. (For compatibility with kramdown 2.1.8 and earlier.)
  * - MKD_NOPANTS: Set unless the "smart" accessor returns true.
  * 
- * See rb_rdiscount__get_flags() for the detailed implementation.
+ * See rb_kramdown__get_flags() for the detailed implementation.
  */
 static AccessorFlagPair ACCESSOR_2_FLAG[] = {
     { "filter_html", MKD_NOHTML },
@@ -37,9 +37,9 @@ static AccessorFlagPair ACCESSOR_2_FLAG[] = {
     { NULL, 0 }     /* sentinel */
 };
 
-static VALUE rb_cRDiscount;
+static VALUE rb_ckramdown;
 
-int rb_rdiscount__get_flags(VALUE ruby_obj)
+int rb_kramdown__get_flags(VALUE ruby_obj)
 {
     AccessorFlagPair *entry;
     
@@ -62,7 +62,7 @@ int rb_rdiscount__get_flags(VALUE ruby_obj)
 }
 
 static VALUE
-rb_rdiscount_to_html(int argc, VALUE *argv, VALUE self)
+rb_kramdown_to_html(int argc, VALUE *argv, VALUE self)
 {
     /* grab char pointer to markdown input text */
     char *res;
@@ -72,7 +72,7 @@ rb_rdiscount_to_html(int argc, VALUE *argv, VALUE self)
     VALUE buf = rb_str_buf_new(1024);
     Check_Type(text, T_STRING);
 
-    int flags = rb_rdiscount__get_flags(self);
+    int flags = rb_kramdown__get_flags(self);
     
     /* 
      * Force Discount to use ASCII character encoding for isalnum(), isalpha(),
@@ -110,12 +110,12 @@ rb_rdiscount_to_html(int argc, VALUE *argv, VALUE self)
 }
 
 static VALUE
-rb_rdiscount_toc_content(int argc, VALUE *argv, VALUE self)
+rb_kramdown_toc_content(int argc, VALUE *argv, VALUE self)
 {
     char *res;
     int szres;
 
-    int flags = rb_rdiscount__get_flags(self);
+    int flags = rb_kramdown__get_flags(self);
 
     /* grab char pointer to markdown input text */
     VALUE text = rb_funcall(self, rb_intern("text"), 0);
@@ -140,11 +140,11 @@ rb_rdiscount_toc_content(int argc, VALUE *argv, VALUE self)
 }
 
 
-void Init_rdiscount()
+void Init_kramdown()
 {
-    rb_cRDiscount = rb_define_class("RDiscount", rb_cObject);
-    rb_define_method(rb_cRDiscount, "to_html", rb_rdiscount_to_html, -1);
-    rb_define_method(rb_cRDiscount, "toc_content", rb_rdiscount_toc_content, -1);
+    rb_ckramdown = rb_define_class("kramdown", rb_cObject);
+    rb_define_method(rb_ckramdown, "to_html", rb_kramdown_to_html, -1);
+    rb_define_method(rb_ckramdown, "toc_content", rb_kramdown_toc_content, -1);
 }
 
 /* vim: set ts=4 sw=4: */

@@ -1,29 +1,29 @@
 # Discount is an implementation of John Gruber's Markdown markup
 # language in C. It implements all of the language as described in
 # {Markdown Syntax}[http://daringfireball.net/projects/markdown/syntax]
-# and passes the Markdown 1.0 test suite. The RDiscount extension makes
+# and passes the Markdown 1.0 test suite. The kramdown extension makes
 # the Discount processor available via a Ruby C Extension library.
 #
 # == Usage
 #
-# RDiscount implements the basic protocol popularized by RedCloth and adopted
+# kramdown implements the basic protocol popularized by RedCloth and adopted
 # by BlueCloth:
-#   require 'rdiscount'
-#   markdown = RDiscount.new("Hello World!")
+#   require 'kramdown'
+#   markdown = kramdown.new("Hello World!")
 #   puts markdown.to_html
 #
 # == Replacing BlueCloth
 #
-# Inject RDiscount into your BlueCloth-using code by replacing your bluecloth
+# Inject kramdown into your BlueCloth-using code by replacing your bluecloth
 # require statements with the following:
 #   begin
-#     require 'rdiscount'
-#     BlueCloth = RDiscount
+#     require 'kramdown'
+#     BlueCloth = kramdown
 #   rescue LoadError
 #     require 'bluecloth'
 #   end
 #
-class RDiscount
+class kramdown
   VERSION = '2.2.0.2'
 
   # Original Markdown formatted text.
@@ -75,7 +75,7 @@ class RDiscount
   # Disable strikethrough processing.
   attr_accessor :no_strikethrough
 
-  # Create a RDiscount Markdown processor. The +text+ argument
+  # Create a kramdown Markdown processor. The +text+ argument
   # should be a string containing Markdown text. Additional arguments may be
   # supplied to set various processing options:
   #
@@ -103,6 +103,6 @@ class RDiscount
 
 end
 
-Markdown = RDiscount unless defined? Markdown
+Markdown = kramdown unless defined? Markdown
 
-require 'rdiscount.so'
+require 'kramdown.so'

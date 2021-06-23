@@ -65,7 +65,7 @@ module Jekyll
         'fenced_code_blocks' => true
       },
 
-      'rdiscount' => {
+      'kramdown' => {
         'extensions' => []
       },
 

@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
-  s.name = 'rdiscount'
+  s.name = 'kramdown'
   s.version = '2.2.0.2'
   s.summary = "Fast Implementation of Gruber's Markdown in C"
   s.date = '2020-08-09'
   s.email = 'david@dafoster.net'
-  s.homepage = 'http://dafoster.net/projects/rdiscount/'
+  s.homepage = 'http://dafoster.net/projects/kramdown/'
   s.authors = ["Ryan Tomayko", "David Loren Parsons", "Andrew White", "David Foster"]
   s.license = "BSD-3-Clause"
   # = MANIFEST =
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
     COPYING
     README.markdown
     Rakefile
-    bin/rdiscount
+    bin/kramdown
     discount
     ext/Csio.c
     ext/VERSION
@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
     ext/mktags.c
     ext/pgm_options.c
     ext/pgm_options.h
-    ext/rdiscount.c
+    ext/kramdown.c
     ext/resource.c
     ext/setup.c
     ext/tags.c
@@ -49,21 +49,21 @@ Gem::Specification.new do |s|
     ext/xml.c
     ext/xmlpage.c
     lib/markdown.rb
-    lib/rdiscount.rb
+    lib/kramdown.rb
     man/markdown.7
-    man/rdiscount.1
-    man/rdiscount.1.ronn
-    rdiscount.gemspec
+    man/kramdown.1
+    man/kramdown.1.ronn
+    kramdown.gemspec
     test/benchmark.rb
     test/benchmark.txt
     test/markdown_test.rb
-    test/rdiscount_test.rb
+    test/kramdown_test.rb
   ]
   # = MANIFEST =
-  s.test_files = ["test/markdown_test.rb", "test/rdiscount_test.rb"]
+  s.test_files = ["test/markdown_test.rb", "test/kramdown_test.rb"]
   s.extra_rdoc_files = ["COPYING"]
   s.extensions = ["ext/extconf.rb"]
-  s.executables = ["rdiscount"]
+  s.executables = ["kramdown"]
   s.require_paths = ["lib"]
   s.rubyforge_project = 'wink'
   # Ruby 1.9.2 has a known bug in mkmf. Ruby 1.9.3 or later is fine.

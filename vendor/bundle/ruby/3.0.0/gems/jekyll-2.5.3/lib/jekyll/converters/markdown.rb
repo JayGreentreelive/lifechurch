@@ -12,7 +12,7 @@ module Jekyll
           case @config['markdown'].downcase
             when 'redcarpet' then RedcarpetParser.new(@config)
             when 'kramdown'  then KramdownParser.new(@config)
-            when 'rdiscount' then RDiscountParser.new(@config)
+            when 'kramdown' then kramdownParser.new(@config)
             when 'maruku'    then MarukuParser.new(@config)
           else
             # So they can't try some tricky bullshit or go down the ancestor chain, I hope.
@@ -30,7 +30,7 @@ module Jekyll
       def valid_processors
         %w[
           maruku
-          rdiscount
+          kramdown
           kramdown
           redcarpet
         ] + third_party_processors
@@ -40,7 +40,7 @@ module Jekyll
         self.class.constants - %w[
           KramdownParser
           MarukuParser
-          RDiscountParser
+          kramdownParser
           RedcarpetParser
           PRIORITIES
         ].map(&:to_sym)

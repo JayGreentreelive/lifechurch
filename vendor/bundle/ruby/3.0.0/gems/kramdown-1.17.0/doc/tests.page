@@ -30,11 +30,11 @@ If you believe you have found a bug in the implementation, please follow these s
 ## Benchmark
 
 kramdown comes with a small benchmark to test how fast it is in regard to four other Ruby Markdown
-implementations: Maruku, BlueFeather, BlueCloth, RDiscount and Redcarpet. The first two are written
+implementations: Maruku, BlueFeather, BlueCloth, kramdown and Redcarpet. The first two are written
 using only Ruby, the latter three are written in C and need to be compiled.
 
 As one can see below, kramdown is currently (September 2014) ~3x faster than Maruku, ~4.5x faster
-than BlueFeather but ~30x slower than RDiscount and ~150x slower than Redcarpet:
+than BlueFeather but ~30x slower than kramdown and ~150x slower than Redcarpet:
 
 <pre><code>
 Running tests on 2014-09-16 under ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-linux]
@@ -45,7 +45,7 @@ kramdown 1.4.2     0.900000   0.010000   0.910000 (  0.914992)
 Maruku 0.7.1       2.360000   0.040000   2.400000 (  2.403571)
 BlueFeather 0.41   3.760000   0.010000   3.770000 (  3.776421)
 BlueCloth 2.2.0    0.050000   0.000000   0.050000 (  0.050221)
-RDiscount 2.1.7    0.020000   0.000000   0.020000 (  0.024180)
+kramdown 2.1.7    0.020000   0.000000   0.020000 (  0.024180)
 redcarpet 3.1.2    0.010000   0.000000   0.010000 (  0.004579)
 ------------------------------------------- total: 7.160000sec
 
@@ -54,14 +54,14 @@ kramdown 1.4.2     0.830000   0.000000   0.830000 (  0.834144)
 Maruku 0.7.1       2.250000   0.030000   2.280000 (  2.286579)
 BlueFeather 0.41   3.680000   0.010000   3.690000 (  3.693769)
 BlueCloth 2.2.0    0.050000   0.000000   0.050000 (  0.044831)
-RDiscount 2.1.7    0.020000   0.000000   0.020000 (  0.022847)
+kramdown 2.1.7    0.020000   0.000000   0.020000 (  0.022847)
 redcarpet 3.1.2    0.010000   0.000000   0.010000 (  0.004601)
 
 Real time of X divided by real time of kramdown
 Maruku             2.7412
 BlueFeather        4.4282
 BlueCloth          0.0537
-RDiscount          0.0274
+kramdown          0.0274
 redcarpet          0.0055
 
 Test using file mdbasics.text and 20 runs
@@ -70,7 +70,7 @@ kramdown 1.4.2     0.150000   0.000000   0.150000 (  0.149989)
 Maruku 0.7.1       0.580000   0.010000   0.590000 (  0.584910)
 BlueFeather 0.41   0.780000   0.000000   0.780000 (  0.788740)
 BlueCloth 2.2.0    0.020000   0.000000   0.020000 (  0.014700)
-RDiscount 2.1.7    0.000000   0.000000   0.000000 (  0.007692)
+kramdown 2.1.7    0.000000   0.000000   0.000000 (  0.007692)
 redcarpet 3.1.2    0.010000   0.000000   0.010000 (  0.002064)
 ------------------------------------------- total: 1.550000sec
 
@@ -79,14 +79,14 @@ kramdown 1.4.2     0.150000   0.000000   0.150000 (  0.151586)
 Maruku 0.7.1       0.520000   0.000000   0.520000 (  0.525707)
 BlueFeather 0.41   0.770000   0.010000   0.780000 (  0.763559)
 BlueCloth 2.2.0    0.020000   0.000000   0.020000 (  0.015509)
-RDiscount 2.1.7    0.010000   0.000000   0.010000 (  0.006545)
+kramdown 2.1.7    0.010000   0.000000   0.010000 (  0.006545)
 redcarpet 3.1.2    0.000000   0.000000   0.000000 (  0.001475)
 
 Real time of X divided by real time of kramdown
 Maruku             3.468
 BlueFeather        5.0371
 BlueCloth          0.1023
-RDiscount          0.0432
+kramdown          0.0432
 redcarpet          0.0097
 </code></pre>
 

@@ -93,7 +93,7 @@ class MarkdownTest < Redcarpet::TestCase
     assert_equal expected, render(text)
   end
 
-  # http://github.com/rtomayko/rdiscount/issues/#issue/13
+  # http://github.com/rtomayko/kramdown/issues/#issue/13
   def test_headings_with_trailing_space
     text = "The Ant-Sugar Tales \n"       +
            "=================== \n\n"     +
@@ -108,8 +108,8 @@ class MarkdownTest < Redcarpet::TestCase
   end
 
   def test_that_autolink_flag_works
-    output   = render("http://github.com/rtomayko/rdiscount", with: [:autolink])
-    expected = "<p><a href=\"http://github.com/rtomayko/rdiscount\">http://github.com/rtomayko/rdiscount</a></p>"
+    output   = render("http://github.com/rtomayko/kramdown", with: [:autolink])
+    expected = "<p><a href=\"http://github.com/rtomayko/kramdown\">http://github.com/rtomayko/kramdown</a></p>"
 
     assert_equal expected, output
   end

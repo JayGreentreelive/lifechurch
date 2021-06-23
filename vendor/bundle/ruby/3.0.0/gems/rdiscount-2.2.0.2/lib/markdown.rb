@@ -1,1 +1,1 @@
-require 'rdiscount'
+require 'kramdown'

@@ -1,82 +1,90 @@
 ---
 layout: default
-title: Watch a Message
-class: header-light section-watch page-watch logo-red-white
-hero: watch-hero
+title: Watch
+class: header-red section-watch page-watch
 ---
 
-  <div class="hero-inner">
-    <div class="hero-side alt">
-      <h1 class="h2">View a message on demand or <a href="http://live.life.church" onclick="ga('send', 'event', 'Watch', 'Click', 'Live');">visit a live experience <span data-churchonline-counter-watch></span> <i class="icon-arrow"></i></a></h1>
+<!-- Live -->
+
+{% assign latest = site.data.watch | first %}
+
+<section class="hphoto hphoto-large section-watch-live section-light">
+  <div class="row">
+    <div class="medium-6 columns">
+      <h1 class="h2 text-white">Join us at Church Online</h1>
+      <p>{{ latest.description_small }}</p>
+      <p>
+        <a href="http://live.lifechurch.tv"
+           class="action text-lprimary"
+           onclick="ga('send', 'event', 'Watch', 'Click', 'Live');">
+           Visit Church Online <span data-churchonline-counter></span> <i class="icon icon-play"></i>
+         </a>
+      </p>
     </div>
   </div>
 </section>
 
+<!-- Archive Header -->
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="page-tertiary padded text-left">
+      <nav class="tertiary-nav">
+        <a class="current" href="#">On Demand</a>
 
-
-<div class="container padded">
-  <!-- Search form -->
-  <form method="get" action="/watch" data-search-form>
-    <input type="search" name="q" id="q" placeholder="Search for a series" data-search-input autofocus="autofocus" />
-  </form>
-
-  <!-- Search results placeholder -->
-  <div class="search-description">
-    <p data-search-found class="detail">
-      <span data-search-found-count></span> result(s) found for &ldquo;<span data-search-found-term></span>&rdquo;.
-    </p>
+        <script>
+          (function() {
+            var cx = '002176242189043456332:_gc7rgk658s';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search></gcse:search>
+      </nav>
+    </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="grid-items grid-three">
-    <div data-search-results></div>
-  </div>
-</div>
-
-<!-- Search result template -->
-<script type="text/x-template" id="search-result">
-  <div class="grid-item watch-item">
-    <a href="##Url##">
-      <div class="panel">
-        <img src="##Image##" />
-        <h6>##Title##</h6>
-      </div>
-    </a>
-  </div>
-</script>
-
-<div class="group of-grid-items">
-  <!-- Archive Grid -->
-  <div class="container">
-    <div class="grid-items grid-three">
+<!-- Archive Grid -->
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
       {% for post in site.categories.watch limit:9 %}
       {% for series in site.data.watch %}
       {% if series.id == post.series-id %}
 
       <!-- Archive Item -->
-      <div class="grid-item watch-item">
+      <li class="watch-item">
         <a href="{{ post.url }}">
           <div class="panel">
-            <img src="{{ series.image_small }}" data-retina="{{ series.image_medium }}" />
+            <img data-interchange="[{{ series.image_small }}, (default)], [{{ series.image_medium }}, (medium)]" alt="{{ series.title }}" />
+            <noscript><img src="{{ series.image_small }}" alt="{{ series.title }}"></noscript>
+
             <h6>{{ series.title }}</h6>
           </div>
         </a>
-      </div>
+      </li>
 
       {% endif %}
       {% endfor %}
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
-<p class="text-center container">
-  <a href="/watch/archive/"
-     class="action large text-black"
-     onclick="ga('send', 'event', 'Watch', 'Click', 'View Archives');">
-     View more archives <i class="icon icon-play"></i>
-  </a>
-</p>
-<script type="text/javascript" src="/js/search.js"></script>
-
+<!-- Archive list link -->
+<section class="page-section section-last">
+<div class="row">
+  <div class="large-12 large-centered columns text-center">
+    <a href="/watch/archive/"
+       class="action large text-black"
+       onclick="ga('send', 'event', 'Watch', 'Click', 'View Archives');">
+       View more archives <i class="icon icon-play"></i>
+    </a>
+  </div>
+</div>
+</section>

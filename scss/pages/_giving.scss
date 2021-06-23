@@ -1,0 +1,257 @@
+// Giving page section styles
+
+  .giving-bg {
+    @include background-image-2x-jpg('/images/giving/giving-bg');
+    background-size: cover;
+    background-position: center bottom;
+    
+    @media #{$medium-up} {
+      h1 {
+        margin-top: 2.5em;
+      }
+    }
+
+    .button {
+      background: #fff;
+      color: #b72f3a;
+    }
+  }
+
+  .hphoto-giving-tithe {
+    @include background-image-2x-jpg('/images/giving/giving-bg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media #{$medium-up} {
+      background-size: 1500px 450px;
+    }
+  }
+
+  .hphoto-giving-spacesplaces {
+    @include background-image-2x-jpg('/images/giving/spaces-places');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+    @media #{$medium-up} {
+      background-size: 1500px 450px;
+    }
+  }
+
+  .hphoto-giving-reliefrestoration {
+    @include background-image-2x-jpg('/images/giving/relief-restoration');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+    @media #{$medium-up} {
+      background-size: 1500px 450px;
+    }
+  }
+
+  .hphoto-giving-digitalmissions {
+    @include background-image-2x-jpg('/images/giving/digital-missions');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+    @media #{$medium-up} {
+      background-size: 1500px 450px;
+    }
+  }
+
+  .giving-main,
+  .giving-ways {
+    .button.inverse {
+      border-color: rgba(255,255,255,.5);
+      color: #fff;
+    }
+  }
+
+  .giving-1 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $red;
+    color: $red;
+    @include border-radius(100px);
+    text-align: center;
+    font-size: rem-calc(23);
+    padding-top: 10px;
+    margin: 0 auto -15px;
+
+    @media #{$medium-up} {
+      margin: 0 auto -35px;
+    }
+  }
+
+  .figure-spacesplaces {
+    padding-top: 30px;
+    margin: 0;
+
+    @media #{$medium-up} {
+      padding-top: 30px;
+    }
+
+    @media #{$large-up} {
+      border: 2px solid #ccc;
+      border-radius: 2000px;
+      width: 360px;
+      height: 360px;
+      padding: 90px 40px 0;
+    }
+
+  }
+
+  
+  .section-giving-numbers {
+    background: #1e1e1e;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    @media #{$medium-up} {
+      padding-top: 6em;
+      padding-bottom: 6em;
+    }
+
+    .number {
+      @extend h2;
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      margin-top: 0 !important;
+      
+      @media #{$medium-up} {
+        font-size: 5em;
+      }
+    }
+  }
+
+
+// Challenge
+
+  .section-challenge-video {
+    background: #333;
+  }
+
+
+// Restore page section styles
+
+  .restore {
+    blockquote cite {
+      color: lighten($red, 20%);
+    }
+
+    .primary-links .live {
+      color: darken($red, 20%) !important;
+    }
+  }
+
+  .section-restore-1 {
+    background: #000 url("/images/giving/restore-bg-1.jpg") center bottom no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media #{$medium-up} {
+      padding-top: 250px;
+      padding-bottom: 50px;
+    }
+
+    @media only screen and (min-height: 620px) {
+      padding-top: 350px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .section-restore-2 {
+    background: #222;
+  }
+
+  .hphoto-restore {
+    @include background-image-2x-jpg('/images/giving/restore-bg-2');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .section-restore-3 {
+    background: #222;
+
+    @media #{$medium-up} {
+      padding-top: 5em;
+      padding-bottom: 4em;
+    }
+  }
+
+
+// Digital Missions page
+
+  .digital-missions {
+    .digital-missions-bg {
+      height: 600px;
+      @include background-image-2x-jpg('/images/digital-missions/dm-bg');
+      background-color: #eaeae8;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center bottom;
+
+      @media #{$medium-up} {
+        background-size: 1500px 450px;
+      }
+    }
+
+    .biblekids {
+      @media #{$small-only} {
+        margin-top: -180px;
+      }
+    }
+  }
+
+
+// Equipping Churches page
+
+  .equipping-churches h2 {
+    margin-top: 15px !important;
+  }
+
+  .equipping-churches .digital-missions-bg {
+    @media #{$medium-up} {
+      height: 750px;
+    }
+  }
+
+
+// LifeMissions page
+
+  .hphoto-lifemissions-2 {
+    @include background-image-2x-jpg('/images/lifemissions/lm-bg-2');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+
+    @media #{$medium-up} {
+      background-size: 1500px 550px;
+    }
+  }
+
+// Stat counter
+
+[data-stat-count] {
+  .stat {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    &:first-child {
+      opacity: 1;
+      height: auto;
+      width: auto;
+    }
+  }
+}
+

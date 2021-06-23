@@ -16,7 +16,8 @@
 .sass-cache/*
 
 Files to ignore
-Gemfile.lock
+#Gemfile.lock
+.ruby-version
 
 # OS or Editor folders
 .DS_Store
@@ -24,3 +25,8 @@ Thumbs.db
 
 # Folders to ignore
 _site
+node_modules
+js/production.min.js
+lifechurch.sublime-project
+lifechurch.sublime-workspace
+.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910

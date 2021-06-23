@@ -1,24 +1,40 @@
-- title: Lives Changed in 2013
-  number: "41,135"
+- title: Lives Changed in 2015
+  number: "46,521"
   pages: "giving"
-- title: Average Attendance 2013
-  number: "51,604"
+  icon: "icon-stat-heart.svg"
+- title: Average Attendance 2015
+  number: "68,203"
   pages: "giving"
-- title: Lives Changed at Church Online
-  number: "9,842"
+  icon: "icon-stat-church.svg"
+- title: Lives Changed at Church Online in 2015
+  number: "9,000"
+  pages: "giving, live"
+  icon: "icon-stat-chop.svg"
+- title: People Baptized in 2015
+  number: "7,129"
   pages: "giving"
-- title: People Baptized in 2013
-  number: "3,357"
-  pages: "giving"
+  icon: "icon-stat-water.svg"
+- title: Lifegroups in 2015
+  number: "47,000"
+  pages: "giving, live"
+  icon: "icon-stat-lg.svg" 
+- title: Next Gen Average Weekly Attendance
+  number: "16,689"
+  pages: "giving, live"
+  icon: "icon-stat-nextgen.svg"   
 - title: YouVersion Installs
-  number: "123,500,000"
+  number: "206,000,000"
   pages: "digital-missions"
-- title: Open Downloads
-  number: "1,116,610"
+  icon: "icon-stat-bible.svg"
+- title: Open Downloads in 2015
+  number: "1,474,763"
   pages: "digital-missions"
-- title: Total 2013 Church Online Visitors
-  number: "5,767,627"
-  pages: "digital-missions"
-- title: Prayers through Church Online Live Prayer
+  icon: "icon-stat-open.svg"
+- title: Church Online Visitors in 2015
+  number: "5,183,000"
+  pages: "digital-missions, live"
+  icon: "icon-stat-chop.svg"
+- title: Prayers through Church Online Live Prayer in 2015
   number: "90,500"
-  pages: "digital-missions"
+  pages: "digital-missions, live"
+  icon: "icon-stat-chop.svg"

@@ -1,22 +1,16 @@
 ---
 layout: default
 section: announcements
-class: header-red
+categories: announcements
 ---
 
-<article class="announcements-article">
-
-<div class="row">
-  <div class="medium-12 columns text-center">
+<section class="single">
+  <header>
     <h1>{{ page.title }}</h1>
-    <time class="meta" datetime="{{ post.date }}">Posted on {{ page.date | date: "%B %-d, %Y" }}</time>
-  </div>
-</div>
-
-<div class="row">
-  <div class="medium-8 medium-centered columns">
+    <!--<time class="meta" datetime="{{ page.date }}">Posted on {{ page.date | date: "%B %-d, %Y" }}</time>-->
+  </header>
+  <article>
+    <p>{% if page.feature %}<img src="{{ page.feature }}" alt="{{ page.title }}" />{% endif %}</p>
     {{ content }}
-  </div>
-</div>
-
-</article>
+  </article>
+</section>

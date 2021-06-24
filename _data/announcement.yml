@@ -8,7 +8,7 @@
   type: notice
   icon: campus
   message: All campuses are closed due to snow.
-  #url: /campus/
+  #url: /locations/
 
 
 - active: false

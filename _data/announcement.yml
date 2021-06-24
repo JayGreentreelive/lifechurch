@@ -5,10 +5,10 @@
 # url: link or leave blank
 
 - active: true
-  type: notice
+  type: alert
   icon: campus
   message: All campuses are closed due to snow.
-  #url: /locations/
+  url: /locations/
 
 
 - active: false

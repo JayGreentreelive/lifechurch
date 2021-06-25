@@ -67,8 +67,8 @@ Heavenly Father, You adopted us into Your family. We want to open our hearts and
 * Are you feeling tugged to consider fostering, adopting, or respite care? Talk with your campus staff about next steps.
 * Sign up to serve in Switch or LifeKids at your campus. [www.life.church/serving](http://life.church/serving)
 * Volunteer with a local mentoring organization.
-* •	Read the Fostering Hope Bible Plan, perfect for Foster Care Awareness Month in May. [go2.lc/fosteringhope](http://go2.lc/fosteringhope)
+* •	Read the Fostering Hope Bible Plan, perfect for Foster Care Awareness Month in May. [go2.lc/fosteringhope](fosteringhope)
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

@@ -60,10 +60,10 @@ _“When the woman broke the jar, she didn’t hold back a single drop. When Jes
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Feeling risky? Start the _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](http://go2.lc/dangerous)
+* Feeling risky? Start the _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](dangerous)
 * You have something to pour out. Empty every last drop for God this week.
 * Start each day by asking God to give you opportunities to rely on His strength alone.
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

@@ -59,4 +59,4 @@ Jesus, what You did for us is something we’ve just got to tell people about. W
 
 * * *
 
-_Get this in your inbox. Visit [go2.lc/emailme](http://info.life.church/talkitover)_
+_Get this in your inbox. Visit [go2.lc/emailme](/talkitover)_

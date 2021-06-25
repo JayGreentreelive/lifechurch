@@ -70,4 +70,4 @@ _Jesus, You said whatever we do for “the least,” we’ve done for You. We wa
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

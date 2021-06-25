@@ -63,4 +63,4 @@ Read Acts 2:42-47 and 4:33-35 out loud. This couldn’t be more directly speakin
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

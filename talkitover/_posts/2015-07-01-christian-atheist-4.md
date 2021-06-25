@@ -63,8 +63,8 @@ Key Scriptures
 ## Live It Out
 <p class="lead">Start Doing: commit to a step and live it out this week.</p>
 
-* This five-day Bible Plan looks at the "why?" of God’s intentions and will help you trust Him more. To subscribe visit [go2.lc/why](http://go2.lc/why)
-* Dig deeper into _The Christian Atheist_. Buy the book, then check out this 12-week group discussion guide at [go2.lc/castudy](http://go2.lc/castudy)
+* This five-day Bible Plan looks at the "why?" of God’s intentions and will help you trust Him more. To subscribe visit [go2.lc/why](why)
+* Dig deeper into _The Christian Atheist_. Buy the book, then check out this 12-week group discussion guide at [go2.lc/castudy](castudy)
 
 * * *
 

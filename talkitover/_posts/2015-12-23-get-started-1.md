@@ -68,4 +68,4 @@ Exodus 4:1-2, 10-12
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

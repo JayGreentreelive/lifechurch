@@ -66,7 +66,7 @@ _The Ten Lepers_ -Luke 17:11-18
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and begin living it this week.</p>
 
-* Make gratitude a daily habit with the new _I'm Grateful_ Bible Plan. [go2.lc/grateful](http://go2.lc/grateful)
+* Make gratitude a daily habit with the new _I'm Grateful_ Bible Plan. [go2.lc/grateful](grateful)
 * Write at least two thank-you notes this week: one to God and one to someone who's blessed you.
 * Write a seven-day list with a different blessing you'll praise God for each day.
 

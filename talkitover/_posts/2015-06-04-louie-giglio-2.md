@@ -66,7 +66,7 @@ of God and knows God. 8 Whoever does not love does not know God, because God is 
 <p class="lead">Start Doing: commit to a step and live it out this week.</p>
 
 * What one person will you talk to about what God thinks about them this week? Share a name with the group, and create a reminder in your phone.
-* Keep reading what God says about you. Pick a Bible Plan to complete together at [go2.lc/plans](http://go2.lc/plans)
+* Keep reading what God says about you. Pick a Bible Plan to complete together at [go2.lc/plans](plans)
 * Start each day with a short prayer inviting God’s perspective of you into your day.
 
 * * *

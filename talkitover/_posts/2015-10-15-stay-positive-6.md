@@ -70,7 +70,7 @@ _... Forget about self-confidence; it's useless. Cultivate God-confidence._
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Cultivate God-confidence with this week's Bible Plan. [go2.lc/confident](http://go2.lc/confident)
+* Cultivate God-confidence with this week's Bible Plan. [go2.lc/confident](confident)
 * Which "My God is" statement will you cling to this week?
 * What bold step do you need to take with God-confidence?
 

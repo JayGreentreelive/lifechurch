@@ -64,7 +64,7 @@ _“God wanted more than a nice temple. He wanted their whole hearts devoted and
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Subscribe to _The Time Is Now_, a Bible Plan to help you cultivate obedience. [go2.lc/timeisnow](http://go2.lc/timeisnow)
+* Subscribe to _The Time Is Now_, a Bible Plan to help you cultivate obedience. [go2.lc/timeisnow](timeisnow)
 * What step will you take this week to prioritize in your obedience to God?
 
 * * *

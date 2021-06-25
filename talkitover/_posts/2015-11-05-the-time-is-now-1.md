@@ -69,7 +69,7 @@ _"The way to get started is to quit talking and start doing."_
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Want help getting started? Our whole church is reading _The Time Is Now_ Bible Plan at [go2.lc/timeisnow](http://go2.lc/timeisnow)
+* Want help getting started? Our whole church is reading _The Time Is Now_ Bible Plan at [go2.lc/timeisnow](timeisnow)
 * What are some practical ways you’ll make God’s work your priority? Write a list, and put it on your fridge.
 * Do something for someone else or for the church instead of yourself this week. Then, make it a new habit.
 

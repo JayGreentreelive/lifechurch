@@ -65,7 +65,7 @@ _When we arrived in Macedonia, there was no rest for us. We faced conflict from 
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and begin living it this week.</p>
 
-* Get encouraged with the new Bible Plan. [go2.lc/encouraging](http://go2.lc/encouraging)
+* Get encouraged with the new Bible Plan. [go2.lc/encouraging](encouraging)
 * What are some practical steps we can take to better encourage others and ourselves this week?
 * Set a daily reminder in your phone to encourage someone.
 

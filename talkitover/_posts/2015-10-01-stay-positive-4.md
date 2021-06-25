@@ -55,6 +55,6 @@ _Remember this—a farmer who plants only a few seeds will get a small crop. But
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and begin living it this week.</p>
 
-* Discover how to become more generous this week. [go2.lc/generous](http://go2.lc/generous)
+* Discover how to become more generous this week. [go2.lc/generous](generous)
 * What will be your first step to grow in generosity.
-* Take the Three-Month Tithe Challenge. [go2.lc/tithechallenge](http://go2.lc/tithechallenge)
+* Take the Three-Month Tithe Challenge. [go2.lc/tithechallenge](tithechallenge)

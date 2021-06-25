@@ -68,7 +68,7 @@ _... Always work enthusiastically for the Lord, for you know that nothing you do
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Spend time with God daily in this week's Bible Plan. [go2.lc/enthusiastic](http://go2.lc/enthusiastic)
+* Spend time with God daily in this week's Bible Plan. [go2.lc/enthusiastic](enthusiastic)
 * David trusted, walked with, and worshipped God daily. Share how you'll take action to grow in one of these areas this week.
 
 * * *

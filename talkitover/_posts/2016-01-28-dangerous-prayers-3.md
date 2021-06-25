@@ -64,9 +64,9 @@ What do you need to fully surrender to God?
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
 * What will be your first step of obedience to His call this week?
-* Read the _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](http://go2.lc/dangerous)
+* Read the _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](dangerous)
 * How can you answer God’s call at Life.Church? For serving opportunities, visit [www.life.church/serving](http://www.life.church/serving/)
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

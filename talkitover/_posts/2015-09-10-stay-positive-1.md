@@ -68,7 +68,7 @@ Proverbs 11:27 NLT
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Keep optimism alive in my week with this new Bible Plan. [go2.lc/optimistic](http://go2.lc/optimistic)
+* Keep optimism alive in my week with this new Bible Plan. [go2.lc/optimistic](optimistic)
 * How will you become more optimistic? Share your action plan with the group.
 * Pick a portion of Romans 8 to memorize.
 

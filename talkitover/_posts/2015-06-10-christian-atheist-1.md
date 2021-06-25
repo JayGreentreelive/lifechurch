@@ -59,9 +59,9 @@ _They claim to **know God**, but their actions **deny him**_. ... Titus 1:16 NIV
 ## Live It Out
 <p class="lead">Start Doing: commit to a step and live it out this week.</p>
 
-* Renew your mind this week with this five-day Bible Plan [go2.lc/renewal](http://go2.lc/renewal)
+* Renew your mind this week with this five-day Bible Plan [go2.lc/renewal](renewal)
 * Write down three ways you’re living like God doesn’t exist. Bring these to Christ in prayer each day this week.
-* Dig deeper into _Christian Atheist_. Buy the book, then check out this 12-week group discussion guide a [go2.lc/castudy](http://go2.lc/castudy)
+* Dig deeper into _Christian Atheist_. Buy the book, then check out this 12-week group discussion guide a [go2.lc/castudy](castudy)
 
 * * *
 

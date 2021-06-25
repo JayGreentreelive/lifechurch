@@ -64,9 +64,9 @@ God, will You break down the racial and social walls we’ve put up? Holy Spirit
 <p class="lead">Start doing. Commit to a step and live it out this week.</p>
 
 * How will you love your neighbor: reconcile a relationship, invite someone to dinner, start a conversation?
-* Start the _How to Neighbor_ Bible Plan—a practical guide to loving your neighbor as yourself. [go2.lc/howtoneighbor](http://go2.lc/howtoneighbor)
-* Get your group pumped with this Life.Church original. [go2.lc/neighboranthem](http://go2.lc/neighboranthem)
+* Start the _How to Neighbor_ Bible Plan—a practical guide to loving your neighbor as yourself. [go2.lc/howtoneighbor](howtoneighbor)
+* Get your group pumped with this Life.Church original. [go2.lc/neighboranthem](neighboranthem)
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

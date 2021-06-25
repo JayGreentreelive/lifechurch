@@ -67,7 +67,7 @@ _"Successful people do consistently what normal people do occasionally."_
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* Find God's help to "be strong" and "do the work" in His Word with this Bible Plan. [go2.lc/timeisnow](http://go2.lc/timeisnow)
+* Find God's help to "be strong" and "do the work" in His Word with this Bible Plan. [go2.lc/timeisnow](timeisnow)
 * Start doing something you used to do when you felt strong in God. Remake the habit this week.
 * Commit to start each day by praying, “God, what will we do together today?”
 

@@ -66,9 +66,9 @@ Psalm 139:23-24 NIV
 ## Live It Out
 <p class="lead">Start doing. Commit to a step, and live it out this week.</p>
 
-* We dare you to start the one-week _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](http://go2.lc/dangerous)
+* We dare you to start the one-week _Dangerous Prayers_ Bible Plan. [go2.lc/dangerous](dangerous)
 * Start each morning this week by asking the Holy Spirit to search you. Make note of what He says and share it with someone.
 
 * * *
 
-_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](http://info.life.church/talkitover)_
+_Want the Talk It Over guide emailed to you each week? Make it happen at [go2.lc/emailme](/talkitover)_

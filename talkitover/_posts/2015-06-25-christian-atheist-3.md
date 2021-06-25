@@ -63,9 +63,9 @@ Key Scripture
 ## Live It Out
 <p class="lead">Start Doing: commit to a step and live it out this week.</p>
 
-* Take out your phone and subscribe to this "hot" Bible Plan by Francis Chan [go2.lc/crazylove](http://go2.lc/crazylove)
+* Take out your phone and subscribe to this "hot" Bible Plan by Francis Chan [go2.lc/crazylove](crazylove)
 * Write down one lukewarm area of your faith to tackle this week. If it’s generosity, try giving more time and resources away. If it’s sharing your faith, share Jesus with one person, and so on.
-* Dig deeper into _Christian Atheist_. Buy the book, then check out this 12-week group discussion guide a [go2.lc/castudy](http://go2.lc/castudy)
+* Dig deeper into _Christian Atheist_. Buy the book, then check out this 12-week group discussion guide a [go2.lc/castudy](castudy)
 
 * * *
 

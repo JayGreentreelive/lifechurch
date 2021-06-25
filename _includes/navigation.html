@@ -1,18 +1,127 @@
-<!-- Navigation -->
+   <!-- Navigation -->
 <div class="navigation-wrapper">
   <header id="navigation">
-    <div class="container">
-      <a id="header-logo" title="Life.Church" href="http://www.life.church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Home');">Life.Church</a>
-      {% unless page.section == 'landing' %}
-      <nav>
-        <a class="nav-live" href="" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Live');">Watch Live <span>Starts soon</span></a>
-        <a class="nav-watch" href="/watch/" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Watch');">Watch On Demand</a>
-        <a href="/locations/" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Locations');">Locations</a>
-        <a href="/giving/" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Give');">Give</a>
-        <a href="/who-we-are/" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Who We Are');">Who We Are</a>
-        <a class="js-more-trigger" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Menu');"><span class="more-line-1"></span><span class="more-line-2"></span><span class="more-line-3"></span></a>
-      </nav>
-      {% endunless %}
+    <div class="row">
+      <div class="small-12 columns">
+        <a class="logo" href="/">Life.Church</a>
+        <nav>
+          <div class="left">
+            <a class="nav-live" href="https://live.life.church?utm_source=life.church&utm_medium=website&utm_content=Header-Live&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Live');">CHURCH ONLINE <span data-churchonline-live></span></a>
+            <a class="nav-watch" href="/media/?utm_source=life.church&utm_medium=website&utm_content=Header-Watch&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Watch');">MEDIA</a>
+            <a href="/locations/?utm_source=life.church&utm_medium=website&utm_content=Header-Locations&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Locations');">Locations</a>
+            <a href="/giving/?utm_source=life.church&utm_medium=website&utm_content=Header-Giving&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Giving');">Give</a>
+            <a href="/who-we-are/?utm_source=life.church&utm_medium=website&utm_content=Header-WhoWeAre&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Who We Are');">Who We Are</a>
+            <a href="/worship/?utm_source=life.church&utm_medium=website&utm_content=Header-Worship&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Worship');">Worship</a>
+          </div>
+          <div class="grid-x align-items-center align-right">
+            <ul class="login-wrapper no-bullet m-a-0"><li><a href="/auth/auth0" id="user-login"><img class="avatar" data-no-retina="true" src="" /><span class="login-text"></span></a><ul class="profile-menu no-bullet"><li class="menu-item"><a class="menu-item-link" href="/profile">My Profile</a></li><li class="menu-item"><a class="menu-item-link" href="/contact">Help</a></li><li class="menu-item"><a class="menu-item-link logout" href="#" id="user-logout">Log Out</a></li></ul></li></ul>
+            <a href="" class="js-more-trigger main-menu" onclick="ga('send', 'event', 'Global', 'Click', 'Navigation Menu');"><span class="more-line-1"></span><span class="more-line-2"></span><span class="more-line-3"></span></a>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
 </div>
+
+    <section id="menu" name="menu" class="more-menu">
+  <div class="more-inner">
+      <!--  Global Menu -->
+      <div class="small-primary">
+        <h5>Navigation</h5>
+        <dl>
+          <a class="nav-watch" href="/live?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-ChurchOnline&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Church Online (Small)');">
+            <dt>Church Online<span class="live hide"> Live</span></dt>
+            <dd>Check out a Life.Church message—live with our Church Online community.</dd>
+          </a>
+          <a class="nav-watch" href="/media/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Watch&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Watch (Small)');">
+            <dt>Media</dt>
+            <dd>Find Messages, LifeGroups & Kids Content, Worship and more.</dd>
+          </a>
+          <a href="/locations/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Locations&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Locations (Small)');">
+            <dt>Locations</dt>
+            <dd>Find out more about our campuses located all over the US.</dd>
+          </a>
+          <a href="/giving/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Giving&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Locations (Small)');">
+            <dt>Give</dt>
+            <dd>Taking action on your generosity is simple. Find out how to give at Life.Church.</dd>
+          </a>
+
+          <a href="/worship/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Worship&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Worship');">
+            <dt>Worship</dt>
+            <dd>Discover original Life.Church Worship music and connect with our team.</dd>
+          </a>
+
+        </dl>
+      </div>
+
+      <h5>Ways to get involved</h5>
+      <dl>
+        <a href="/kids/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Kids&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Kids');">
+          <dt>Kids</dt>
+          <dd>Check out everything happening in LifeKids, our ministry for kids ages birth-6th grade.</dd>
+        </a>
+        
+        <a href="/switch/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Youth&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Youth');">
+          <dt>Youth</dt>
+          <dd>See how you can get involved in Switch, our student ministry for 6th-12th graders.</dd>
+        </a>
+
+        <a href="/lifegroups/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-LifeGroups&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu LifeGroups');">
+          <dt>LifeGroups</dt>
+          <dd>Find out how you can grow, laugh, and serve with other believers through a LifeGroup.</dd>
+        </a>
+
+        <a href="/missions/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Missions&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu GlobalMissions');">
+          <dt>Missions</dt>
+          <dd>Show God’s love in your city and around the world through Global and Local Mission Partners.</dd>
+        </a>
+
+        <a href="/next/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Next&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Whats Next');">
+          <dt>What's Next</dt>
+          <dd>Let us help you with your next steps as a new believer.</dd>
+        </a>
+
+        <a href="/serving/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Serving&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Serving');">
+          <dt>Serving Opportunities</dt>
+          <dd>God can use your gifts and skills to make a difference in the lives of others at Life.Church.</dd>
+        </a>
+
+        <a href="/tools/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Tools&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Tools');">
+          <dt>Tools for Growth</dt>
+          <dd>We want to equip you, your family, and your LifeGroup to grow as followers of Christ.</dd>
+        </a>
+
+      <a href="/careers/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Careers&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Careers');">
+        <dt>Careers</dt>
+        <dd>Find out what it's like to work at Life.Church and explore all of our open roles.</dd>
+      </a>
+    </dl>
+      <h5>A bit about us</h5>
+      <dl>
+        <a href="/who-we-are/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-WhoWeAre&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Who We Are');">
+          <dt>Who We Are</dt>
+          <dd>Find out how we want to make a lasting difference in your life, our community, and the world.</dd>
+        </a>
+
+        <a href="/beliefs/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Beliefs&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Beliefs');">
+          <dt>Our Beliefs</dt>
+          <dd>Learn more about what we believe as fully devoted followers of Christ.</dd>
+        </a>
+
+        <a href="/what-to-expect/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-WhatToExpect&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu What To Expect');">
+          <dt>What to Expect</dt>
+          <dd>Visiting for the first time? We want you to know what you'll find at Life.Church.</dd>
+        </a>
+
+        <a href="/churches/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-EquippingChurches&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Equipping Churches');">
+          <dt>For Churches</dt>
+          <dd>Find free tools and resources created by Life.Church for churches around the world.</dd>
+        </a>
+
+        <a href="/contact/?utm_source=life.church&utm_medium=website&utm_content=MoreMenu-Contact&utm_campaign=Life.Church" onclick="ga('send', 'event', 'Global', 'Click', 'Menu Contact');">
+          <dt>Contact Us</dt>
+          <dd>We love to hear from the great people who visit and attend Life.Church.</dd>
+        </a>
+      </dl>
+  </div>
+</section>

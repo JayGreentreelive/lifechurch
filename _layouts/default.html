@@ -9,19 +9,7 @@
   </head>
 
   <body class="{% if page.class %}{{ page.class }}{% endif %}{% for announcement in site.data.announcement %}{% if announcement.active == true %} has-announcement{% endif %}{% endfor %}">
-    <div class="panel-giving">
-  <!--Your 2015 giving statement will be <a href="/giving/">available online</a> beginning <strong>Friday, January 15</strong>. You should also receive a hard copy of your giving statement in the mail by Saturday, January 30. Thank you for your generosity! <br />
-  <br /><strong>Questions?</strong> Contact the Giving Experience Team at <a href="mailto:giving@life.church">giving@life.church</a> or (405) 216-7054.
--->
-This is a demonstration site only. Information may be outdated.
-  </div>
-<div class="announcement {{ announcement.type }}">
-  <div class="container">
-    <a class="announcement-link flip" href="#">
-      <p><i class="announcement-icon icon-announcement-maintenance"></i> Demonstration use only</p>
-    </a>
-  </div>
-</div> 
+
     {% include announcement.html %}
     {% if page.hero %}<section id="hero" class="hero top {{ page.hero }}">{% endif %}
 

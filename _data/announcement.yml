@@ -4,11 +4,11 @@
 # message: the message in the announcement
 # url: link or leave blank
 
-- active: false
+- active: true
   type: alert
-  icon: campus
-  message: All campuses are closed due to snow.
-  url: /locations/
+  icon: maintenance
+  message: Website is for demonstration only and is not a current life.church website.
+  #url: /locations/
 
 
 - active: false

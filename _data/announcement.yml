@@ -7,8 +7,8 @@
 - active: true
   type: alert
   icon: maintenance
-  message: Website is for demonstration only and is not a current life.church website.
-  #url: /locations/
+  message: Website is for demonstration only and is not an official life.church website.
+  url: https://life.church/
 
 
 - active: false

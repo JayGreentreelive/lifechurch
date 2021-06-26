@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: thursdaychurch
+  api_key: '654639925529758'
+  api_secret: 6B51F2DKTtHnEytdwm5joBEtCq4
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: thursdaychurch
+  api_key: '654639925529758'
+  api_secret: 6B51F2DKTtHnEytdwm5joBEtCq4
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: thursdaychurch
+  api_key: '654639925529758'
+  api_secret: 6B51F2DKTtHnEytdwm5joBEtCq4
+  enhance_image_tag: true
+  static_file_support: false

@@ -1,8 +1,8 @@
 # Rewrite to www
 Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^lifechurch.tv[nc]
-RewriteRule ^(.*)$ http://www.lifechurch.tv/$1 [r=301,nc]
+RewriteCond %{HTTP_HOST} ^JayGreentree.live[nc]
+RewriteRule ^(.*)$ http://www.JayGreentree.live/$1 [r=301,nc]
 
 # Custom 404 errors
 ErrorDocument 404 /404/

@@ -2,26 +2,21 @@
 
 /* TEAM */
 
-  Justin Battenfield
-    Life.Church
-    justin.battenfield@life.church
-    @jbatphoto
+  Adam Fairhead
+    LifeChurch.tv
+    adam.fairhead@lifechurch.tv
+    http://adamfairhead.com
+    @adamfairhead
 
-  
-  Chelsea Nelson
-    Life.Church
-    chelsea.nelson@life.church 
+  Scott Lesser
+    LifeChurch.tv
+    scott.lesser@lifechurch.tv
+    http://scottlesser.com
+    @okcscott
 
-
-  Daniel Woodward
-    Life.Church
-    daniel.woodward@life.church
-    @danielrwoodward
-
-  
 
 /* SITE */
 
   Standards: HTML5, CSS3
-  Components: Bourbon, Neat, Jekyll, jQuery
-  Software: Vim, Git
+  Components: Foundation, Jekyll, jQuery, Reveal
+  Software: Sublime Text, Git

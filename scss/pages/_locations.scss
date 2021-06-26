@@ -1,0 +1,762 @@
+// Contents
+// ~1 General Locations Styles
+// ~2 Locations Overview Page
+// ~3 Campus Page
+// ~4 Specific Campus Pages
+
+
+// ~1 General Locations Styles ***************************************
+
+// Map pin
+.pin {
+  @include svg-image('/locations/assets/pin');
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 44px;
+  height: 33px;
+  text-align: center;
+  font-size: 9px;
+  text-transform: uppercase;
+  padding-top: 35px;
+  color: #ada5a5;
+  text-indent: 6px;
+}
+
+.pin-state.pin-ok,
+.pin-state.pin-tx {
+  @include svg-image('/locations/assets/pin2');
+}
+
+
+// ~2 Locations Overview Page ***************************************
+
+// my campus buttons
+[data-unset-campus] {
+  display: none;
+}
+
+.my-campus {
+  [data-unset-campus] {
+    display: inline-block;
+  }
+
+  [data-set-campus] {
+    display: none;
+  }
+}
+
+.page-locations.has-alerts .map-wrapper {
+  top: 43px;
+}
+
+.page-locations {
+
+  // Wrapper around all the large screen location content
+  .map-wrapper {
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    background: #a4ddf4;
+  }
+
+  .map-list li {
+    margin-bottom: 0;
+  }
+
+  // Hide tertiary links from locations page
+  @media #{$medium-up} {
+    .page-tertiary {
+      visibility: hidden;
+    }
+  }
+
+  // Locations image on top of small screen
+  @media #{$small-only} {
+    .hphoto-small-locations {
+      @include svg-image('/locations/assets/map');
+      background-color: #a2ddf5;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: auto 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  // Make locations top section even shorter on small landscape screens
+  @media #{$small-only} and (orientation: landscape) {
+    .hphoto-small-locations {
+      height: 70px;
+    }
+  }
+
+  // Forcing the map content styles to only render on large screens
+  @media #{$medium-up} {
+
+    // Position the content on top of the map
+    .page-main {
+      height: 170px;
+      margin-top: 220px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    // Position footer flush to map
+    .page-footer {
+      background: #fff;
+      position: relative;
+
+
+      .columns {
+        margin-top: 0;
+        border: none;
+      }
+    }
+
+    // The map itself
+    .map {
+      @include svg-image('/locations/assets/map');
+      background-color: #a2ddf5;
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 100%;
+      height: 550px;
+      position: absolute;
+      top: 0;
+      background-size: auto 620px;
+      @include transition-property(all);
+      @include transition-duration(.5s);
+    }
+
+    // Map when zoomed into Oklahoma
+    .map-ok {
+      background-size: auto 2400px;
+      background-position: center -1050px;
+    }
+
+    // Map when zoomed into Texas
+    .map-tx {
+      background-size: auto 2400px;
+      background-position: center -1250px;
+    }
+
+    // US Map fallback for CSS3-less users
+    .no-backgroundsize .map {
+      background: url('/locations/assets/map-1.jpg') center top no-repeat !important;
+    }
+
+    // Oklahoma Map fallback for CSS3-less users
+    .no-backgroundsize .map-ok {
+      background: url('/locations/assets/map-2.jpg') center top no-repeat !important;
+    }
+
+    // Texas Map fallback for CSS3-less users
+    .no-backgroundsize .map-tx {
+      background: url('/locations/assets/map-3.jpg') center top no-repeat !important;
+    }
+
+    // Back button when zoomed in on the map
+    .map-back {
+      position: relative;
+      z-index: 6;
+      top: 80px;
+    }
+
+    // List box styles
+    .map-list {
+      background: #fff;
+      position: absolute;
+      z-index: 6;
+      list-style: none;
+      padding: 5px 10px;
+      @include box-shadow(rgba(0,0,0,.1) 0 2px 0);
+      @include border-radius(3px);
+      @include transition-property(margin-left);
+      @include transition-duration(1s);
+    }
+
+    // List box styles for OKC
+    .map-list-okc {
+      left: 50%;
+      top: 140px;
+      margin-left: -240px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: -10px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #fff;
+      }
+    }
+
+    // List box styles for Tulsa
+    .map-list-tulsa {
+      left: 50%;
+      top: 140px;
+      margin-left: 80px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #fff;
+      }
+    }
+
+    // List box styles for Stillwater
+    .map-list-stillwater {
+      left: 50%;
+      top: 210px;
+      margin-left: -40px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+      }
+    }
+
+    // Page-specific pin styles
+    .pin {
+      left: 50%;
+      right: 0;
+      position: absolute;
+      z-index: 3;
+      @include transition-property(background-position);
+      @include transition-duration(.2s);
+    }
+
+    // Recolor pin text for Wellington, since it's on the water
+    .pin-fl {
+      color: #4ea6c9;
+    }
+
+    // Pin-push animation where pins are clickable
+    .pin-state:hover,
+    .pin-keller:hover,
+    .pin-fortworth:hover {
+      background-position: center 5px;
+    }
+
+    // Pin positioning
+
+      .pin-ok {
+        margin-left: -40px;
+        top: 300px;
+      }
+
+      .pin-tx {
+        margin-left: -60px;
+        top: 360px;
+      }
+
+      .pin-tn {
+        margin-left: 150px;
+        top: 285px;
+      }
+
+      .pin-fl {
+        margin-left: 235px;
+        top: 465px;
+      }
+
+      .pin-ny {
+        margin-left: 335px;
+        top: 160px;
+      }
+
+      .pin-okc {
+        margin-left: -75px;
+        top: 190px;
+      }
+
+      .pin-tulsa {
+        margin-left: 35px;
+        top: 160px;
+      }
+
+      .pin-stillwater {
+        margin-left: -22px;
+        top: 160px;
+      }
+
+      .pin-keller {
+        margin-left: -70px;
+        top: 240px;
+      }
+
+      .pin-fortworth {
+        margin-left: -40px;
+        top: 200px;
+      }
+    }
+
+}
+
+
+// ~3 Campus Page ***************************************
+
+// Page hero section
+.locations-hero {
+  background-size: 1500px 350px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Hide Local Partner images
+.section-localpartners img {
+  display: none;
+}
+
+
+// Magellan
+
+  .section-locations .sub-nav {
+    text-align: center;
+  }
+
+  .section-locations .sub-nav dt,
+  .section-locations .sub-nav dd,
+  .section-locations .sub-nav li {
+    float: none;
+  }
+
+  .section-locations .fixed {
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  [data-magellan-expedition] {
+    background: #fdfdfd;
+  }
+
+  .magellan-anchor {
+    position: relative;
+    top: -100px;
+
+    @media #{$medium-up} {
+      top: -20px;
+    }
+  }
+
+
+// Page content wrapper
+.tiles {
+  height: 113px;
+  border-bottom: 1px solid #ddd;
+  margin-top: -20px;
+}
+
+// Page tile
+.location-tile {
+  text-align: center;
+  padding: 35px 0;
+  display: block;
+  width: 33.3%;
+  float: left;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background: #eee;
+  @include transition-property(all);
+  @include transition-duration(.3s);
+  @extend h4;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+
+  // Type in the tile
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Hover state
+  &:hover {
+    color: $body-font-color;
+    background: #ddd;
+  }
+}
+
+// Active tile state
+.tile-active {
+  background: #ddd !important;
+}
+
+// Lift active content over the content fading out
+.content-active {
+  z-index: 1;
+  position: relative;
+}
+
+
+// Map
+.locations-map {
+  background-color: #fff;
+  background-size: 1196px 398px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 170px;
+  border: 1px solid #ddd;
+
+  @media #{$small-only} {
+    background-size: 800px auto;
+    background-position: 0 -40px;
+    margin-bottom: 150px;
+  }
+
+  @media #{$medium-up} {
+    height: 400px;
+  }
+
+  .pin {
+    top: 70px;
+    left: 70px;
+    position: absolute;
+
+    @media #{$medium-up} {
+      top: 180px;
+      left: 110px;
+    }
+  }
+
+  .address {
+    background: #fff;
+    color: $body-font-color;
+    padding: 15px 0;
+    width: 100%;
+    top: 172px;
+    position: relative;
+
+    a {
+      margin-right: 0;
+    }
+
+    @media #{$medium-up} {
+      padding: 15px;
+      position: absolute;
+      color: #fff;
+      width: 250px;
+      top: 165px;
+      left: 160px;
+      background: rgba(0,0,0,.8);
+      @include border-radius(6px);
+
+      a {
+        color: #86def7;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 14px;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid rgba(0,0,0,.8);
+      }
+    }
+  }
+}
+
+
+// Experience Calendar
+
+  // Calendar Key
+
+    .calendar-key {
+
+      // Keep the links in the key on the same line as the colors
+      a {
+        float: left;
+      }
+
+      figure {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 2px 7px 0 0;
+        @include border-radius(3px);
+      }
+
+      &.key-service-time figure {
+        background: lighten($red, 30%);
+        border: 1px solid lighten($red, 20%);
+      }
+
+      &.key-switch figure {
+        background: $primary-color;
+        border: 1px solid darken($primary-color, 10%);
+      }
+
+      &.key-lifekids figure {
+        background: #69d166;
+          border: 1px solid darken(#69d166, 10%);
+      }
+    }
+
+
+
+
+
+// New Experience Calendar
+
+.times {
+  list-style: none;
+  margin-left: 0;
+}
+
+@media #{$medium-up} {
+  .days-times {
+    border: 1px solid #bbb;
+    background: #fff;
+    position: relative;
+    width: 100%;
+
+    h4 {
+      display: none;
+    }
+
+    // Day wrapper
+    .day {
+      height: 40px;
+      width: 100%;
+      background: #fff;
+
+      &:nth-child(even) {
+        background: #f9f9f9 !important;
+      }
+    }
+
+    // Entry wrapper
+    .times {
+      padding: 0;
+      margin: 0;
+      position: relative;
+
+      // Day title
+      label {
+        margin-left: 10px;
+      }
+    }
+
+    // Entry
+    .time {
+      height: 40px;
+      width: 5%; // default time 1 hour
+      position: absolute;
+      overflow: hidden;
+
+      label span {
+        display: none;
+      }
+
+      .time-box {
+        display: block;
+        width: 100%;
+        height: 40px;
+        font-family: $body-font-family;
+        background: #aaa;
+        @include border-radius(2px);
+        border: 1px solid #999;
+        font-size: rem-calc(11);
+
+        .time-box-time-label,
+        .time-box-duration,
+        .time-box-duration-label {
+          display: none;
+        }
+
+        .time-box-time {
+          margin: 0px 0 0 4px;
+        }
+      }
+
+      &.type-service-time .time-box {
+        background: lighten($red, 30%);
+        border: 1px solid lighten($red, 20%);
+        color: $red;
+      }
+
+      &.type-switch .time-box {
+        background: $primary-color;
+        border: 1px solid darken($primary-color, 10%);
+        color: darken($primary-color, 20%);
+      }
+
+      &.type-lifekids .time-box {
+        background: #69d166;
+        border: 1px solid darken(#69d166, 10%);
+        color: darken(#69d166, 40%);
+      }
+    }
+
+    .time-07-00 { left: 20%; }
+    .time-07-30 { left: 22.5%; }
+    .time-08-00 { left: 25%; }
+    .time-08-30 { left: 27.5%; }
+    .time-09-00 { left: 30%; }
+    .time-09-30 { left: 32.5%; }
+    .time-10-00 { left: 35%; }
+    .time-10-30 { left: 37.5%; }
+    .time-11-00 { left: 40%; }
+    .time-11-30 { left: 42.5%; }
+    .time-12-00 { left: 45%; }
+    .time-12-30 { left: 47.5%; }
+    .time-13-00 { left: 50%; }
+    .time-13-30 { left: 52.5%; }
+    .time-14-00 { left: 55%; }
+    .time-14-30 { left: 57.5%; }
+    .time-15-00 { left: 60%; }
+    .time-15-30 { left: 62.5%; }
+    .time-16-00 { left: 65%; }
+    .time-16-30 { left: 67.5%; }
+    .time-17-00 { left: 70%; }
+    .time-17-30 { left: 72.5%; }
+    .time-18-00 { left: 75%; }
+    .time-18-30 { left: 77.5%; }
+    .time-19-00 { left: 80%; }
+    .time-19-30 { left: 82.5%; }
+    .time-20-00 { left: 85%; }
+    .time-20-30 { left: 87.5%; }
+    .time-21-00 { left: 90%; }
+    .time-21-30 { left: 92.5%; }
+    .time-22-00 { left: 95%; }
+
+    .overlap {
+      margin-top: 40px;
+    }
+
+    .overlap-2 {
+      margin-top: 80px;
+    }
+
+    .rows-2 {
+      height: 80px;
+    }
+
+    .rows-3 {
+      height: 120px;
+    }
+
+    // 1 hour entry
+    .duration-60 {
+      width: 5%;
+    }
+
+    // 2 hour entry
+    .duration-120 {
+      width: 10%
+    }
+
+    // 3 hour entry
+    .duration-180 {
+      width: 15%;
+    }
+
+    // 4 hour entry
+    .duration-240 {
+      width: 20%;
+    }
+
+    .time-lines .time {
+      height: 100%;
+
+      .time-line {
+        margin-top: 40px;
+        border-left: 1px solid #ccc;
+        height: 100%;
+      }
+
+      label {
+        margin: 0;
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        position: absolute;
+        top: 11px;
+        font-size: rem-calc(13);
+      }
+    }
+
+  }
+
+}
+
+ @media #{$large-up} {
+  // Day title
+  .days-times .time label span {
+    display: inline;
+  }
+}
+
+
+
+// ~4 Specific Campus Pages ***************************************
+
+  .location-alb .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/alb-bg'); }
+  .location-bao .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/bao-bg'); }
+  .location-edm .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/edm-bg'); }
+  .location-ftw .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/ftw-bg'); }
+  .location-hnv .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/hnv-bg'); }
+  .location-jnk .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/jnk-bg'); }
+  .location-klr .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/klr-bg'); }
+  .location-mor .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/mor-bg'); }
+  .location-mwc .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/mwc-bg'); }
+  .location-noc .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/noc-bg'); }
+  .location-okc .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/okc-bg'); }
+  .location-ows .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/ows-bg'); }
+  .location-soc .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/soc-bg'); }
+  .location-sto .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/sto-bg'); }
+  .location-stw .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/stw-bg'); }
+  .location-tul .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/tul-bg'); }
+  .location-wel .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/wel-bg'); }
+  .location-ykn .locations-hero { @include background-image-2x-jpg('/locations/assets/campus/ykn-bg'); }
+
+  .location-alb .locations-map { @include background-image-2x-jpg('/locations/assets/campus/alb-map'); }
+  .location-bao .locations-map { @include background-image-2x-jpg('/locations/assets/campus/bao-map'); }
+  .location-edm .locations-map { @include background-image-2x-jpg('/locations/assets/campus/edm-map'); }
+  .location-ftw .locations-map { @include background-image-2x-jpg('/locations/assets/campus/ftw-map'); }
+  .location-hnv .locations-map { @include background-image-2x-jpg('/locations/assets/campus/hnv-map'); }
+  .location-jnk .locations-map { @include background-image-2x-jpg('/locations/assets/campus/jnk-map'); }
+  .location-klr .locations-map { @include background-image-2x-jpg('/locations/assets/campus/klr-map'); }
+  .location-mor .locations-map { @include background-image-2x-jpg('/locations/assets/campus/mor-map'); }
+  .location-mwc .locations-map { @include background-image-2x-jpg('/locations/assets/campus/mwc-map'); }
+  .location-noc .locations-map { @include background-image-2x-jpg('/locations/assets/campus/noc-map'); }
+  .location-okc .locations-map { @include background-image-2x-jpg('/locations/assets/campus/okc-map'); }
+  .location-ows .locations-map { @include background-image-2x-jpg('/locations/assets/campus/ows-map'); }
+  .location-soc .locations-map { @include background-image-2x-jpg('/locations/assets/campus/soc-map'); }
+  .location-sto .locations-map { @include background-image-2x-jpg('/locations/assets/campus/sto-map'); }
+  .location-stw .locations-map { @include background-image-2x-jpg('/locations/assets/campus/stw-map'); }
+  .location-tul .locations-map { @include background-image-2x-jpg('/locations/assets/campus/tul-map'); }
+  .location-wel .locations-map { @include background-image-2x-jpg('/locations/assets/campus/wel-map'); }
+  .location-ykn .locations-map { @include background-image-2x-jpg('/locations/assets/campus/ykn-map'); }

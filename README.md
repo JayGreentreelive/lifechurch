@@ -1,8 +1,10 @@
-# Life.Church Website
+# LifeChurch.tv Website
 
 ## Requirements
 
-  * Ruby 2.0
+  * Ruby 1.9+
   * [Node.js](http://nodejs.org)
-  * [grunt](http://http://gruntjs.com/.org/): `npm install -g grunt-cli`
+  * [compass](http://compass-style.org/): `gem install compass`
+  * [bower](http://bower.io): `npm install bower -g`
+  * [foundation](http://foundation.zurb.com): `gem install foundation`
   * [jekyll](http://jekyllrb.com): `gem install jekyll`

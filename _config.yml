@@ -6,7 +6,7 @@ relative_permalinks: false
 
 prose:
   rooturl: 'announcements/_posts'
-  siteurl: 'http://www.JayGreentree.live/'
+  siteurl: 'http://www.JayGreentree.info/'
   metadata:
     _posts:
       - name: 'layout'

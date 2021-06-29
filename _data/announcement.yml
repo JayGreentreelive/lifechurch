@@ -8,13 +8,13 @@
   type: notice
   icon: calendar
   message: View additional Easter service times.
-  url: /easter/
+  #url: /easter/
 
 - active: true
   type: alert
   icon: maintenance
   message: Website is for demonstration only and is not an official life.church website.
-  url: https://life.church/
+  #url: https://life.church/
 
 - active: false
   type: notice

@@ -10,7 +10,7 @@
   message: View additional Easter service times.
   #url: /easter/
 
-- active: false
+- active: true
   type: alert
   icon: maintenance
   message: Website is for demonstration only and is not an official life.church website.

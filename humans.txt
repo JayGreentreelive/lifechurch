@@ -2,21 +2,13 @@
 
 /* TEAM */
 
-  Adam Fairhead
-    JayGreentree.live
-    adam.fairhead@JayGreentree.live
-    http://adamfairhead.com
-    @adamfairhead
-
-  Scott Lesser
-    JayGreentree.live
-    scott.lesser@JayGreentree.live
-    http://scottlesser.com
-    @okcscott
-
-
+  Jay Greentree
+    JayGreentree.com
+    jay@jaygreentree
+    http://jaygreentree.com
+    @JayTheITGuy1983
 /* SITE */
 
   Standards: HTML5, CSS3
   Components: Foundation, Jekyll, jQuery, Reveal
-  Software: Sublime Text, Git
+  Software: VS Code, Git
